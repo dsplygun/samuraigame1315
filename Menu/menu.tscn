@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://28c800auf8c2"]
+
+[ext_resource type="Script" path="res://script/Menu.gd" id="1_myjeg"]
+[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://Menu/seting.tscn" id="2_20wgl"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myjeg")
+
+[node name="seting2" parent="." instance=ExtResource("2_20wgl")]
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 37.0
+offset_right = 239.0
+offset_bottom = 103.0
+text = "Грати"
+
+[node name="exti" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 191.0
+offset_right = 242.0
+offset_bottom = 257.0
+text = "Вийти"
+
+[node name="seting" type="Button" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 112.0
+offset_right = 241.0
+offset_bottom = 178.0
+text = "Налуштування"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="exti" to="." method="_on_exti_pressed"]
+[connection signal="pressed" from="seting" to="." method="_on_seting_pressed"]

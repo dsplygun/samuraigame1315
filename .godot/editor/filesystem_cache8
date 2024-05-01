@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1714570437
+icon.svg::CompressedTexture2D::187795208743354558::1714142732::1714143202::1::::<><>::
+::res://levels/::1714572502
+seting.gd::GDScript::-1::1714571010::0::1::::<>CanvasLayer<>::
+village.tscn::PackedScene::4111188135304541561::1714572502::0::1::::<><>::res://script/village.gd<>uid://ckmn4stuq0k3f::::res://Menu/game_intr.tscn<>uid://dfya3lwq3t610::::res://Menu/seting.tscn
+::res://Menu/::1714572502
+game_intr.tscn::PackedScene::5500344421447120749::1714572502::0::1::::<><>::res://script/game_intr.gd
+menu.tscn::PackedScene::1963404961026066955::1714572502::0::1::::<><>::res://script/Menu.gd<>uid://dfya3lwq3t610::::res://Menu/seting.tscn
+seting.tscn::PackedScene::7559801950103953249::1714572252::0::1::::<><>::res://levels/seting.gd
+::res://script/::1714572531
+game_intr.gd::GDScript::-1::1714572350::0::1::::<>CanvasLayer<>::
+Menu.gd::GDScript::-1::1714572498::0::1::::<>Control<>::
+village.gd::GDScript::-1::1714402069::0::1::::<>Node2D<>::

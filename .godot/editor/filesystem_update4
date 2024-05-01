@@ -1,0 +1,8 @@
+res://levels/village.tscn
+res://Menu/menu.tscn
+res://levels/vilage.tscn
+res://Menu/game_intr.tscn
+res://Menu/seting.tscn
+res://script/seting.gd
+res://script/game_intr.gd
+res://script/Menu.gd
