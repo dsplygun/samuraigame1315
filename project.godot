@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
 Settings="*res://settings.gd"
+Inventory="*res://inventory.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
@@ -51,5 +52,6 @@ dialogic_default_action={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
