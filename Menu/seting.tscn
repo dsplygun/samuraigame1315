@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfya3lwq3t610"]
+
+[ext_resource type="Script" path="res://script/seting.gd" id="1_wr0q6"]
+
+[node name="seting" type="CanvasLayer"]
+script = ExtResource("1_wr0q6")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 524.0
+offset_bottom = 268.0
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 625.0
+offset_top = 125.0
+offset_right = 842.0
+offset_bottom = 141.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
