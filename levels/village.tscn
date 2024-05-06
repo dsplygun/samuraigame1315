@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bytqwyetn2y14"]
+[gd_scene load_steps=4 format=3 uid="uid://bi4d1ef0a3b8x"]
 
 [ext_resource type="Script" path="res://script/village.gd" id="1_yyqy3"]
 [ext_resource type="PackedScene" uid="uid://ckmn4stuq0k3f" path="res://Menu/game_intr.tscn" id="2_yg0vr"]
@@ -8,6 +8,5 @@
 script = ExtResource("1_yyqy3")
 
 [node name="game intr" parent="." instance=ExtResource("2_yg0vr")]
-visible = false
 
 [node name="seting" parent="." instance=ExtResource("3_w5clu")]
