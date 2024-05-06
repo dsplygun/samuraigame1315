@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cn2heyjv2wd3p"]
+
+[ext_resource type="Texture2D" uid="uid://dc71vevdxdcjq" path="res://sprites/enemysprite.jpg" id="1_64knq"]
+[ext_resource type="Script" path="res://scripts/enemy_test.gd" id="1_jx12r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ut18"]
+radius = 60.5331
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7gmlh"]
+radius = 84.0536
+
+[node name="enemy_test" type="CharacterBody2D"]
+script = ExtResource("1_jx12r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_64knq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("CircleShape2D_7ut18")
+disabled = true
+
+[node name="death_area" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_area"]
+shape = SubResource("CircleShape2D_7gmlh")
+debug_color = Color(0.429522, 0.471704, 0.964104, 0.42)
+
+[connection signal="area_entered" from="death_area" to="." method="_on_death_area_area_entered"]

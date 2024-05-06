@@ -1,0 +1,9 @@
+res://characters/best_character.gd
+res://levels/village.tscn
+res://characters/best_character.tscn
+res://scenes/best_character.tscn
+res://scenes/enemy_test.tscn
+res://scripts/enemy_test.gd
+res://scripts/best_character.gd
+res://scenes/npc_test.tscn
+res://scripts/npc_test.gd
