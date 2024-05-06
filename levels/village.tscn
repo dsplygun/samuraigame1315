@@ -1,16 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4qu5en53xuw5"]
+[gd_scene load_steps=2 format=3 uid="uid://b4qu5en53xuw5"]
 
-[ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="1_5npnx"]
-[ext_resource type="PackedScene" uid="uid://cn2heyjv2wd3p" path="res://scenes/enemy_test.tscn" id="2_o6w5r"]
-[ext_resource type="PackedScene" uid="uid://b0odpqamv5k80" path="res://scenes/npc_test.tscn" id="3_jilqw"]
+[ext_resource type="PackedScene" uid="uid://oknycevymi6b" path="res://levels/testlevel.tscn" id="1_e3tqb"]
 
 [node name="Village" type="Node2D"]
 
-[node name="enemy_test" parent="." instance=ExtResource("2_o6w5r")]
-position = Vector2(753, 84)
-
-[node name="best_character" parent="." instance=ExtResource("1_5npnx")]
-position = Vector2(159, 97)
-
-[node name="npc_test" parent="." instance=ExtResource("3_jilqw")]
-position = Vector2(548, 288)
+[node name="Testlevel" parent="." instance=ExtResource("1_e3tqb")]
