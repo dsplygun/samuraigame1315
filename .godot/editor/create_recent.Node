@@ -1,5 +1,9 @@
 CollisionShape2D
 Area2D
+NavigationRegion2D
+NavigationAgent2D
+Node
+CanvasLayer
 Sprite2D
 CharacterBody2D
 Timer
