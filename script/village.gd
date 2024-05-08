@@ -17,3 +17,10 @@ func _input(event):
 			$"game intr".visible = false
 		else:
 			$"game intr".visible = true
+			
+	if event is InputEventKey and  Input.get_action_strength("e"):
+		if $"intr".visible:
+			$"intr".visible = false
+		else:
+			$"intr".visible = true
+
