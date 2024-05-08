@@ -1,8 +1,0 @@
-res://levels/village.tscn
-res://scenes/best_character.tscn
-res://scenes/enemy_test.tscn
-res://scenes/npc_test.tscn
-res://scenes/health_component.tscn
-res://scenes/pathfinder_component.tscn
-res://scripts/pathfinder_component.gd
-res://scripts/enemy_test.gd
