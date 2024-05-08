@@ -21,3 +21,12 @@ func check_item(item):
 		return true
 	else:
 		return false
+var gold = int()
+func earn_gold(amount):
+	gold+=amount
+func spend_gold(amount):
+	if gold<amount:
+		gold-=amount
+		return false
+	else:
+		return true
