@@ -26,7 +26,7 @@ func earn_gold(amount):
 	gold+=amount
 func spend_gold(amount):
 	if gold<amount:
-		gold-=amount
 		return false
 	else:
+		gold-=amount
 		return true
