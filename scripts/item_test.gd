@@ -8,12 +8,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(Inventory.Inv)
-	
+	pass
 
-func _input(event):
-	if event is InputEventKey and  Input.get_action_strength("esc"):
-		if $"game intr".visible:
-			$"game intr".visible = false
-		else:
-			$"game intr".visible = true
+
+func _on_interact_area_body_entered(body):
+	if body.is_in_group("hero"):
+		Inventory.add("item")
+		queue_free()

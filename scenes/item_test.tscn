@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://mxylpo6nnxv6"]
+
+[ext_resource type="Script" path="res://scripts/item_test.gd" id="1_3vfky"]
+[ext_resource type="Texture2D" uid="uid://b88qujpjy7x7g" path="res://sprites/hel.png" id="1_nfc11"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hhjj"]
+size = Vector2(75, 36)
+
+[node name="item_test" type="Node2D"]
+script = ExtResource("1_3vfky")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5.72205e-06, 9.53674e-07)
+scale = Vector2(0.0275111, 0.0275111)
+texture = ExtResource("1_nfc11")
+
+[node name="interact_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact_area"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_1hhjj")
+debug_color = Color(0.686722, 0.493403, 0.228188, 0.42)
+
+[connection signal="body_entered" from="interact_area" to="." method="_on_interact_area_body_entered"]

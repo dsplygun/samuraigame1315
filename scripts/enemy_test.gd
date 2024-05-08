@@ -18,7 +18,6 @@ func _physics_process(delta):
 	if $PathfinderComponent.distance_to_target() < 125:
 		velocity = Vector2(0,0)
 		
-	print(position)
 	move_and_slide()
 	
 	#look_at( get_node("../shooter").position )
