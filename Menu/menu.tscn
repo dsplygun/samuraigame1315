@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_myjeg")
 
 [node name="seting2" parent="." instance=ExtResource("2_20wgl")]
+visible = false
 
 [node name="start" type="Button" parent="."]
 layout_mode = 0
