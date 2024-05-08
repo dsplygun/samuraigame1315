@@ -1,5 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
+.godot\
 
 # Godot-specific ignores
 .import/
@@ -14,4 +15,8 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
+**.import
+**.cfg
 *.import
+dialogues/backgrounds/Без імені.png.import
+characters/portraits/patrick.png.import
