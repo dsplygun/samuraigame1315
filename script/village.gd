@@ -1,14 +1,14 @@
 extends Node2D
 
-
+@onready var item_anim = get_node("item_test/AnimatedSprite2D")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	item_anim.play("default")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass#print(Inventory.Inv)
+	pass
 	
 
 func _input(event):

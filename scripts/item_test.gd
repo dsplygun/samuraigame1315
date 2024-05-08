@@ -13,5 +13,5 @@ func _process(delta):
 
 func _on_interact_area_body_entered(body):
 	if body.is_in_group("hero"):
-		Inventory.add("item")
+		Inventory.add("coin_test")
 		queue_free()

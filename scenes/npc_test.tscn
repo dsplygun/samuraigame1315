@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0odpqamv5k80"]
 
 [ext_resource type="Script" path="res://scripts/npc_test.gd" id="1_7ns0r"]
-[ext_resource type="Texture2D" uid="uid://biu6y5xg23aik" path="res://sprites/npcsprite.jpg" id="1_ohrsj"]
+[ext_resource type="Texture2D" uid="uid://dekq3otijvdn5" path="res://sprites/npcsprite.jpg" id="1_ohrsj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vjvo5"]
 radius = 68.0074
