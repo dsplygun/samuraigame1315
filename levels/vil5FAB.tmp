@@ -31,11 +31,10 @@ script = ExtResource("4_alx4g")
 
 [node name="GoldLabel" type="Label" parent="intr/ItemList"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 295.0
-offset_right = 145.0
-offset_bottom = 337.0
-text = "123"
+offset_left = -1008.0
+offset_top = -13.0
+offset_right = -968.0
+offset_bottom = 10.0
 
 [node name="ProgressBar" parent="intr" instance=ExtResource("5_235do")]
 script = ExtResource("6_gg2d6")

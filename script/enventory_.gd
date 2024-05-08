@@ -5,7 +5,6 @@ extends ItemList
 func _ready():
 	Inventory.add("монета")
 	Inventory.add("меч")
-	Label = Inventory.gold
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,4 +12,5 @@ func _process(delta):
 	clear()
 	for item in Inventory.Inv:
 		add_item(item)
+	$GoldLabel.text = str(Inventory.gold)
 	
