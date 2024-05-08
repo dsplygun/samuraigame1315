@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cn2heyjv2wd3p"]
 
-[ext_resource type="Texture2D" uid="uid://bhs0ms2m47yof" path="res://sprites/enemysprite.jpg" id="1_64knq"]
+[ext_resource type="Texture2D" uid="uid://dy137nha372v2" path="res://sprites/enemysprite.jpg" id="1_64knq"]
 [ext_resource type="Script" path="res://scripts/enemy_test.gd" id="1_jx12r"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="3_1ro8h"]
 [ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="4_skkb5"]
