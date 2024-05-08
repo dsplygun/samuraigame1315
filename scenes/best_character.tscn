@@ -11,7 +11,7 @@ radius = 58.6728
 [sub_resource type="CircleShape2D" id="CircleShape2D_5hth2"]
 radius = 57.0088
 
-[node name="best_character" type="CharacterBody2D"]
+[node name="best_character" type="CharacterBody2D" groups=["hero"]]
 script = ExtResource("1_3x33p")
 
 [node name="char_spr" type="Sprite2D" parent="."]

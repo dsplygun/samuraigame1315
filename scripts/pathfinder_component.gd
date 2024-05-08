@@ -12,8 +12,10 @@ func _physics_process(delta):
 	direction = get_next_path_position() - get_node("..").position
 	var bodies = $"../detection_area".get_overlapping_bodies()
 	for body in bodies:
-		if "best_character" in body.name:
+		if body.is_in_group("hero"):
+			print(get_next_path_position())
 			target_position = target.position
-		else:
-			target_position = $"..".position
-
+			return
+		
+	target_position = $"..".position
+	
