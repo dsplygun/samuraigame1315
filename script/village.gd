@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	pass#print(Inventory.Inv)
 	
 
 func _input(event):
@@ -19,8 +19,8 @@ func _input(event):
 			$"game intr".visible = true
 			
 	if event is InputEventKey and  Input.get_action_strength("e"):
-		if $"intr".visible:
-			$"intr".visible = false
+		if $"intr/ItemList".visible:
+			$"intr/ItemList".visible = false
 		else:
-			$"intr".visible = true
+			$"intr/ItemList".visible = true
 
