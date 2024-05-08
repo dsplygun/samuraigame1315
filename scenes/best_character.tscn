@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://gy78e2kdlxx2"]
+[gd_scene load_steps=7 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
 [ext_resource type="Texture2D" uid="uid://clwypjsx2caux" path="res://sprites/sprite.jpg" id="2_43d3t"]
 [ext_resource type="Texture2D" uid="uid://dgivpkcwc43h0" path="res://sprites/magic.png" id="3_83a31"]
+[ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
 radius = 58.6728
@@ -46,5 +47,7 @@ debug_color = Color(0.962724, 0, 0.502911, 0.42)
 
 [node name="wand_time" type="Timer" parent="."]
 wait_time = 0.4
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_qpxmd")]
 
 [connection signal="timeout" from="wand_time" to="." method="_on_wand_time_timeout"]

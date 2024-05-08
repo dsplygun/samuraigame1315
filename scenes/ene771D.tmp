@@ -45,3 +45,5 @@ debug_color = Color(0.779296, 0.429581, 0.233664, 0.42)
 
 [connection signal="area_entered" from="death_area" to="." method="_on_death_area_area_entered"]
 [connection signal="out_of_health" from="HealthComponent" to="." method="_on_health_component_out_of_health"]
+[connection signal="body_entered" from="detection_area" to="PathfinderComponent" method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="PathfinderComponent" method="_on_detection_area_body_exited"]
