@@ -1,14 +1,14 @@
 extends Node2D
 
-@onready var item_anim = get_node("item_test/AnimatedSprite2D")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	item_anim.play("default")
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(Inventory.gold)
+	pass#print(Inventory.Inv)
 	
 
 func _input(event):
@@ -19,8 +19,8 @@ func _input(event):
 			$"game intr".visible = true
 			
 	if event is InputEventKey and  Input.get_action_strength("e"):
-		if $"intr".visible:
-			$"intr".visible = false
+		if $"intr/ItemList".visible:
+			$"intr/ItemList".visible = false
 		else:
-			$"intr".visible = true
+			$"intr/ItemList".visible = true
 
