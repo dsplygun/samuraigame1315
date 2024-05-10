@@ -1,5 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://oknycevymi6b"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://x13sje0uw00r" path="res://Texture/TX Tileset Grass.png" id="1_4qpqs"]
 [ext_resource type="Texture2D" uid="uid://b1rber0v5m7iy" path="res://Texture/TX Plant.png" id="2_refuw"]
 [ext_resource type="Texture2D" uid="uid://0usqwmhcrlcx" path="res://Texture/TX Props.png" id="3_54dtl"]
@@ -18,6 +19,16 @@
 [ext_resource type="Texture2D" uid="uid://dg602c72aldo5" path="res://sprites/Basic Asset Pack/Basic Humanoid Animations/halfling bard/HalflingBard.png" id="16_yj8l4"]
 [ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="17_54cq4"]
 [ext_resource type="Script" path="res://script/KEYREG.gd" id="17_m4ana"]
+=======
+[ext_resource type="Texture2D" uid="uid://dqjshek0y826h" path="res://Texture/Basic/TX Tileset Grass.png" id="1_4qpqs"]
+[ext_resource type="Texture2D" uid="uid://cslilpbshccbm" path="res://Texture/Basic/TX Plant.png" id="2_refuw"]
+[ext_resource type="Texture2D" uid="uid://b6pxh67mhpsh0" path="res://Texture/Basic/TX Props.png" id="3_54dtl"]
+[ext_resource type="Texture2D" uid="uid://b65m80ty84xqo" path="res://Texture/Basic/TX Shadow Plant.png" id="4_qb8ag"]
+[ext_resource type="Texture2D" uid="uid://2uxfi5vkx3qa" path="res://Texture/Basic/TX Shadow.png" id="5_sknv7"]
+[ext_resource type="Texture2D" uid="uid://cv42jemg6bvr4" path="res://Texture/Basic/TX Struct.png" id="6_4v7j1"]
+[ext_resource type="Texture2D" uid="uid://dnapm68tt5tky" path="res://Texture/Basic/TX Tileset Stone Ground.png" id="7_42u7k"]
+[ext_resource type="Texture2D" uid="uid://bgq464qc25ydc" path="res://Texture/Basic/TX Tileset Wall.png" id="8_wa3op"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3iaf"]
 texture = ExtResource("1_4qpqs")
