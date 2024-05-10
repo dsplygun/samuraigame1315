@@ -2931,6 +2931,7 @@ sprite = SubResource("SpriteFrames_wg8sd")
 [node name="item_test" parent="." instance=ExtResource("17_54cq4")]
 position = Vector2(144, 464)
 scale = Vector2(2, 2)
+value = 999
 
 [node name="KEYREG" type="Node" parent="."]
 script = ExtResource("17_m4ana")
