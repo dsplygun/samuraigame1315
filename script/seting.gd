@@ -18,3 +18,15 @@ func _on_button_pressed():
 	else:
 		$".".visible = true
 		
+
+
+func _on_music_value_changed(value):
+	Settings.set_musicvolume(value)
+
+
+func _on_sound_value_changed(value):
+	Settings.set_soundvolume(value)
+
+
+func _on_h_slider_value_changed(value):
+	Settings.set_brightness(value)
