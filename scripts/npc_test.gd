@@ -16,7 +16,7 @@ func _input(event):
 	if event is InputEventKey:
 		if $"../best_character" in $interact_area.get_overlapping_bodies():
 			if Input.is_action_just_pressed("interact") and give_item == false:
-				print("Here, take it!")
+				#Dialogic.start_timeline("res://dialogues/test_timelinr.dtl")
 				Inventory.add("npc_artifact")
 				give_item = true
 			elif Input.is_action_just_pressed("interact") and give_item == true:

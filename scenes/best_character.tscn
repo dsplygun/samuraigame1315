@@ -1,53 +1,118 @@
-[gd_scene load_steps=7 format=3 uid="uid://gy78e2kdlxx2"]
+[gd_scene load_steps=18 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
-[ext_resource type="Texture2D" uid="uid://bv2rxwescfeg6" path="res://sprites/sprite.jpg" id="2_43d3t"]
-[ext_resource type="Texture2D" uid="uid://cdvxthnav3c6e" path="res://sprites/magic.png" id="3_83a31"]
+[ext_resource type="Texture2D" uid="uid://wdi8xmi0rhfl" path="res://Texture/Characters(test)/Free Version Red Sprite/Front Movement.png" id="2_qda55"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
-radius = 58.6728
+[sub_resource type="AtlasTexture" id="AtlasTexture_rusbi"]
+atlas = ExtResource("2_qda55")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5hth2"]
-radius = 57.0088
+[sub_resource type="AtlasTexture" id="AtlasTexture_aadgk"]
+atlas = ExtResource("2_qda55")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vfek"]
+atlas = ExtResource("2_qda55")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbo2u"]
+atlas = ExtResource("2_qda55")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7xi3"]
+atlas = ExtResource("2_qda55")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nys1"]
+atlas = ExtResource("2_qda55")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhnek"]
+atlas = ExtResource("2_qda55")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3malt"]
+atlas = ExtResource("2_qda55")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngosk"]
+atlas = ExtResource("2_qda55")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvi4s"]
+atlas = ExtResource("2_qda55")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8ug5"]
+atlas = ExtResource("2_qda55")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbyjj"]
+atlas = ExtResource("2_qda55")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkidx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rusbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aadgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vfek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbo2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7xi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nys1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhnek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3malt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngosk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvi4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8ug5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbyjj")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
+radius = 24.5459
 
 [node name="best_character" type="CharacterBody2D" groups=["hero"]]
 script = ExtResource("1_3x33p")
 
-[node name="char_spr" type="Sprite2D" parent="."]
-position = Vector2(-7.62939e-06, -1.00001)
-scale = Vector2(0.10007, 0.10007)
-texture = ExtResource("2_43d3t")
-flip_h = true
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_gkidx")
+animation = &"walk"
 
 [node name="char_collision" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1.5)
 shape = SubResource("CircleShape2D_vr7bn")
 
-[node name="wand" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(47, 26)
-rotation = -2.15897
-scale = Vector2(0.214166, 0.38832)
-texture = ExtResource("3_83a31")
-flip_v = true
-
-[node name="wand_zone" type="Area2D" parent="wand" groups=["wand"]]
-position = Vector2(222.764, -63.5453)
-rotation = 2.45062
-scale = Vector2(3.36183, 4.13907)
-skew = -0.527367
-monitoring = false
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wand/wand_zone"]
-position = Vector2(47, 12)
-shape = SubResource("CircleShape2D_5hth2")
-debug_color = Color(0.962724, 0, 0.502911, 0.42)
-
-[node name="wand_time" type="Timer" parent="."]
-wait_time = 0.4
-
 [node name="HealthComponent" parent="." instance=ExtResource("4_qpxmd")]
-
-[connection signal="timeout" from="wand_time" to="." method="_on_wand_time_timeout"]

@@ -1,16 +1,16 @@
 [background arg="res://dialogues/backgrounds/Без імені.png" fade="0.0"]
-join character2 1 [animation="Slide In Left" length="1" wait="true"]
+join character2 0 [animation="Slide In Left" length="1" wait="true"]
 character2: ух щас бі сделать жоскі єджинг на скібіді талчков го са мної
 - єджингануть
 	leave character2 [animation="Bounce Out" length="0.2"]
-	join character1 3 [animation="Slide In Right" length="0.3"]
+	join character1 0 [animation="Slide In Right" length="0.3"]
 	character1: є ті же не сігма ті бєтамєйл у тебя нема різз і левел 5 гїат
 	leave --All--
 	тєбя убіл сігма
 	[end_timeline]
 - нє єджингавацц
 	character2: ну і ладно лох ті бєта а я буду делать єджинґ
-	join character1 3 [animation="Slide In Right"]
+	join character1 0 [animation="Slide In Right"]
 	character1: є ті шо лох ти бета маіл решил делать єджинг?
 	update character2 0 [animation="Bounce"]
 	character2: ої не не убіваї меня сігма
