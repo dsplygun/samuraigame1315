@@ -1,5 +1,5 @@
 extends Node2D
-
+@export var value : int = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,5 +13,5 @@ func _process(delta):
 
 func _on_interact_area_body_entered(body):
 	if body.is_in_group("hero"):
-		Inventory.earn_gold(5)
+		Inventory.earn_gold(value)
 		queue_free()
