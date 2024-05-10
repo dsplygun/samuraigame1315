@@ -1,13 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://oknycevymi6b"]
+[gd_scene load_steps=23 format=3 uid="uid://4gbi7agtiat6"]
 
-[ext_resource type="Texture2D" uid="uid://wwbnbbbee5v4" path="res://Texture/TX Tileset Grass.png" id="1_4qpqs"]
-[ext_resource type="Texture2D" uid="uid://c02jbq2y72mp4" path="res://Texture/TX Plant.png" id="2_refuw"]
-[ext_resource type="Texture2D" uid="uid://bx8rb3vinwj4g" path="res://Texture/TX Props.png" id="3_54dtl"]
-[ext_resource type="Texture2D" uid="uid://d356t82gtcgo0" path="res://Texture/TX Shadow Plant.png" id="4_qb8ag"]
-[ext_resource type="Texture2D" uid="uid://jt8pcuuw2o8s" path="res://Texture/TX Shadow.png" id="5_sknv7"]
-[ext_resource type="Texture2D" uid="uid://cm1haqh5njipw" path="res://Texture/TX Struct.png" id="6_4v7j1"]
-[ext_resource type="Texture2D" uid="uid://csuo4frblfydj" path="res://Texture/TX Tileset Stone Ground.png" id="7_42u7k"]
-[ext_resource type="Texture2D" uid="uid://8xiawolpoagf" path="res://Texture/TX Tileset Wall.png" id="8_wa3op"]
+[ext_resource type="Texture2D" uid="uid://cdo5odsefrm7h" path="res://Texture/TX Tileset Grass.png" id="1_4qpqs"]
+[ext_resource type="Script" path="res://scripts/testlevel.gd" id="1_ajovb"]
+[ext_resource type="Texture2D" uid="uid://db866166nluxt" path="res://Texture/TX Plant.png" id="2_refuw"]
+[ext_resource type="Texture2D" uid="uid://cnpp6kj21m2ku" path="res://Texture/TX Props.png" id="3_54dtl"]
+[ext_resource type="Texture2D" uid="uid://cq7rnx0rbep0u" path="res://Texture/TX Shadow Plant.png" id="4_qb8ag"]
+[ext_resource type="Texture2D" uid="uid://dh1fgt3ip5x7t" path="res://Texture/TX Shadow.png" id="5_sknv7"]
+[ext_resource type="Texture2D" uid="uid://cun1if0stsbei" path="res://Texture/TX Struct.png" id="6_4v7j1"]
+[ext_resource type="Texture2D" uid="uid://c8kxbk6nums8c" path="res://Texture/TX Tileset Stone Ground.png" id="7_42u7k"]
+[ext_resource type="Texture2D" uid="uid://bel5bqk6wtsdp" path="res://Texture/TX Tileset Wall.png" id="8_wa3op"]
+[ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="13_xf0kq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3iaf"]
 texture = ExtResource("1_4qpqs")
@@ -1916,6 +1918,7 @@ height = 92.5264
 size = Vector2(56, 16)
 
 [node name="Testlevel" type="Node2D"]
+script = ExtResource("1_ajovb")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bhc4q")
@@ -2802,6 +2805,7 @@ shape = SubResource("RectangleShape2D_xkn2l")
 [node name="Statue" type="Node2D" parent="TileMap"]
 
 [node name="platform" type="Sprite2D" parent="TileMap/Statue"]
+z_index = 2
 position = Vector2(554.1, 321.013)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("3_54dtl")
@@ -2816,6 +2820,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_us8je")
 
 [node name="statue" type="Sprite2D" parent="TileMap/Statue"]
+z_index = 2
 position = Vector2(556, 273)
 scale = Vector2(1.97368, 1.97368)
 texture = ExtResource("3_54dtl")
@@ -2827,7 +2832,7 @@ region_rect = Rect2(444.952, 19.6336, 38.5543, 75.5155)
 [node name="Bench" type="Node2D" parent="TileMap/Benches"]
 
 [node name="Bench" type="Sprite2D" parent="TileMap/Benches/Bench"]
-z_index = 1
+z_index = 2
 position = Vector2(554, 395)
 texture = ExtResource("3_54dtl")
 region_enabled = true
@@ -2845,3 +2850,7 @@ position = Vector2(560, 404)
 texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(294.347, 34.8483, 61.3318, 28.7774)
+
+[node name="best_character" parent="." instance=ExtResource("13_xf0kq")]
+position = Vector2(118, 327)
+scale = Vector2(0.6, 0.6)

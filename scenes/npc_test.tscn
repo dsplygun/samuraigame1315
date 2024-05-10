@@ -1,27 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0odpqamv5k80"]
+[gd_scene load_steps=4 format=3 uid="uid://b0odpqamv5k80"]
 
 [ext_resource type="Script" path="res://scripts/npc_test.gd" id="1_7ns0r"]
-[ext_resource type="Texture2D" uid="uid://omy84g5yjk67" path="res://sprites/npcsprite.jpg" id="1_ohrsj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vjvo5"]
-radius = 68.0074
+radius = 49.0918
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htq10"]
-radius = 113.004
+radius = 66.0984
 
 [node name="npc_test" type="CharacterBody2D"]
 script = ExtResource("1_7ns0r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_ohrsj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -11)
+scale = Vector2(6, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_vjvo5")
 
 [node name="interact_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interact_area"]
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_htq10")
 debug_color = Color(0.641039, 0.524044, 0.0293422, 0.42)
 
