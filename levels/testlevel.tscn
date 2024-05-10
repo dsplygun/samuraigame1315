@@ -1,14 +1,22 @@
-[gd_scene load_steps=21 format=3 uid="uid://oknycevymi6b"]
+[gd_scene load_steps=30 format=3 uid="uid://oknycevymi6b"]
 
-[ext_resource type="Texture2D" uid="uid://dqjshek0y826h" path="res://Texture/Basic/TX Tileset Grass.png" id="1_4qpqs"]
-[ext_resource type="Texture2D" uid="uid://cslilpbshccbm" path="res://Texture/Basic/TX Plant.png" id="2_refuw"]
-[ext_resource type="Texture2D" uid="uid://b6pxh67mhpsh0" path="res://Texture/Basic/TX Props.png" id="3_54dtl"]
-[ext_resource type="Texture2D" uid="uid://b65m80ty84xqo" path="res://Texture/Basic/TX Shadow Plant.png" id="4_qb8ag"]
-[ext_resource type="Texture2D" uid="uid://2uxfi5vkx3qa" path="res://Texture/Basic/TX Shadow.png" id="5_sknv7"]
-[ext_resource type="Texture2D" uid="uid://cv42jemg6bvr4" path="res://Texture/Basic/TX Struct.png" id="6_4v7j1"]
-[ext_resource type="Texture2D" uid="uid://dnapm68tt5tky" path="res://Texture/Basic/TX Tileset Stone Ground.png" id="7_42u7k"]
-[ext_resource type="Texture2D" uid="uid://bgq464qc25ydc" path="res://Texture/Basic/TX Tileset Wall.png" id="8_wa3op"]
-
+[ext_resource type="Texture2D" uid="uid://x13sje0uw00r" path="res://Texture/TX Tileset Grass.png" id="1_4qpqs"]
+[ext_resource type="Texture2D" uid="uid://b1rber0v5m7iy" path="res://Texture/TX Plant.png" id="2_refuw"]
+[ext_resource type="Texture2D" uid="uid://0usqwmhcrlcx" path="res://Texture/TX Props.png" id="3_54dtl"]
+[ext_resource type="Texture2D" uid="uid://4svhoqgkk5n2" path="res://Texture/TX Shadow Plant.png" id="4_qb8ag"]
+[ext_resource type="Texture2D" uid="uid://dshuyrh48ckeu" path="res://Texture/TX Shadow.png" id="5_sknv7"]
+[ext_resource type="Texture2D" uid="uid://ccu2fd2da2sqk" path="res://Texture/TX Struct.png" id="6_4v7j1"]
+[ext_resource type="Texture2D" uid="uid://dc2hlqbv8nxmi" path="res://Texture/TX Tileset Stone Ground.png" id="7_42u7k"]
+[ext_resource type="Texture2D" uid="uid://g6rb7t6ikaj7" path="res://Texture/TX Tileset Wall.png" id="8_wa3op"]
+[ext_resource type="PackedScene" uid="uid://ckmn4stuq0k3f" path="res://Menu/game_intr.tscn" id="9_uefp1"]
+[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://Menu/seting.tscn" id="10_jo7gc"]
+[ext_resource type="Script" path="res://script/enventory_.gd" id="11_aikg6"]
+[ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://hp_bar.tscn" id="12_2kfg3"]
+[ext_resource type="Script" path="res://hp_bar.gd" id="13_8ycrb"]
+[ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="15_dk6ur"]
+[ext_resource type="PackedScene" uid="uid://b0odpqamv5k80" path="res://scenes/npc_test.tscn" id="16_45xp2"]
+[ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="17_54cq4"]
+[ext_resource type="Script" path="res://script/KEYREG.gd" id="17_m4ana"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3iaf"]
 texture = ExtResource("1_4qpqs")
@@ -2846,3 +2854,42 @@ position = Vector2(560, 404)
 texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(294.347, 34.8483, 61.3318, 28.7774)
+
+[node name="game intr" parent="." instance=ExtResource("9_uefp1")]
+visible = false
+
+[node name="seting" parent="." instance=ExtResource("10_jo7gc")]
+visible = false
+
+[node name="intr" type="CanvasLayer" parent="."]
+
+[node name="ItemList" type="ItemList" parent="intr"]
+offset_left = 1008.0
+offset_top = 13.0
+offset_right = 1146.0
+offset_bottom = 339.0
+script = ExtResource("11_aikg6")
+
+[node name="GoldLabel" type="Label" parent="intr/ItemList"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 295.0
+offset_right = 145.0
+offset_bottom = 337.0
+text = "123"
+
+[node name="ProgressBar" parent="intr" instance=ExtResource("12_2kfg3")]
+script = ExtResource("13_8ycrb")
+
+[node name="best_character" parent="." instance=ExtResource("15_dk6ur")]
+position = Vector2(74, 328)
+
+[node name="npc_test" parent="." instance=ExtResource("16_45xp2")]
+position = Vector2(557, 519)
+
+[node name="item_test" parent="." instance=ExtResource("17_54cq4")]
+position = Vector2(144, 464)
+scale = Vector2(2, 2)
+
+[node name="KEYREG" type="Node" parent="."]
+script = ExtResource("17_m4ana")
