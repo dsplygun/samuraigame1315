@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://oknycevymi6b"]
+[gd_scene load_steps=36 format=3 uid="uid://oknycevymi6b"]
 
 [ext_resource type="Texture2D" uid="uid://x13sje0uw00r" path="res://Texture/TX Tileset Grass.png" id="1_4qpqs"]
 [ext_resource type="Texture2D" uid="uid://b1rber0v5m7iy" path="res://Texture/TX Plant.png" id="2_refuw"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://hp_bar.gd" id="13_8ycrb"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="15_dk6ur"]
 [ext_resource type="PackedScene" uid="uid://b0odpqamv5k80" path="res://scenes/npc_test.tscn" id="16_45xp2"]
+[ext_resource type="Texture2D" uid="uid://dg602c72aldo5" path="res://sprites/Basic Asset Pack/Basic Humanoid Animations/halfling bard/HalflingBard.png" id="16_yj8l4"]
 [ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="17_54cq4"]
 [ext_resource type="Script" path="res://script/KEYREG.gd" id="17_m4ana"]
 
@@ -1924,6 +1925,42 @@ height = 92.5264
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnlwv"]
 size = Vector2(56, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_htq5d"]
+atlas = ExtResource("16_yj8l4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp64m"]
+atlas = ExtResource("16_yj8l4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4etah"]
+atlas = ExtResource("16_yj8l4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t37u"]
+atlas = ExtResource("16_yj8l4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wg8sd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htq5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp64m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4etah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t37u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Testlevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -2825,6 +2862,8 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_us8je")
 
 [node name="statue" type="Sprite2D" parent="TileMap/Statue"]
+z_index = 1
+y_sort_enabled = true
 position = Vector2(556, 273)
 scale = Vector2(1.97368, 1.97368)
 texture = ExtResource("3_54dtl")
@@ -2836,7 +2875,7 @@ region_rect = Rect2(444.952, 19.6336, 38.5543, 75.5155)
 [node name="Bench" type="Node2D" parent="TileMap/Benches"]
 
 [node name="Bench" type="Sprite2D" parent="TileMap/Benches/Bench"]
-z_index = 1
+y_sort_enabled = true
 position = Vector2(554, 395)
 texture = ExtResource("3_54dtl")
 region_enabled = true
@@ -2886,6 +2925,8 @@ position = Vector2(74, 328)
 
 [node name="npc_test" parent="." instance=ExtResource("16_45xp2")]
 position = Vector2(557, 519)
+scale = Vector2(0.4, 0.4)
+sprite = SubResource("SpriteFrames_wg8sd")
 
 [node name="item_test" parent="." instance=ExtResource("17_54cq4")]
 position = Vector2(144, 464)
