@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://gy78e2kdlxx2"]
+
+[ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
+[ext_resource type="Texture2D" uid="uid://clwypjsx2caux" path="res://sprites/sprite.jpg" id="2_43d3t"]
+[ext_resource type="Texture2D" uid="uid://dgivpkcwc43h0" path="res://sprites/magic.png" id="3_83a31"]
+[ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
+radius = 58.6728
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hth2"]
+radius = 57.0088
+
+[node name="best_character" type="CharacterBody2D" groups=["hero"]]
+script = ExtResource("1_3x33p")
+
+[node name="char_spr" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, -1.00001)
+scale = Vector2(0.10007, 0.10007)
+texture = ExtResource("2_43d3t")
+flip_h = true
+
+[node name="char_collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1.5)
+shape = SubResource("CircleShape2D_vr7bn")
+
+[node name="wand" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(47, 26)
+rotation = -2.15897
+scale = Vector2(0.214166, 0.38832)
+texture = ExtResource("3_83a31")
+flip_v = true
+
+[node name="wand_zone" type="Area2D" parent="wand" groups=["wand"]]
+position = Vector2(222.764, -63.5453)
+rotation = 2.45062
+scale = Vector2(3.36183, 4.13907)
+skew = -0.527367
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wand/wand_zone"]
+position = Vector2(47, 12)
+shape = SubResource("CircleShape2D_5hth2")
+debug_color = Color(0.962724, 0, 0.502911, 0.42)
+
+[node name="wand_time" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_qpxmd")]
+
+[connection signal="timeout" from="wand_time" to="." method="_on_wand_time_timeout"]

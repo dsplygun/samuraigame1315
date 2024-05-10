@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckmn4stuq0k3f"]
+
+[ext_resource type="Script" path="res://script/game_intr.gd" id="1_hlc5l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rtiy"]
+
+[node name="game intr" type="CanvasLayer"]
+script = ExtResource("1_hlc5l")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+offset_right = 279.0
+offset_bottom = 83.0
+text = "erwrwr"
+placeholder_text = "wrwrwerwer"
+
+[node name="CodeEdit" type="CodeEdit" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 255.0
+offset_bottom = 118.0
+
+[node name="MenuBar" type="MenuBar" parent="."]
+visible = false
+offset_left = 76.0
+offset_top = 31.0
+offset_right = 281.0
+offset_bottom = 107.0
+tooltip_text = "asdasdasd
+"
+flat = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LineEdit" type="LineEdit" parent="."]
+visible = false
+offset_right = 344.0
+offset_bottom = 114.0
+text = "fdfgfd g"
+placeholder_text = "dfgdfgdfg"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_1rtiy")
+
+[node name="resum" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 16.0
+offset_right = 704.0
+offset_bottom = 86.0
+text = "Відновити"
+
+[node name="seting" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 92.0
+offset_right = 704.0
+offset_bottom = 162.0
+text = "Налуштування"
+
+[node name="v menu2" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 169.0
+offset_right = 704.0
+offset_bottom = 239.0
+text = "Вийти в меню"
+
+[connection signal="pressed" from="resum" to="." method="_on_resum_pressed"]
+[connection signal="pressed" from="seting" to="." method="_on_seting_pressed"]
+[connection signal="pressed" from="v menu2" to="." method="_on_v_menu_2_pressed"]

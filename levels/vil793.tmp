@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://bi4d1ef0a3b8x"]
+
+[ext_resource type="Script" path="res://script/village.gd" id="1_yyqy3"]
+[ext_resource type="PackedScene" uid="uid://ckmn4stuq0k3f" path="res://Menu/game_intr.tscn" id="2_yg0vr"]
+[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://Menu/seting.tscn" id="3_w5clu"]
+[ext_resource type="PackedScene" uid="uid://cn2heyjv2wd3p" path="res://scenes/enemy_test.tscn" id="4_88c4q"]
+[ext_resource type="Script" path="res://script/enventory_.gd" id="4_alx4g"]
+[ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="5_q1j8e"]
+[ext_resource type="PackedScene" uid="uid://b0odpqamv5k80" path="res://scenes/npc_test.tscn" id="6_kutpr"]
+[ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="7_d1o88"]
+
+[node name="Village" type="Node2D"]
+script = ExtResource("1_yyqy3")
+
+[node name="game intr" parent="." instance=ExtResource("2_yg0vr")]
+visible = false
+
+[node name="seting" parent="." instance=ExtResource("3_w5clu")]
+visible = false
+
+[node name="intr" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ItemList" type="ItemList" parent="intr"]
+offset_right = 138.0
+offset_bottom = 326.0
+script = ExtResource("4_alx4g")
+
+[node name="enemy_test" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_88c4q")]
+position = Vector2(638, 138)
+target = NodePath("../best_character")
+
+[node name="best_character" parent="." instance=ExtResource("5_q1j8e")]
+position = Vector2(159, 138)
+
+[node name="npc_test" parent="." instance=ExtResource("6_kutpr")]
+position = Vector2(352, 345)
+
+[node name="item_test" parent="." instance=ExtResource("7_d1o88")]
+position = Vector2(144, 464)
+scale = Vector2(2, 2)

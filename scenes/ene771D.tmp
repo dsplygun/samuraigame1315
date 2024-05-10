@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://cn2heyjv2wd3p"]
+
+[ext_resource type="Texture2D" uid="uid://dc71vevdxdcjq" path="res://sprites/enemysprite.jpg" id="1_64knq"]
+[ext_resource type="Script" path="res://scripts/enemy_test.gd" id="1_jx12r"]
+[ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="3_1ro8h"]
+[ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="4_skkb5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ut18"]
+radius = 60.5331
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7gmlh"]
+radius = 84.0536
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_go3r5"]
+radius = 194.209
+
+[node name="enemy_test" type="CharacterBody2D"]
+script = ExtResource("1_jx12r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_64knq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("CircleShape2D_7ut18")
+disabled = true
+debug_color = Color(0, 0, 0, 0.42)
+
+[node name="death_area" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_area"]
+shape = SubResource("CircleShape2D_7gmlh")
+debug_color = Color(0.429522, 0.471704, 0.964104, 0.42)
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_1ro8h")]
+
+[node name="PathfinderComponent" parent="." instance=ExtResource("4_skkb5")]
+
+[node name="detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+shape = SubResource("CircleShape2D_go3r5")
+debug_color = Color(0.779296, 0.429581, 0.233664, 0.42)
+
+[connection signal="area_entered" from="death_area" to="." method="_on_death_area_area_entered"]
+[connection signal="out_of_health" from="HealthComponent" to="." method="_on_health_component_out_of_health"]
+[connection signal="body_entered" from="detection_area" to="PathfinderComponent" method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="PathfinderComponent" method="_on_detection_area_body_exited"]
