@@ -2872,6 +2872,13 @@ region_rect = Rect2(444.952, 19.6336, 38.5543, 75.5155)
 
 [node name="Benches" type="Node2D" parent="TileMap"]
 
+[node name="Shadow" type="Sprite2D" parent="TileMap/Benches"]
+self_modulate = Color(1, 1, 1, 0.592157)
+position = Vector2(559, 404)
+texture = ExtResource("5_sknv7")
+region_enabled = true
+region_rect = Rect2(294.347, 34.8483, 61.3318, 28.7774)
+
 [node name="Bench" type="Node2D" parent="TileMap/Benches"]
 
 [node name="Bench" type="Sprite2D" parent="TileMap/Benches/Bench"]
@@ -2886,13 +2893,6 @@ region_rect = Rect2(290.626, 18.5753, 58.0453, 42.188)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Benches/Bench/Bench/StaticBody2D"]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_pnlwv")
-
-[node name="Shadow" type="Sprite2D" parent="TileMap/Benches/Bench"]
-self_modulate = Color(1, 1, 1, 0.592157)
-position = Vector2(560, 404)
-texture = ExtResource("5_sknv7")
-region_enabled = true
-region_rect = Rect2(294.347, 34.8483, 61.3318, 28.7774)
 
 [node name="game intr" parent="." instance=ExtResource("9_uefp1")]
 visible = false
@@ -2922,6 +2922,7 @@ script = ExtResource("13_8ycrb")
 
 [node name="best_character" parent="." instance=ExtResource("15_dk6ur")]
 position = Vector2(74, 328)
+scale = Vector2(2, 2)
 
 [node name="npc_test" parent="." instance=ExtResource("16_45xp2")]
 position = Vector2(557, 519)
