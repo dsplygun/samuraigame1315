@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
-[ext_resource type="Texture2D" uid="uid://wdi8xmi0rhfl" path="res://Texture/Characters(test)/Free Version Red Sprite/Front Movement.png" id="2_qda55"]
+[ext_resource type="Texture2D" uid="uid://dvfj86422w6n0" path="res://Texture/Characters(test)/Free Version Red Sprite/Front Movement.png" id="2_qda55"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rusbi"]
