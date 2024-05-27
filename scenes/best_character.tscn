@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
-[ext_resource type="Texture2D" uid="uid://bv2rxwescfeg6" path="res://sprites/sprite.jpg" id="2_43d3t"]
-[ext_resource type="Texture2D" uid="uid://cdvxthnav3c6e" path="res://sprites/magic.png" id="3_83a31"]
+[ext_resource type="Texture2D" uid="uid://br13tlfr6n3jx" path="res://sprites/sprite.jpg" id="2_43d3t"]
+[ext_resource type="Texture2D" uid="uid://by0ou283senut" path="res://sprites/magic.png" id="3_83a31"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
