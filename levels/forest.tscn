@@ -1,13 +1,13 @@
 [gd_scene load_steps=25 format=3 uid="uid://b4huhehi6fxyn"]
 
-[ext_resource type="Texture2D" uid="uid://2vxooq2idrf6" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
-[ext_resource type="Texture2D" uid="uid://odppd5ic2db4" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
-[ext_resource type="Texture2D" uid="uid://cvkobedbxxc5k" path="res://Texture/Forest BETA V3/Forest Props.png" id="3_e621c"]
-[ext_resource type="Texture2D" uid="uid://gqk45frlk111" path="res://Texture/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
-[ext_resource type="Texture2D" uid="uid://devdkqklw3lm4" path="res://Texture/Forest BETA V3/Sample.png" id="5_63d7n"]
-[ext_resource type="Texture2D" uid="uid://d20m10ypfvg0l" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
-[ext_resource type="Texture2D" uid="uid://ccb2n148fc3av" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
-[ext_resource type="Texture2D" uid="uid://bw3frjv7gcjfi" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
+[ext_resource type="Texture2D" uid="uid://bxepbxawncblf" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
+[ext_resource type="Texture2D" uid="uid://bwtn1dv6w16uq" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
+[ext_resource type="Texture2D" uid="uid://cas4d8q4vtnhp" path="res://Texture/Forest BETA V3/Forest Props.png" id="3_e621c"]
+[ext_resource type="Texture2D" uid="uid://b1nai2i6lg6u4" path="res://Texture/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
+[ext_resource type="Texture2D" uid="uid://dc8xcxo44tcu6" path="res://Texture/Forest BETA V3/Sample.png" id="5_63d7n"]
+[ext_resource type="Texture2D" uid="uid://bn3ocr1d0dlud" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
+[ext_resource type="Texture2D" uid="uid://c5popylbngiur" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
+[ext_resource type="Texture2D" uid="uid://bfr7qoakdtxyd" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -7838,7 +7838,7 @@ sources/8 = SubResource("TileSetAtlasSource_38lxw")
 size = Vector2(1197, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mt0b1"]
-size = Vector2(23, 358.25)
+size = Vector2(23, 363.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncywj"]
 size = Vector2(20, 189.25)
@@ -8031,7 +8031,7 @@ position = Vector2(-11.5, 496.125)
 shape = SubResource("RectangleShape2D_mt0b1")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
-position = Vector2(1163, 471.75)
+position = Vector2(1163, 474.313)
 shape = SubResource("RectangleShape2D_mt0b1")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
@@ -8102,10 +8102,10 @@ position = Vector2(1079, 614)
 shape = SubResource("CapsuleShape2D_u8g7h")
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
-polygon = PackedVector2Array(112, 176, 320, 176, 320, 400, 160, 400, 160, 272, 112, 272)
+polygon = PackedVector2Array(112, 176, 320, 176, 320, 420, 160, 420, 160, 272, 112, 272)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
-polygon = PackedVector2Array(688, 128, 688, 160, 608, 160, 608, 176, 592, 176, 592, 192, 576, 192, 576, 208, 560, 208, 560, 224, 544, 224, 544, 240, 512, 240, 512, 256, 432, 256, 432, 272, 368, 272, 368, 128)
+polygon = PackedVector2Array(688, 120, 688, 160, 608, 160, 608, 176, 592, 176, 592, 192, 576, 192, 576, 208, 560, 208, 560, 224, 544, 224, 544, 240, 512, 240, 512, 256, 432, 256, 432, 272, 368, 272, 368, 120)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
-polygon = PackedVector2Array(976, 128, 976, 160, 1008, 160, 1008, 176, 1040, 176, 1040, 192, 1056, 192, 1056, 224, 1072, 224, 1072, 240, 1152, 240, 1152, 128)
+polygon = PackedVector2Array(976, 120, 976, 160, 1008, 160, 1008, 176, 1040, 176, 1040, 192, 1056, 192, 1056, 224, 1072, 224, 1072, 240, 1152, 240, 1152, 121)
