@@ -17,7 +17,11 @@ func _physics_process(delta):
 	
 	if $PathfinderComponent.distance_to_target() < 125:
 		velocity = Vector2(0,0)
-		
+	var bodies = $"death_area".get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("hero"):
+			body.get_node("HealthComponent").take_damage(1)
+			break
 	move_and_slide()
 	
 	#look_at( get_node("../shooter").position )

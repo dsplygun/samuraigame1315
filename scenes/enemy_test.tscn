@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cn2heyjv2wd3p"]
 
-[ext_resource type="Texture2D" uid="uid://ce3odswhbp5xs" path="res://sprites/enemysprite.jpg" id="1_64knq"]
+[ext_resource type="Texture2D" uid="uid://dx3onkhi1o7pv" path="res://sprites/enemysprite.jpg" id="1_64knq"]
 [ext_resource type="Script" path="res://scripts/enemy_test.gd" id="1_jx12r"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="3_1ro8h"]
 [ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="4_skkb5"]
@@ -12,7 +12,7 @@ radius = 60.5331
 radius = 84.0536
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_go3r5"]
-radius = 194.209
+radius = 437.293
 
 [node name="enemy_test" type="CharacterBody2D"]
 script = ExtResource("1_jx12r")
