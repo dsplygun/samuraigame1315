@@ -29,7 +29,8 @@ directories/dch_directory={
 "character2": "res://characters/character2.dch"
 }
 directories/dtl_directory={
-"test": "res://dialogues/test.dtl"
+"test": "res://dialogues/test.dtl",
+"test_timelinr": "res://dialogues/test_timelinr.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
