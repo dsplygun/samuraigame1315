@@ -12,7 +12,6 @@ func _physics_process(delta):
 
 	target = $".."
 	var bodies = $"../detection_area".get_overlapping_bodies()
-	print(bodies)
 	for body in bodies:
 		if body.is_in_group("hero"):
 			target = body
