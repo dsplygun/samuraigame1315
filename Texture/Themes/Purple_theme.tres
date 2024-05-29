@@ -1,0 +1,147 @@
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://pnb3rikxhy3i"]
+
+[ext_resource type="Texture2D" uid="uid://4goxto1ndyku" path="res://Texture/Themes/Pixel Buttom.png" id="1_57a7k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_do60v"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(321, 288, 63, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_taibu"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(193, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gap8b"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(193, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5hl0c"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(257, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grnai"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(320, 288, 64, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_focd3"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(193, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8t3hx"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(257, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lfr7t"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(193, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c72d1"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(257, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7e044"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(193, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqo6u"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(257, 289, 62, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qmxrp"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(576, 288, 64, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsdvk"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(512, 288, 64, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cbud"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 15.0
+texture_margin_top = 14.0
+texture_margin_right = 15.0
+texture_margin_bottom = 14.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(448, 32, 64, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_que2m"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(576, 288, 64, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nhb5"]
+texture = ExtResource("1_57a7k")
+region_rect = Rect2(512, 288, 64, 32)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_do60v")
+Button/styles/hover = SubResource("StyleBoxTexture_taibu")
+Button/styles/normal = SubResource("StyleBoxTexture_gap8b")
+Button/styles/pressed = SubResource("StyleBoxTexture_5hl0c")
+CheckBox/styles/disabled = SubResource("StyleBoxTexture_grnai")
+CheckBox/styles/hover = SubResource("StyleBoxTexture_focd3")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxTexture_8t3hx")
+CheckButton/styles/hover = SubResource("StyleBoxTexture_lfr7t")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxTexture_c72d1")
+CheckButton/styles/normal = SubResource("StyleBoxTexture_7e044")
+CheckButton/styles/pressed = SubResource("StyleBoxTexture_lqo6u")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_qmxrp")
+LineEdit/styles/read_only = SubResource("StyleBoxTexture_jsdvk")
+Panel/styles/panel = SubResource("StyleBoxTexture_4cbud")
+TextEdit/styles/normal = SubResource("StyleBoxTexture_que2m")
+TextEdit/styles/read_only = SubResource("StyleBoxTexture_2nhb5")

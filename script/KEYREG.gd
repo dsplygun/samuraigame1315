@@ -18,7 +18,7 @@ func _input(event):
 			$"../game intr".visible = true
 			
 	if event is InputEventKey and  Input.get_action_strength("e"):
-		if $"../intr/ItemList".visible:
-			$"../intr/ItemList".visible = false
+		if $"../ItemList".visible:
+			$"../ItemList".visible = false
 		else:
-			$"../intr/ItemList".visible = true
+			$"../ItemList".visible = true
