@@ -17,6 +17,7 @@ offset_right = 819.0
 offset_bottom = 504.0
 
 [node name="resum" type="Button" parent="."]
+layout_mode = 0
 offset_left = 440.0
 offset_top = 208.0
 offset_right = 704.0
@@ -25,6 +26,7 @@ text = "Відновити"
 metadata/_edit_use_anchors_ = true
 
 [node name="seting" type="Button" parent="."]
+layout_mode = 0
 offset_left = 440.0
 offset_top = 284.0
 offset_right = 704.0
@@ -32,6 +34,7 @@ offset_bottom = 354.0
 text = "Налуштування"
 
 [node name="v menu2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 440.0
 offset_top = 361.0
 offset_right = 704.0
