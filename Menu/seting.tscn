@@ -2,7 +2,11 @@
 
 [ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_tvanj"]
 [ext_resource type="Script" path="res://script/seting.gd" id="1_wr0q6"]
+<<<<<<< Updated upstream
 [ext_resource type="Theme" uid="uid://d06ksedt6lxto" path="res://Texture/Themes/Only_read.tres" id="3_n3ect"]
+=======
+[ext_resource type="Theme" path="res://Texture/Themes/Only_read.tres" id="3_n3ect"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Theme" id="Theme_ttnf5"]
 
