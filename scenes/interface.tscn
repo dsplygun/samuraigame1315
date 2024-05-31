@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0kxbm2wnacw2"]
+[gd_scene load_steps=17 format=3 uid="uid://d0kxbm2wnacw2"]
 
 [ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_0gpsx"]
+[ext_resource type="Texture2D" uid="uid://buoyvy1d677kx" path="res://Texture/Items/CoinsV2_outline_18x18res.png" id="1_b341n"]
 [ext_resource type="Script" path="res://script/enventory_.gd" id="1_ocoi3"]
 [ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://hp_bar.tscn" id="2_hyou6"]
 [ext_resource type="Script" path="res://hp_bar.gd" id="3_etsim"]
@@ -8,7 +9,79 @@
 [ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://Menu/seting.tscn" id="5_5nblj"]
 [ext_resource type="Script" path="res://script/KEYREG.gd" id="6_h0y8c"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_28cyh"]
+atlas = ExtResource("1_b341n")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sl26"]
+atlas = ExtResource("1_b341n")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4de8"]
+atlas = ExtResource("1_b341n")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo88a"]
+atlas = ExtResource("1_b341n")
+region = Rect2(54, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h386"]
+atlas = ExtResource("1_b341n")
+region = Rect2(72, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv4eq"]
+atlas = ExtResource("1_b341n")
+region = Rect2(90, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4cdx"]
+atlas = ExtResource("1_b341n")
+region = Rect2(108, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sbb6h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28cyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sl26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4de8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo88a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h386")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv4eq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4cdx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
 [node name="intr" type="CanvasLayer"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(305.25, 28.25)
+scale = Vector2(2.19444, 2.19444)
+sprite_frames = SubResource("SpriteFrames_sbb6h")
+autoplay = "default"
+frame_progress = 0.0501496
+
+[node name="GoldLabel" type="Label" parent="."]
+offset_left = 327.0
+offset_top = 25.0
+offset_right = 373.0
+offset_bottom = 48.0
+text = "1
+"
 
 [node name="ItemList" type="ItemList" parent="."]
 offset_left = 1008.0
@@ -17,14 +90,6 @@ offset_right = 1146.0
 offset_bottom = 334.0
 theme = ExtResource("1_0gpsx")
 script = ExtResource("1_ocoi3")
-
-[node name="GoldLabel" type="Label" parent="ItemList"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 295.0
-offset_right = 145.0
-offset_bottom = 337.0
-text = "123"
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 8.0
