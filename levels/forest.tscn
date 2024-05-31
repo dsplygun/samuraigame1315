@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=25 format=3 uid="uid://b4huhehi6fxyn"]
 
 [ext_resource type="Texture2D" uid="uid://bxepbxawncblf" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
 [ext_resource type="Texture2D" uid="uid://bwtn1dv6w16uq" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bn3ocr1d0dlud" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
 [ext_resource type="Texture2D" uid="uid://c5popylbngiur" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
 [ext_resource type="Texture2D" uid="uid://bfr7qoakdtxyd" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
-[ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="9_ldt8q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -8110,6 +8109,3 @@ polygon = PackedVector2Array(688, 120, 688, 160, 608, 160, 608, 176, 592, 176, 5
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
 polygon = PackedVector2Array(976, 120, 976, 160, 1008, 160, 1008, 176, 1040, 176, 1040, 192, 1056, 192, 1056, 224, 1072, 224, 1072, 240, 1152, 240, 1152, 121)
-
-[node name="best_character" parent="." instance=ExtResource("9_ldt8q")]
-position = Vector2(65, 278)
