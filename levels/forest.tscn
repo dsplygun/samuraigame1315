@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=27 format=3 uid="uid://b4huhehi6fxyn"]
 
 [ext_resource type="Texture2D" uid="uid://bed6dt03amp50" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
 [ext_resource type="Texture2D" uid="uid://dnvolk6cenwsu" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
@@ -7855,9 +7855,6 @@ size = Vector2(69.5, 183)
 radius = 5.0
 height = 18.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jir3y"]
-size = Vector2(639.75, 11)
-
 [node name="Forest" type="Node2D"]
 scale = Vector2(2, 2)
 
@@ -8121,19 +8118,6 @@ position = Vector2(65, 278)
 scale = Vector2(1.5, 1.5)
 
 [node name="camera1" type="Camera2D" parent="."]
-position = Vector2(320, 245.5)
-offset = Vector2(576, 0)
+position = Vector2(1, -1.5)
+offset = Vector2(576, 324)
 script = ExtResource("10_db1rd")
-
-[node name="camera2" type="Camera2D" parent="."]
-position = Vector2(321, 509)
-scale = Vector2(1, 1.02)
-enabled = false
-zoom = Vector2(0.9, 1.1)
-
-[node name="cameraarea" type="Area2D" parent="."]
-
-[node name="cameracollision12" type="CollisionShape2D" parent="cameraarea"]
-position = Vector2(320, 359)
-shape = SubResource("RectangleShape2D_jir3y")
-debug_color = Color(0.115287, 0.0853195, 0, 0.42)
