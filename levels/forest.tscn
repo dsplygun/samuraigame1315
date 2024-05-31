@@ -1,15 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=26 format=3 uid="uid://b4huhehi6fxyn"]
 
-[ext_resource type="Texture2D" uid="uid://bed6dt03amp50" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
-[ext_resource type="Texture2D" uid="uid://dnvolk6cenwsu" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
-[ext_resource type="Texture2D" uid="uid://bmq6bynkujyrc" path="res://Texture/Forest BETA V3/Forest Props.png" id="3_e621c"]
-[ext_resource type="Texture2D" uid="uid://dcjrkmh4g5ycq" path="res://Texture/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
-[ext_resource type="Texture2D" uid="uid://drkyvq88n1uhm" path="res://Texture/Forest BETA V3/Sample.png" id="5_63d7n"]
-[ext_resource type="Texture2D" uid="uid://nicosumpyvjr" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
-[ext_resource type="Texture2D" uid="uid://cpssy7tc0wogs" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
-[ext_resource type="Texture2D" uid="uid://rvht42554fep" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
+[ext_resource type="Texture2D" uid="uid://bxepbxawncblf" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
+[ext_resource type="Texture2D" uid="uid://bwtn1dv6w16uq" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
+[ext_resource type="Texture2D" uid="uid://cas4d8q4vtnhp" path="res://Texture/Forest BETA V3/Forest Props.png" id="3_e621c"]
+[ext_resource type="Texture2D" uid="uid://b1nai2i6lg6u4" path="res://Texture/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
+[ext_resource type="Texture2D" uid="uid://dc8xcxo44tcu6" path="res://Texture/Forest BETA V3/Sample.png" id="5_63d7n"]
+[ext_resource type="Texture2D" uid="uid://bn3ocr1d0dlud" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
+[ext_resource type="Texture2D" uid="uid://c5popylbngiur" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
+[ext_resource type="Texture2D" uid="uid://bfr7qoakdtxyd" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="9_ldt8q"]
-[ext_resource type="Script" path="res://script/camera1.gd" id="10_db1rd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -7855,11 +7854,7 @@ size = Vector2(69.5, 183)
 radius = 5.0
 height = 18.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jir3y"]
-size = Vector2(639.75, 11)
-
 [node name="Forest" type="Node2D"]
-scale = Vector2(2, 2)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_gn4ie")
@@ -8118,22 +8113,3 @@ polygon = PackedVector2Array(976, 120, 976, 160, 1008, 160, 1008, 176, 1040, 176
 
 [node name="best_character" parent="." instance=ExtResource("9_ldt8q")]
 position = Vector2(65, 278)
-scale = Vector2(1.5, 1.5)
-
-[node name="camera1" type="Camera2D" parent="."]
-position = Vector2(320, 245.5)
-offset = Vector2(576, 0)
-script = ExtResource("10_db1rd")
-
-[node name="camera2" type="Camera2D" parent="."]
-position = Vector2(321, 509)
-scale = Vector2(1, 1.02)
-enabled = false
-zoom = Vector2(0.9, 1.1)
-
-[node name="cameraarea" type="Area2D" parent="."]
-
-[node name="cameracollision12" type="CollisionShape2D" parent="cameraarea"]
-position = Vector2(320, 359)
-shape = SubResource("RectangleShape2D_jir3y")
-debug_color = Color(0.115287, 0.0853195, 0, 0.42)

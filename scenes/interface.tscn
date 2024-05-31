@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0kxbm2wnacw2"]
+[gd_scene load_steps=8 format=3 uid="uid://d0kxbm2wnacw2"]
 
+[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_0gpsx"]
 [ext_resource type="Script" path="res://script/enventory_.gd" id="1_ocoi3"]
 [ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://hp_bar.tscn" id="2_hyou6"]
 [ext_resource type="Script" path="res://hp_bar.gd" id="3_etsim"]
@@ -11,9 +12,10 @@
 
 [node name="ItemList" type="ItemList" parent="."]
 offset_left = 1008.0
-offset_top = 13.0
+offset_top = 8.0
 offset_right = 1146.0
-offset_bottom = 339.0
+offset_bottom = 334.0
+theme = ExtResource("1_0gpsx")
 script = ExtResource("1_ocoi3")
 
 [node name="GoldLabel" type="Label" parent="ItemList"]
@@ -24,7 +26,20 @@ offset_right = 145.0
 offset_bottom = 337.0
 text = "123"
 
+[node name="Panel" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 285.0
+offset_bottom = 49.0
+theme = ExtResource("1_0gpsx")
+
 [node name="ProgressBar" parent="." instance=ExtResource("2_hyou6")]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 278.0
+offset_bottom = 42.0
+theme = ExtResource("1_0gpsx")
+value = 50.0
 script = ExtResource("3_etsim")
 
 [node name="game intr" parent="." instance=ExtResource("4_4dn0e")]

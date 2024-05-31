@@ -10,7 +10,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0
-offset_right = 8.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_dytw0")
@@ -28,26 +28,26 @@ visible = false
 
 [node name="start" type="Button" parent="."]
 layout_mode = 0
-offset_left = 457.0
+offset_left = 455.0
 offset_top = 176.0
-offset_right = 721.0
+offset_right = 719.0
 offset_bottom = 246.0
 theme = ExtResource("1_dytw0")
 text = "Грати"
 
 [node name="exti" type="Button" parent="."]
 layout_mode = 0
-offset_left = 456.0
+offset_left = 454.0
 offset_top = 322.0
-offset_right = 720.0
+offset_right = 718.0
 offset_bottom = 392.0
 text = "Вийти"
 
 [node name="seting" type="Button" parent="."]
 layout_mode = 0
-offset_left = 457.0
+offset_left = 455.0
 offset_top = 248.0
-offset_right = 721.0
+offset_right = 719.0
 offset_bottom = 318.0
 text = "Налуштування"
 
