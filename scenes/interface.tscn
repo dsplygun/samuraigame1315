@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0kxbm2wnacw2"]
+
+[ext_resource type="Script" path="res://script/enventory_.gd" id="1_ocoi3"]
+[ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://hp_bar.tscn" id="2_hyou6"]
+[ext_resource type="Script" path="res://hp_bar.gd" id="3_etsim"]
+[ext_resource type="PackedScene" uid="uid://ckmn4stuq0k3f" path="res://Menu/game_intr.tscn" id="4_4dn0e"]
+[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://Menu/seting.tscn" id="5_5nblj"]
+[ext_resource type="Script" path="res://script/KEYREG.gd" id="6_h0y8c"]
+
+[node name="intr" type="CanvasLayer"]
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 1008.0
+offset_top = 13.0
+offset_right = 1146.0
+offset_bottom = 339.0
+script = ExtResource("1_ocoi3")
+
+[node name="GoldLabel" type="Label" parent="ItemList"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 295.0
+offset_right = 145.0
+offset_bottom = 337.0
+text = "123"
+
+[node name="ProgressBar" parent="." instance=ExtResource("2_hyou6")]
+script = ExtResource("3_etsim")
+
+[node name="game intr" parent="." instance=ExtResource("4_4dn0e")]
+visible = false
+
+[node name="seting" parent="." instance=ExtResource("5_5nblj")]
+visible = false
+
+[node name="KEYREG" type="Node" parent="."]
+script = ExtResource("6_h0y8c")

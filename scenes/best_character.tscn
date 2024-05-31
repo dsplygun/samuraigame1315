@@ -1,11 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://gy78e2kdlxx2"]
+[gd_scene load_steps=17 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
-[ext_resource type="Texture2D" uid="uid://c26lyqxeu28h0" path="res://sprites/Characters(test)/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
+[ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="2_a2bpd"]
+[ext_resource type="Texture2D" uid="uid://brmka443l05e1" path="res://sprites/Characters(test)/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
-[ext_resource type="Texture2D" uid="uid://br01fsamoc7jw" path="res://sprites/Characters(test)/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
-[ext_resource type="Texture2D" uid="uid://bg3k1pf12emew" path="res://sprites/Characters(test)/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
-[ext_resource type="Texture2D" uid="uid://dj8778vwpmiky" path="res://sprites/Characters(test)/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
+[ext_resource type="Texture2D" uid="uid://cwp8nwhmn7rrp" path="res://sprites/Characters(test)/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
+[ext_resource type="Texture2D" uid="uid://dhefks2yde2s" path="res://sprites/Characters(test)/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
+[ext_resource type="Texture2D" uid="uid://gssqu3slsx5y" path="res://sprites/Characters(test)/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
 radius = 8.06226
@@ -434,6 +435,8 @@ _data = {
 
 [node name="best_character" type="CharacterBody2D" groups=["hero"]]
 script = ExtResource("1_3x33p")
+
+[node name="intr" parent="." instance=ExtResource("2_a2bpd")]
 
 [node name="char_collision" type="CollisionShape2D" parent="."]
 z_index = 1
