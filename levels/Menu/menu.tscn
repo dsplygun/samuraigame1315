@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://28c800auf8c2"]
 
-[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_dytw0"]
-[ext_resource type="Script" path="res://script/Menu.gd" id="1_myjeg"]
-[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://Menu/seting.tscn" id="2_20wgl"]
+[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://sprites/tiletextures/Themes/Purple_theme.tres" id="1_dytw0"]
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_myjeg"]
+[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://levels/Menu/seting.tscn" id="2_20wgl"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

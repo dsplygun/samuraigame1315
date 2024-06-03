@@ -11,22 +11,22 @@ config_version=5
 [application]
 
 config/name="samuraigame1315"
-run/main_scene="res://Menu/menu.tscn"
+run/main_scene="res://levels/Menu/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
-Settings="*res://settings.gd"
-Inventory="*res://inventory.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Settings="*res://scripts/settings.gd"
+Inventory="*res://scripts/inventory.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"character1": "res://characters/character1.dch",
-"character2": "res://characters/character2.dch"
+"characters/character1": "res://sprites/characters/character1.dch",
+"characters/character2": "res://sprites/characters/character2.dch"
 }
 directories/dtl_directory={
 "test": "res://dialogues/test.dtl",
