@@ -56,7 +56,7 @@ position = Vector2(159, 138)
 [node name="npc_test" parent="." instance=ExtResource("6_kutpr")]
 position = Vector2(352, 345)
 
-[node name="item_test" parent="." instance=ExtResource("7_d1o88")]
+[node name="Coin" parent="." instance=ExtResource("7_d1o88")]
 position = Vector2(144, 464)
 scale = Vector2(2, 2)
 
