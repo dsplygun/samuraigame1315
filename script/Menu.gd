@@ -21,9 +21,17 @@ func _on_exti_pressed():
 
 
 func _on_seting_pressed():
-		
-		if $"seting2".visible:
-			$"seting2".visible = false
+	
+		if $"start".visible:
+			$"start".visible = false
 		else:
-			$"seting2".visible = true
-			
+			$"start".visible = true
+		if $"exti".visible:
+			$"exti".visible = false
+		else:
+			$"exti".visible = true
+		if $"seting".visible:
+			$"seting".visible = false
+		else:
+			$"seting".visible = true
+		get_tree().change_scene_to_file("res://Menu/seting.tscn")

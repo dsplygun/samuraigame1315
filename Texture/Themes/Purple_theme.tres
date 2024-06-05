@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=18 format=3 uid="uid://pnb3rikxhy3i"]
+[gd_resource type="Theme" load_steps=21 format=3 uid="uid://pnb3rikxhy3i"]
 
-[ext_resource type="Texture2D" uid="uid://4goxto1ndyku" path="res://Texture/Themes/Pixel Buttom.png" id="1_57a7k"]
+[ext_resource type="Texture2D" uid="uid://rjn1i5e1n7hk" path="res://Texture/Themes/Pixel Buttom.png" id="1_57a7k"]
+[ext_resource type="Texture2D" uid="uid://cdxs86j764rwv" path="res://Texture/Themes/All.png" id="2_pphm0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_do60v"]
 texture = ExtResource("1_57a7k")
@@ -90,6 +91,16 @@ texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 region_rect = Rect2(257, 289, 62, 30)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkbl3"]
+texture = ExtResource("1_57a7k")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(320, 32, 32, 32)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qmxrp"]
 texture = ExtResource("1_57a7k")
 texture_margin_left = 10.0
@@ -116,6 +127,14 @@ axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 region_rect = Rect2(448, 32, 64, 32)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3okl6"]
+texture = ExtResource("2_pphm0")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(633, 133, 32, 5)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_que2m"]
 texture = ExtResource("1_57a7k")
 texture_margin_left = 10.0
@@ -140,8 +159,10 @@ CheckButton/styles/hover = SubResource("StyleBoxTexture_lfr7t")
 CheckButton/styles/hover_pressed = SubResource("StyleBoxTexture_c72d1")
 CheckButton/styles/normal = SubResource("StyleBoxTexture_7e044")
 CheckButton/styles/pressed = SubResource("StyleBoxTexture_lqo6u")
+ItemList/styles/panel = SubResource("StyleBoxTexture_nkbl3")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_qmxrp")
 LineEdit/styles/read_only = SubResource("StyleBoxTexture_jsdvk")
 Panel/styles/panel = SubResource("StyleBoxTexture_4cbud")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_3okl6")
 TextEdit/styles/normal = SubResource("StyleBoxTexture_que2m")
 TextEdit/styles/read_only = SubResource("StyleBoxTexture_2nhb5")

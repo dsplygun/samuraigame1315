@@ -1,0 +1,4 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfya3lwq3t610"]
+
+[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_tvanj"]
+[ext_resource type="Script" path="res://script/seting.gd" id="1_wr0q6"]

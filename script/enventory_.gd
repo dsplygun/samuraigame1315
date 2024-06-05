@@ -12,5 +12,6 @@ func _process(delta):
 	clear()
 	for item in Inventory.Inv:
 		add_item(item)
-	$GoldLabel.text = str(Inventory.gold)
+	$"../GoldLabel".text = str(Inventory.gold)
+	
 	
