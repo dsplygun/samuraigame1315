@@ -1,13 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bi4d1ef0a3b8x"]
+[gd_scene load_steps=7 format=3 uid="uid://bi4d1ef0a3b8x"]
 
 [ext_resource type="Script" path="res://scripts/village.gd" id="1_yyqy3"]
-[ext_resource type="PackedScene" uid="uid://ckmn4stuq0k3f" path="res://levels/Menu/game_intr.tscn" id="2_yg0vr"]
-[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://levels/Menu/seting.tscn" id="3_w5clu"]
 [ext_resource type="PackedScene" uid="uid://cn2heyjv2wd3p" path="res://scenes/enemy_test.tscn" id="4_88c4q"]
-[ext_resource type="Script" path="res://scripts/enventory_.gd" id="4_alx4g"]
-[ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://scenes/hp_bar.tscn" id="5_235do"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="5_q1j8e"]
-[ext_resource type="Script" path="res://scripts/hp_bar.gd" id="6_gg2d6"]
 [ext_resource type="PackedScene" uid="uid://b0odpqamv5k80" path="res://scenes/npc_test.tscn" id="6_kutpr"]
 [ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="7_d1o88"]
 
@@ -19,32 +14,6 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Village" type="Node2D"]
 script = ExtResource("1_yyqy3")
-
-[node name="game intr" parent="." instance=ExtResource("2_yg0vr")]
-visible = false
-
-[node name="seting" parent="." instance=ExtResource("3_w5clu")]
-visible = false
-
-[node name="intr" type="CanvasLayer" parent="."]
-
-[node name="ItemList" type="ItemList" parent="intr"]
-offset_left = 1008.0
-offset_top = 13.0
-offset_right = 1146.0
-offset_bottom = 339.0
-script = ExtResource("4_alx4g")
-
-[node name="GoldLabel" type="Label" parent="intr/ItemList"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 295.0
-offset_right = 145.0
-offset_bottom = 337.0
-text = "123"
-
-[node name="ProgressBar" parent="intr" instance=ExtResource("5_235do")]
-script = ExtResource("6_gg2d6")
 
 [node name="enemy_test" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_88c4q")]
 position = Vector2(849, 165)

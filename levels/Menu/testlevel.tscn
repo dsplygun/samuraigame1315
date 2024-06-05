@@ -1,13 +1,13 @@
 [gd_scene load_steps=21 format=3 uid="uid://oknycevymi6b"]
 
-[ext_resource type="Texture2D" uid="uid://d11lay0a4643j" path="res://sprites/tiletextures/Basic/TX Tileset Grass.png" id="1_4qpqs"]
-[ext_resource type="Texture2D" uid="uid://bnkc2r8lbc14v" path="res://sprites/tiletextures/Basic/TX Plant.png" id="2_refuw"]
-[ext_resource type="Texture2D" uid="uid://dkbvrvx0m11s8" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_54dtl"]
-[ext_resource type="Texture2D" uid="uid://ikhmqjx5bb0u" path="res://sprites/tiletextures/Basic/TX Shadow Plant.png" id="4_qb8ag"]
-[ext_resource type="Texture2D" uid="uid://bc2mk1gd3cwv6" path="res://sprites/tiletextures/Basic/TX Shadow.png" id="5_sknv7"]
-[ext_resource type="Texture2D" uid="uid://v6q06cd12pkg" path="res://sprites/tiletextures/Basic/TX Struct.png" id="6_4v7j1"]
-[ext_resource type="Texture2D" uid="uid://ch5hnljtktpbx" path="res://sprites/tiletextures/Basic/TX Tileset Stone Ground.png" id="7_42u7k"]
-[ext_resource type="Texture2D" uid="uid://ckd8ya2nrunen" path="res://sprites/tiletextures/Basic/TX Tileset Wall.png" id="8_wa3op"]
+[ext_resource type="Texture2D" uid="uid://d1c5ivqq6ie88" path="res://sprites/tiletextures/Basic/TX Tileset Grass.png" id="1_4qpqs"]
+[ext_resource type="Texture2D" uid="uid://dyisym475de72" path="res://sprites/tiletextures/Basic/TX Plant.png" id="2_refuw"]
+[ext_resource type="Texture2D" uid="uid://cvoxr3r83i1kg" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_54dtl"]
+[ext_resource type="Texture2D" uid="uid://dpg37gkd3nai7" path="res://sprites/tiletextures/Basic/TX Shadow Plant.png" id="4_qb8ag"]
+[ext_resource type="Texture2D" uid="uid://34xghmdhycuv" path="res://sprites/tiletextures/Basic/TX Shadow.png" id="5_sknv7"]
+[ext_resource type="Texture2D" uid="uid://dqxxoaotcmx3o" path="res://sprites/tiletextures/Basic/TX Struct.png" id="6_4v7j1"]
+[ext_resource type="Texture2D" uid="uid://d1ehkkdwg3xis" path="res://sprites/tiletextures/Basic/TX Tileset Stone Ground.png" id="7_42u7k"]
+[ext_resource type="Texture2D" uid="uid://bpkhy3h3awr86" path="res://sprites/tiletextures/Basic/TX Tileset Wall.png" id="8_wa3op"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3iaf"]
 texture = ExtResource("1_4qpqs")

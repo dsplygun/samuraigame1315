@@ -7,7 +7,6 @@ var attack = 1
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
 func _physics_process(delta):
 	var vertical = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	var horizontal = Input.get_action_strength("move_right") - Input.get_action_strength("move_left") 
@@ -69,3 +68,28 @@ func _on_attack_kd_timeout():
 
 func _on_attack_timer_timeout():
 	speed = 300
+	
+
+func _input(event):
+	if event is InputEventKey:
+		if Input.get_action_strength("one"):
+			switch_char("res://scenes/best_character.tscn")
+		if Input.get_action_strength("two"):
+			switch_char("res://scenes/priestess_char.tscn")
+		if Input.get_action_strength("three"):
+			switch_char("res://scenes/magistr_char.tscn")
+
+func switch_char(to_char):
+	var next_char = load(to_char)
+	var hero = next_char.instantiate()
+
+	
+	hero.position = self.position + Vector2(0,0)
+	hero.scale = self.scale
+	
+	$"../camera1".follow_char = hero
+	print(self.position)
+	print(hero.position)
+	$"..".add_child(hero)
+	self.queue_free()
+
