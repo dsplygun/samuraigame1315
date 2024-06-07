@@ -1,12 +1,12 @@
 [gd_scene load_steps=20 format=3 uid="uid://oknycevymi6b"]
 
-[ext_resource type="Texture2D" uid="uid://cbvbuldrqjec4" path="res://Texture/Basic/TX Tileset Grass.png" id="1_4qpqs"]
-[ext_resource type="Texture2D" uid="uid://w8q1j0m5rmio" path="res://Texture/Basic/TX Plant.png" id="2_refuw"]
-[ext_resource type="Texture2D" uid="uid://d3jsyn0dowcml" path="res://Texture/Basic/TX Props.png" id="3_54dtl"]
-[ext_resource type="Texture2D" uid="uid://bi4t0ngt1eypw" path="res://Texture/Basic/TX Shadow.png" id="5_sknv7"]
-[ext_resource type="Texture2D" uid="uid://c7p2oukoqkac1" path="res://Texture/Basic/TX Struct.png" id="6_4v7j1"]
-[ext_resource type="Texture2D" uid="uid://1mw3j1ssbjil" path="res://Texture/Basic/TX Tileset Stone Ground.png" id="7_42u7k"]
-[ext_resource type="Texture2D" uid="uid://dejmde2mg5s6w" path="res://Texture/Basic/TX Tileset Wall.png" id="8_wa3op"]
+[ext_resource type="Texture2D" uid="uid://cokuyfwx7s2n" path="res://Texture/Basic/TX Tileset Grass.png" id="1_4qpqs"]
+[ext_resource type="Texture2D" uid="uid://bmr5m5sxjg6nw" path="res://Texture/Basic/TX Plant.png" id="2_refuw"]
+[ext_resource type="Texture2D" uid="uid://dk11087hvrbtb" path="res://Texture/Basic/TX Props.png" id="3_54dtl"]
+[ext_resource type="Texture2D" uid="uid://cwfpqqajvw8nc" path="res://Texture/Basic/TX Shadow.png" id="5_sknv7"]
+[ext_resource type="Texture2D" uid="uid://bhlc00q0ame87" path="res://Texture/Basic/TX Struct.png" id="6_4v7j1"]
+[ext_resource type="Texture2D" uid="uid://bi43vbubjji62" path="res://Texture/Basic/TX Tileset Stone Ground.png" id="7_42u7k"]
+[ext_resource type="Texture2D" uid="uid://dacj7r8u6dqs2" path="res://Texture/Basic/TX Tileset Wall.png" id="8_wa3op"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3iaf"]
 texture = ExtResource("1_4qpqs")
