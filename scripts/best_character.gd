@@ -4,6 +4,7 @@ var dash = 2
 var attack = 1
 @export var speed = 300
 @onready var char_anim = get_node("AnimationTree")
+@onready var switch_anim = get_node("switch_effect")
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -72,24 +73,26 @@ func _on_attack_timer_timeout():
 
 func _input(event):
 	if event is InputEventKey:
-		if Input.get_action_strength("one"):
+		if Input.get_action_strength("one") and $switch_effect/switch_eff_kd.is_stopped():
 			switch_char("res://scenes/best_character.tscn")
-		if Input.get_action_strength("two"):
+		if Input.get_action_strength("two") and $switch_effect/switch_eff_kd.is_stopped():
 			switch_char("res://scenes/priestess_char.tscn")
-		if Input.get_action_strength("three"):
+		if Input.get_action_strength("three") and $switch_effect/switch_eff_kd.is_stopped():
 			switch_char("res://scenes/magistr_char.tscn")
 
+#вызывается СТАРЫМ персонажем
 func switch_char(to_char):
 	var next_char = load(to_char)
 	var hero = next_char.instantiate()
-
-	
 	hero.position = self.position + Vector2(0,0)
 	hero.scale = self.scale
-	
 	$"../camera1".follow_char = hero
-	print(self.position)
-	print(hero.position)
 	$"..".add_child(hero)
+	hero.get_node("switch_effect").visible = true
+	hero.switch_anim.play("switch")
 	self.queue_free()
 
+
+func _on_switch_eff_kd_timeout():
+	$switch_effect.visible = false
+	

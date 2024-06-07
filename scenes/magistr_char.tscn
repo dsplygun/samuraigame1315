@@ -1,7 +1,8 @@
-[gd_scene load_steps=63 format=3 uid="uid://cgenjp04pohk6"]
+[gd_scene load_steps=76 format=3 uid="uid://cgenjp04pohk6"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_ql84e"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="2_ag2fu"]
+[ext_resource type="Texture2D" uid="uid://bvnbl6mwf4tdn" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_vvmea"]
 [ext_resource type="Texture2D" uid="uid://by1bse746wjj5" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_v8uwu"]
 [ext_resource type="Texture2D" uid="uid://cm10pjogph5f5" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="4_xvwl7"]
 [ext_resource type="Texture2D" uid="uid://cn2hwi0bfuioi" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="5_8nhn7"]
@@ -11,6 +12,91 @@
 [ext_resource type="Texture2D" uid="uid://mt2e08rfttlt" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="9_0wd5s"]
 [ext_resource type="Texture2D" uid="uid://2d55w4qxrb4f" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="10_5j4vv"]
 [ext_resource type="Texture2D" uid="uid://bbu6aji7j2h6f" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="11_w6l6y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_soob3"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(0, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xv05"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(64, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5mnr"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(128, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cjvu"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(192, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1wmg"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(256, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u2lc"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(320, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxnfs"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(384, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gabrk"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(448, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cqc3"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(512, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq6qd"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(576, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx4v5"]
+atlas = ExtResource("2_vvmea")
+region = Rect2(640, 640, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3lye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_soob3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xv05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5mnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cjvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1wmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u2lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxnfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gabrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cqc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq6qd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx4v5")
+}],
+"loop": false,
+"name": &"switch",
+"speed": 14.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
 radius = 6.08276
@@ -87,7 +173,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 0, 0.0166664, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_bi43p"]
@@ -1270,6 +1356,18 @@ graph_offset = Vector2(0, -32.7551)
 collision_layer = 2
 script = ExtResource("1_ql84e")
 
+[node name="switch_effect" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, 8)
+scale = Vector2(0.668, 0.668)
+sprite_frames = SubResource("SpriteFrames_t3lye")
+animation = &"switch"
+
+[node name="switch_eff_kd" type="Timer" parent="switch_effect"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [node name="char_collision" type="CollisionShape2D" parent="."]
 z_index = 1
 shape = SubResource("CircleShape2D_vr7bn")
@@ -1277,13 +1375,13 @@ shape = SubResource("CircleShape2D_vr7bn")
 [node name="HealthComponent" parent="." instance=ExtResource("2_ag2fu")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0, 0.0166664, 1)
 texture = ExtResource("3_v8uwu")
 flip_h = true
 hframes = 6
 vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-active = false
 libraries = {
 "": SubResource("AnimationLibrary_j6h0v")
 }
@@ -1309,7 +1407,6 @@ wait_time = 6.0
 one_shot = true
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-active = false
 tree_root = SubResource("AnimationNodeStateMachine_hchml")
 anim_player = NodePath("../AnimationPlayer")
 parameters/attack/blend_position = Vector2(-0.0258064, -0.493507)
