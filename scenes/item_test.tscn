@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://mxylpo6nnxv6"]
 
 [ext_resource type="Script" path="res://scripts/item_test.gd" id="1_3vfky"]
-[ext_resource type="Texture2D" uid="uid://cbomyk6oy08lc" path="res://Texture/Items/Coins_topdown_outline_18x18res.png" id="2_xfjbq"]
+[ext_resource type="Texture2D" uid="uid://bb3f6pem6ra5t" path="res://sprites/tiletextures/Items/Coins_topdown_outline_18x18res.png" id="2_xfjbq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hhjj"]
 size = Vector2(41, 42.5)
@@ -75,6 +75,5 @@ debug_color = Color(0.686722, 0.493403, 0.228188, 0.42)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_d43k0")
-autoplay = "default"
 
 [connection signal="body_entered" from="interact_area" to="." method="_on_interact_area_body_entered"]
