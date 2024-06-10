@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SoundManager="*res://addons/sound_manager/sound_manager.gd"
 Settings="*res://settings.gd"
 Inventory="*res://inventory.gd"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]

@@ -1,15 +1,17 @@
-[gd_scene load_steps=27 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=29 format=3 uid="uid://b4huhehi6fxyn"]
 
-[ext_resource type="Texture2D" uid="uid://bed6dt03amp50" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
-[ext_resource type="Texture2D" uid="uid://dnvolk6cenwsu" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
-[ext_resource type="Texture2D" uid="uid://bmq6bynkujyrc" path="res://Texture/Forest BETA V3/Forest Props.png" id="3_e621c"]
-[ext_resource type="Texture2D" uid="uid://dcjrkmh4g5ycq" path="res://Texture/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
-[ext_resource type="Texture2D" uid="uid://drkyvq88n1uhm" path="res://Texture/Forest BETA V3/Sample.png" id="5_63d7n"]
-[ext_resource type="Texture2D" uid="uid://nicosumpyvjr" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
-[ext_resource type="Texture2D" uid="uid://cpssy7tc0wogs" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
-[ext_resource type="Texture2D" uid="uid://rvht42554fep" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
+[ext_resource type="Texture2D" uid="uid://dn0mgqc8daph" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
+[ext_resource type="Texture2D" uid="uid://c1r6fy5xh7uae" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
+[ext_resource type="Texture2D" uid="uid://cadf2vu40ngni" path="res://Texture/Forest BETA V3/Forest Props.png" id="3_e621c"]
+[ext_resource type="Texture2D" uid="uid://cdlobxb1dhrp8" path="res://Texture/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
+[ext_resource type="Texture2D" uid="uid://gj13wjhjx4dj" path="res://Texture/Forest BETA V3/Sample.png" id="5_63d7n"]
+[ext_resource type="Texture2D" uid="uid://kmqphhtqoyq8" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
+[ext_resource type="Texture2D" uid="uid://c8h4gx0lywh4a" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
+[ext_resource type="Texture2D" uid="uid://ppf8pl2jo73u" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="9_ldt8q"]
 [ext_resource type="Script" path="res://script/camera1.gd" id="10_db1rd"]
+[ext_resource type="PackedScene" uid="uid://c2lrcefh23bl6" path="res://scenes/sacred_statue.tscn" id="11_6r0l0"]
+[ext_resource type="PackedScene" uid="uid://1oqyodf3lhkx" path="res://scenes/evil_statue.tscn" id="12_n2wvs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -8113,7 +8115,12 @@ polygon = PackedVector2Array(688, 120, 688, 160, 608, 160, 608, 176, 592, 176, 5
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
 polygon = PackedVector2Array(976, 120, 976, 160, 1008, 160, 1008, 176, 1040, 176, 1040, 192, 1056, 192, 1056, 224, 1072, 224, 1072, 240, 1152, 240, 1152, 121)
 
+[node name="sacred_statue" parent="." instance=ExtResource("11_6r0l0")]
+y_sort_enabled = true
+position = Vector2(716, 108)
+
 [node name="best_character" parent="." instance=ExtResource("9_ldt8q")]
+y_sort_enabled = true
 position = Vector2(65, 278)
 scale = Vector2(1.5, 1.5)
 
@@ -8121,3 +8128,6 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(1, -1.5)
 offset = Vector2(576, 324)
 script = ExtResource("10_db1rd")
+
+[node name="evil_statue" parent="." instance=ExtResource("12_n2wvs")]
+position = Vector2(952, 108)

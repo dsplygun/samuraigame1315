@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="HealEffect" load_steps=2 format=3 uid="uid://bsaa3upwmi2ky"]
+
+[ext_resource type="Script" path="res://resources/heal.gd" id="1_jxwt2"]
+
+[resource]
+script = ExtResource("1_jxwt2")
+value = 100
