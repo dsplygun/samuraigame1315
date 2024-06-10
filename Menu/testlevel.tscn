@@ -1,13 +1,12 @@
-[gd_scene load_steps=21 format=3 uid="uid://oknycevymi6b"]
+[gd_scene load_steps=20 format=3 uid="uid://oknycevymi6b"]
 
-[ext_resource type="Texture2D" uid="uid://wwbnbbbee5v4" path="res://Texture/TX Tileset Grass.png" id="1_4qpqs"]
-[ext_resource type="Texture2D" uid="uid://c02jbq2y72mp4" path="res://Texture/TX Plant.png" id="2_refuw"]
-[ext_resource type="Texture2D" uid="uid://bx8rb3vinwj4g" path="res://Texture/TX Props.png" id="3_54dtl"]
-[ext_resource type="Texture2D" uid="uid://d356t82gtcgo0" path="res://Texture/TX Shadow Plant.png" id="4_qb8ag"]
-[ext_resource type="Texture2D" uid="uid://jt8pcuuw2o8s" path="res://Texture/TX Shadow.png" id="5_sknv7"]
-[ext_resource type="Texture2D" uid="uid://cm1haqh5njipw" path="res://Texture/TX Struct.png" id="6_4v7j1"]
-[ext_resource type="Texture2D" uid="uid://csuo4frblfydj" path="res://Texture/TX Tileset Stone Ground.png" id="7_42u7k"]
-[ext_resource type="Texture2D" uid="uid://8xiawolpoagf" path="res://Texture/TX Tileset Wall.png" id="8_wa3op"]
+[ext_resource type="Texture2D" uid="uid://cokuyfwx7s2n" path="res://Texture/Basic/TX Tileset Grass.png" id="1_4qpqs"]
+[ext_resource type="Texture2D" uid="uid://bmr5m5sxjg6nw" path="res://Texture/Basic/TX Plant.png" id="2_refuw"]
+[ext_resource type="Texture2D" uid="uid://dk11087hvrbtb" path="res://Texture/Basic/TX Props.png" id="3_54dtl"]
+[ext_resource type="Texture2D" uid="uid://cwfpqqajvw8nc" path="res://Texture/Basic/TX Shadow.png" id="5_sknv7"]
+[ext_resource type="Texture2D" uid="uid://bhlc00q0ame87" path="res://Texture/Basic/TX Struct.png" id="6_4v7j1"]
+[ext_resource type="Texture2D" uid="uid://bi43vbubjji62" path="res://Texture/Basic/TX Tileset Stone Ground.png" id="7_42u7k"]
+[ext_resource type="Texture2D" uid="uid://dacj7r8u6dqs2" path="res://Texture/Basic/TX Tileset Wall.png" id="8_wa3op"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3iaf"]
 texture = ExtResource("1_4qpqs")
@@ -870,7 +869,7 @@ texture = ExtResource("3_54dtl")
 19:31/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rvahw"]
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 4:6/0 = 0
 5:6/0 = 0
 6:6/0 = 0
@@ -1939,7 +1938,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(32.5, 254.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -1955,7 +1954,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush2"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(693.5, 548.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -1971,7 +1970,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush21"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(759.5, 618.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -1987,7 +1986,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush22"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(825.5, 412.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2003,7 +2002,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush23"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(1116.5, 532.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2019,7 +2018,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush24"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(924.5, 606.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2035,7 +2034,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush25"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(957.5, 461.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2051,7 +2050,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush3"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(1038.5, 103.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2067,7 +2066,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush4"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(913.5, 63.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2083,7 +2082,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush5"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(703.5, 150.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2099,7 +2098,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush6"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(678.5, 47.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2115,7 +2114,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush7"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(874.5, 195.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2131,7 +2130,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush8"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750.5, 248.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2147,7 +2146,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush9"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(294.5, 444.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2164,7 +2163,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush10"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(32.5, 254.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2180,7 +2179,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush11"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(262.5, 449.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2196,7 +2195,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush12"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(150.5, 574.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2212,7 +2211,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush13"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(43.5, 417.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2228,7 +2227,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush14"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(415.5, 142.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2244,7 +2243,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush15"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(218.5, 46.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2261,7 +2260,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush16"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(32.5, 254.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2277,7 +2276,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush17"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(295.5, 241.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2294,7 +2293,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush18"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(32.5, 254.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2311,7 +2310,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush19"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(32.5, 254.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2328,7 +2327,7 @@ region_rect = Rect2(216.482, 184.735, 47.027, 43.0742)
 [node name="shadow" type="Sprite2D" parent="TileMap/Bushes/bush20"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(32.5, 254.5)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(216.601, 202.079, 51.7, 30.493)
 
@@ -2346,7 +2345,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree1"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2369,7 +2368,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree2"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2392,7 +2391,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree3"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2415,7 +2414,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree4"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2438,7 +2437,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree5"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2461,7 +2460,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree6"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(733, 448)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2485,7 +2484,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree7"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2508,7 +2507,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree8"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2531,7 +2530,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree9"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2554,7 +2553,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree10"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2577,7 +2576,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree11"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2600,7 +2599,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree12"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2623,7 +2622,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree13"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2646,7 +2645,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree14"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2669,7 +2668,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree15"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(750, 460)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2692,7 +2691,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree16"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(753, 459)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2716,7 +2715,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree17"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(753, 459)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2740,7 +2739,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree18"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(753, 459)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2764,7 +2763,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree19"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(753, 459)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 
@@ -2788,7 +2787,7 @@ region_rect = Rect2(13.8, 6.7, 134.2, 150.7)
 [node name="shadow" type="Sprite2D" parent="TileMap/Trees/Tree20"]
 self_modulate = Color(1, 1, 1, 0.572549)
 position = Vector2(753, 459)
-texture = ExtResource("4_qb8ag")
+texture = ExtResource("5_sknv7")
 region_enabled = true
 region_rect = Rect2(41.0797, 84.7918, 107.519, 86.1785)
 

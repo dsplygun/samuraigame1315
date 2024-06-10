@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://script/Menu.gd" id="1_myjeg"]
 [ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://Menu/seting.tscn" id="2_20wgl"]
 
-
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
