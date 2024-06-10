@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2lrcefh23bl6"]
 
 [ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_36u04"]
-[ext_resource type="Texture2D" uid="uid://cl0msncyrwr11" path="res://Texture/Basic/TX Props.png" id="1_wupps"]
+[ext_resource type="Texture2D" uid="uid://b4quynigyusxk" path="res://sprites/tiletextures/Basic/TX Props.png" id="1_wupps"]
 [ext_resource type="Resource" uid="uid://bsaa3upwmi2ky" path="res://resources/heal_100.tres" id="2_b80el"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]

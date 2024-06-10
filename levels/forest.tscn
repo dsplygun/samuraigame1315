@@ -1,16 +1,17 @@
-[gd_scene load_steps=33 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=34 format=3 uid="uid://b4huhehi6fxyn"]
 
-[ext_resource type="Texture2D" uid="uid://d052p8efpx7eq" path="res://Texture/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
-[ext_resource type="Texture2D" uid="uid://ddd5iqn6kjrm0" path="res://Texture/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
-[ext_resource type="Texture2D" uid="uid://dmgmhwpw1kktl" path="res://Texture/Forest BETA V3/Forest Props.png" id="3_e621c"]
-[ext_resource type="Texture2D" uid="uid://cyk4kh2iepn17" path="res://Texture/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
-[ext_resource type="Texture2D" uid="uid://d3o50g45adfg3" path="res://Texture/Forest BETA V3/Sample.png" id="5_63d7n"]
-[ext_resource type="Texture2D" uid="uid://h1ajt6kmcgfe" path="res://Texture/Forest BETA V3/Settlement.png" id="6_t0wwn"]
-[ext_resource type="Texture2D" uid="uid://dgqh6c4ndr5j2" path="res://Texture/Forest BETA V3/Trees.png" id="7_3t25t"]
-[ext_resource type="Texture2D" uid="uid://bv7u5sdq3oj3v" path="res://Texture/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
+[ext_resource type="Texture2D" uid="uid://ds4hioct0n4by" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
+[ext_resource type="Texture2D" uid="uid://b1avc2mtvn6rx" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
+[ext_resource type="Texture2D" uid="uid://cs2q3gras6emt" path="res://sprites/tiletextures/Forest BETA V3/Forest Props.png" id="3_e621c"]
+[ext_resource type="Texture2D" uid="uid://dvlwluexfurry" path="res://sprites/tiletextures/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
+[ext_resource type="Texture2D" uid="uid://bnsq4dgy5af62" path="res://sprites/tiletextures/Forest BETA V3/Sample.png" id="5_63d7n"]
+[ext_resource type="Texture2D" uid="uid://2nixksvvlg20" path="res://sprites/tiletextures/Forest BETA V3/Settlement.png" id="6_t0wwn"]
+[ext_resource type="Texture2D" uid="uid://be67aj1eldkdf" path="res://sprites/tiletextures/Forest BETA V3/Trees.png" id="7_3t25t"]
+[ext_resource type="Texture2D" uid="uid://twgtu1vqiwos" path="res://sprites/tiletextures/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="9_ldt8q"]
-[ext_resource type="Script" path="res://script/camera1.gd" id="10_db1rd"]
 [ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="11_cx7cn"]
+[ext_resource type="Script" path="res://scripts/camera1.gd" id="11_giv6a"]
+[ext_resource type="PackedScene" uid="uid://cn2heyjv2wd3p" path="res://scenes/enemy_test.tscn" id="12_iejxk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -23540,7 +23541,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(57, 624)
 scale = Vector2(0.5, 0.5)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap" groups=["coll"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
 position = Vector2(576, 92.5)
@@ -25533,10 +25534,15 @@ region_rect = Rect2(39, 373, 144, 147)
 
 [node name="best_character" parent="." instance=ExtResource("9_ldt8q")]
 z_index = 8
-position = Vector2(65, 278)
+position = Vector2(135.5, 136)
 scale = Vector2(1.5, 1.5)
 
-[node name="camera1" type="Camera2D" parent="."]
+[node name="camera1" type="Camera2D" parent="." node_paths=PackedStringArray("follow_char")]
 position = Vector2(1, -1.5)
 offset = Vector2(576, 324)
-script = ExtResource("10_db1rd")
+script = ExtResource("11_giv6a")
+follow_char = NodePath("../best_character")
+
+[node name="enemy_test" parent="." node_paths=PackedStringArray("target") instance=ExtResource("12_iejxk")]
+position = Vector2(338.5, 223)
+target = NodePath("../best_character")

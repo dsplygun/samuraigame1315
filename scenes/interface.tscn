@@ -1,14 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://d0kxbm2wnacw2"]
 
-[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://sprites/tiletextures/Themes/Purple_theme.tres" id="1_0gpsx"]
-[ext_resource type="Texture2D" uid="uid://b61046imfyuu1" path="res://sprites/tiletextures/Items/CoinsV2_outline_18x18res.png" id="1_b341n"]
+[ext_resource type="Theme" path="res://Texture/Themes/Purple_theme.tres" id="1_0gpsx"]
+[ext_resource type="Texture2D" uid="uid://b0c2cy4ko1yy4" path="res://sprites/tiletextures/Items/CoinsV2_outline_18x18res.png" id="1_b341n"]
 [ext_resource type="Script" path="res://scripts/enventory_.gd" id="1_ocoi3"]
 [ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://scenes/hp_bar.tscn" id="2_hyou6"]
 [ext_resource type="Script" path="res://scripts/hp_bar.gd" id="3_etsim"]
 [ext_resource type="PackedScene" uid="uid://ckmn4stuq0k3f" path="res://levels/Menu/game_intr.tscn" id="4_4dn0e"]
-[ext_resource type="PackedScene" path="res://levels/Menu/setting.tscn" id="5_5nblj"]
+[ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://levels/Menu/setting.tscn" id="5_5nblj"]
 [ext_resource type="Script" path="res://scripts/KEYREG.gd" id="6_h0y8c"]
-
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_28cyh"]
 atlas = ExtResource("1_b341n")

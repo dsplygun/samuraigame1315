@@ -32,7 +32,6 @@ offset_left = 455.0
 offset_top = 176.0
 offset_right = 719.0
 offset_bottom = 246.0
-theme = ExtResource("1_dytw0")
 text = "Грати"
 
 [node name="exti" type="Button" parent="."]
