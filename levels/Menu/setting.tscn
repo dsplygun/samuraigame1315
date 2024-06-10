@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfya3lwq3t610"]
 
-[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_tvanj"]
-[ext_resource type="Script" path="res://script/seting.gd" id="1_wr0q6"]
-[ext_resource type="Theme" uid="uid://d06ksedt6lxto" path="res://Texture/Themes/Only_read.tres" id="3_n3ect"]
+[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://sprites/tiletextures/Themes/Purple_theme.tres" id="1_tvanj"]
+[ext_resource type="Script" path="res://scripts/seting.gd" id="1_wr0q6"]
+[ext_resource type="Theme" uid="uid://d06ksedt6lxto" path="res://sprites/tiletextures/Themes/Only_read.tres" id="3_n3ect"]
+
 
 [sub_resource type="Theme" id="Theme_ttnf5"]
 

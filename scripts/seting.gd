@@ -17,7 +17,7 @@ func _on_button_pressed():
 		$".".visible = false
 	else:
 		$".".visible = true
-	get_tree().change_scene_to_file("res://Menu/menu.tscn"	)
+	get_tree().change_scene_to_file("res://levels/Menu/menu.tscn"	)
 
 
 func _on_music_value_changed(value):

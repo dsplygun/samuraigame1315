@@ -34,4 +34,4 @@ func _on_seting_pressed():
 			$"seting".visible = false
 		else:
 			$"seting".visible = true
-		get_tree().change_scene_to_file("res://Menu/seting.tscn")
+		get_tree().change_scene_to_file("res://levels/Menu/setting.tscn")
