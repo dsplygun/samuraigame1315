@@ -1,17 +1,18 @@
-[gd_scene load_steps=76 format=3 uid="uid://gy78e2kdlxx2"]
+[gd_scene load_steps=77 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
-[ext_resource type="Texture2D" uid="uid://cyvd726gdc6nh" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
-[ext_resource type="Texture2D" uid="uid://bdgoj3v5jex6f" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
+[ext_resource type="Texture2D" uid="uid://bae61x6jdvwp6" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
+[ext_resource type="Texture2D" uid="uid://bro8pkpgv1y3k" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
-[ext_resource type="Texture2D" uid="uid://bon8t2x5d3f0p" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
-[ext_resource type="Texture2D" uid="uid://darjt1hy7occf" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="5_8t0al"]
-[ext_resource type="Texture2D" uid="uid://dl7k7a56p7a5g" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
-[ext_resource type="Texture2D" uid="uid://dn3xnqem14he2" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
-[ext_resource type="Texture2D" uid="uid://br38dhiccle7t" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="6_tle6h"]
-[ext_resource type="Texture2D" uid="uid://b2mvddhcnqxfh" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="7_h8wsm"]
-[ext_resource type="Texture2D" uid="uid://d2ylmcdvxvt22" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="8_5rvm0"]
-[ext_resource type="Texture2D" uid="uid://bu27axtkv48fs" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="8_bcl12"]
+[ext_resource type="Texture2D" uid="uid://rglfja0pkv40" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
+[ext_resource type="Texture2D" uid="uid://clsglyypf1dm6" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="5_8t0al"]
+[ext_resource type="Texture2D" uid="uid://dogkhbhlh6art" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
+[ext_resource type="Texture2D" uid="uid://bf35ava6m5856" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
+[ext_resource type="Texture2D" uid="uid://dmjhnlfk7pq60" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="6_tle6h"]
+[ext_resource type="Texture2D" uid="uid://betj7dkbtaov" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="7_h8wsm"]
+[ext_resource type="Texture2D" uid="uid://c8nc3p8dd0oko" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="8_5rvm0"]
+[ext_resource type="Texture2D" uid="uid://kaindw6ypcpe" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="8_bcl12"]
+[ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="13_6j2sh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soob3"]
 atlas = ExtResource("2_102yq")
@@ -1414,6 +1415,8 @@ parameters/attack/blend_position = Vector2(-0.0258064, -0.493507)
 parameters/dash/blend_position = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(-0.00215054, 0.0308371)
 parameters/walk/blend_position = Vector2(-0.00645161, -0.876652)
+
+[node name="intr" parent="." instance=ExtResource("13_6j2sh")]
 
 [connection signal="timeout" from="switch_effect/switch_eff_kd" to="." method="_on_switch_eff_kd_timeout"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
