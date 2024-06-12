@@ -1,5 +1,7 @@
 extends StaticBody2D
 @export var effect : Resource
+#@export var value : Array[Variant]
+@export var value : Dictionary
 func _process(delta):
 	pass
 
@@ -8,7 +10,7 @@ func _input(event):
 		if Input.is_action_just_pressed("interact"):
 			for body in $interact_area.get_overlapping_bodies():
 				if body.is_in_group("hero"):
-					effect.activate_effect(body)
+					effect.activate_effect(body,value)
 
 func _on_interact_area_body_entered(body):
 	pass

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cedufubb26f83"]
+
+[ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_fotl0"]
+[ext_resource type="Resource" uid="uid://bf6r21vdhyeop" path="res://resources/teleport.tres" id="2_tkxkv"]
+[ext_resource type="Texture2D" uid="uid://c68icqsdpat7t" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="3_v63p0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]
+size = Vector2(66, 41)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mmxc"]
+radius = 21.0
+
+[node name="cave teleport" type="StaticBody2D"]
+script = ExtResource("1_fotl0")
+effect = ExtResource("2_tkxkv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.0625)
+texture = ExtResource("3_v63p0")
+region_enabled = true
+region_rect = Rect2(1.39632, 87.1066, 76.3661, 53.4563)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -7.5)
+shape = SubResource("RectangleShape2D_h0nn4")
+
+[node name="interact_area" type="Area2D" parent="."]
+position = Vector2(14, 4)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact_area"]
+position = Vector2(-14, 9)
+shape = SubResource("CircleShape2D_0mmxc")
+debug_color = Color(0.641039, 0.524044, 0.0293422, 0.42)

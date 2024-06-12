@@ -1,17 +1,18 @@
-[gd_scene load_steps=76 format=3 uid="uid://cgenjp04pohk6"]
+[gd_scene load_steps=77 format=3 uid="uid://cgenjp04pohk6"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_ql84e"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="2_ag2fu"]
-[ext_resource type="Texture2D" uid="uid://cyvd726gdc6nh" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_vvmea"]
-[ext_resource type="Texture2D" uid="uid://bdgoj3v5jex6f" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_v8uwu"]
-[ext_resource type="Texture2D" uid="uid://bu27axtkv48fs" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="4_xvwl7"]
-[ext_resource type="Texture2D" uid="uid://dn3xnqem14he2" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="5_8nhn7"]
-[ext_resource type="Texture2D" uid="uid://d2ylmcdvxvt22" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="6_mdv3d"]
-[ext_resource type="Texture2D" uid="uid://darjt1hy7occf" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="7_wiev8"]
-[ext_resource type="Texture2D" uid="uid://br38dhiccle7t" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="8_cfvyg"]
-[ext_resource type="Texture2D" uid="uid://b2mvddhcnqxfh" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="9_0wd5s"]
-[ext_resource type="Texture2D" uid="uid://bon8t2x5d3f0p" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="10_5j4vv"]
-[ext_resource type="Texture2D" uid="uid://dl7k7a56p7a5g" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="11_w6l6y"]
+[ext_resource type="Texture2D" uid="uid://bkj32ulsioin5" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_vvmea"]
+[ext_resource type="Texture2D" uid="uid://cdchjoos4t8s3" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_v8uwu"]
+[ext_resource type="Texture2D" uid="uid://dhi25fq8cmf2m" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="4_xvwl7"]
+[ext_resource type="Texture2D" uid="uid://cjt3xxjqgkeyu" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="5_8nhn7"]
+[ext_resource type="Texture2D" uid="uid://bwawtm8hw43vl" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="6_mdv3d"]
+[ext_resource type="Texture2D" uid="uid://cswiuxklnkgja" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="7_wiev8"]
+[ext_resource type="Texture2D" uid="uid://b4cd1em831k3d" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="8_cfvyg"]
+[ext_resource type="Texture2D" uid="uid://xv5826k1p0gm" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="9_0wd5s"]
+[ext_resource type="Texture2D" uid="uid://d2rm5epqrtxhs" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="10_5j4vv"]
+[ext_resource type="Texture2D" uid="uid://cuxotyn2xjajy" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="11_w6l6y"]
+[ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="13_7nlbk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soob3"]
 atlas = ExtResource("2_vvmea")
@@ -1373,6 +1374,7 @@ z_index = 1
 shape = SubResource("CircleShape2D_vr7bn")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_ag2fu")]
+health = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0, 0.0166664, 1)
@@ -1413,6 +1415,8 @@ parameters/attack/blend_position = Vector2(-0.0258064, -0.493507)
 parameters/dash/blend_position = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(-0.00215054, 0.0308371)
 parameters/walk/blend_position = Vector2(-0.00645161, -0.876652)
+
+[node name="intr" parent="." instance=ExtResource("13_7nlbk")]
 
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
