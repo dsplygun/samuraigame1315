@@ -1,18 +1,18 @@
 [gd_scene load_steps=77 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
-[ext_resource type="Texture2D" uid="uid://bkj32ulsioin5" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
-[ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="2_qjuhd"]
-[ext_resource type="Texture2D" uid="uid://cdchjoos4t8s3" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
+[ext_resource type="Texture2D" uid="uid://bae61x6jdvwp6" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
+[ext_resource type="Texture2D" uid="uid://bro8pkpgv1y3k" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
-[ext_resource type="Texture2D" uid="uid://d2rm5epqrtxhs" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
-[ext_resource type="Texture2D" uid="uid://cswiuxklnkgja" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="5_8t0al"]
-[ext_resource type="Texture2D" uid="uid://cuxotyn2xjajy" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
-[ext_resource type="Texture2D" uid="uid://cjt3xxjqgkeyu" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
-[ext_resource type="Texture2D" uid="uid://b4cd1em831k3d" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="6_tle6h"]
-[ext_resource type="Texture2D" uid="uid://xv5826k1p0gm" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="7_h8wsm"]
-[ext_resource type="Texture2D" uid="uid://bwawtm8hw43vl" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="8_5rvm0"]
-[ext_resource type="Texture2D" uid="uid://dhi25fq8cmf2m" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="8_bcl12"]
+[ext_resource type="Texture2D" uid="uid://rglfja0pkv40" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
+[ext_resource type="Texture2D" uid="uid://clsglyypf1dm6" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="5_8t0al"]
+[ext_resource type="Texture2D" uid="uid://dogkhbhlh6art" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
+[ext_resource type="Texture2D" uid="uid://bf35ava6m5856" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
+[ext_resource type="Texture2D" uid="uid://dmjhnlfk7pq60" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="6_tle6h"]
+[ext_resource type="Texture2D" uid="uid://betj7dkbtaov" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="7_h8wsm"]
+[ext_resource type="Texture2D" uid="uid://c8nc3p8dd0oko" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="8_5rvm0"]
+[ext_resource type="Texture2D" uid="uid://kaindw6ypcpe" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="8_bcl12"]
+[ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="13_6j2sh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soob3"]
 atlas = ExtResource("2_102yq")
@@ -1357,8 +1357,6 @@ graph_offset = Vector2(0, -32.7551)
 collision_layer = 2
 script = ExtResource("1_3x33p")
 
-[node name="intr" parent="." instance=ExtResource("2_qjuhd")]
-
 [node name="switch_effect" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-1.90735e-06, 8)
@@ -1378,7 +1376,6 @@ z_index = 1
 shape = SubResource("CircleShape2D_vr7bn")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_qpxmd")]
-health = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_pd10w")
@@ -1418,6 +1415,8 @@ parameters/attack/blend_position = Vector2(-0.0258064, -0.493507)
 parameters/dash/blend_position = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(-0.00215054, 0.0308371)
 parameters/walk/blend_position = Vector2(-0.00645161, -0.876652)
+
+[node name="intr" parent="." instance=ExtResource("13_6j2sh")]
 
 [connection signal="timeout" from="switch_effect/switch_eff_kd" to="." method="_on_switch_eff_kd_timeout"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
