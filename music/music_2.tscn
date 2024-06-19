@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsqfa3va4ov1q"]
+
+[ext_resource type="Script" path="res://music/music_2.gd" id="1_t3mih"]
+[ext_resource type="AudioStream" uid="uid://b4s60musp1skl" path="res://music/Imminent Threat.mp3" id="2_pnahe"]
+
+[node name="Music_2" type="Node"]
+script = ExtResource("1_t3mih")
+track = ExtResource("2_pnahe")

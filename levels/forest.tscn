@@ -1,18 +1,19 @@
-[gd_scene load_steps=37 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=38 format=3 uid="uid://b4huhehi6fxyn"]
 
-[ext_resource type="Texture2D" uid="uid://b3wspy8uqxob" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
-[ext_resource type="Texture2D" uid="uid://cl3gbspffwgbg" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
-[ext_resource type="Texture2D" uid="uid://bcogvi47tdts8" path="res://sprites/tiletextures/Forest BETA V3/Forest Props.png" id="3_e621c"]
-[ext_resource type="Texture2D" uid="uid://ckcl0lx32qjqo" path="res://sprites/tiletextures/Cave/Dungeon tileset.png" id="3_s4yen"]
-[ext_resource type="Texture2D" uid="uid://wn1b50s52a65" path="res://sprites/tiletextures/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
-[ext_resource type="Texture2D" uid="uid://bx6n7udrlgywh" path="res://sprites/tiletextures/Forest BETA V3/Sample.png" id="5_63d7n"]
-[ext_resource type="Texture2D" uid="uid://d3kykqccsuugk" path="res://sprites/tiletextures/Forest BETA V3/Settlement.png" id="6_t0wwn"]
-[ext_resource type="Texture2D" uid="uid://lx4m14mcqov4" path="res://sprites/tiletextures/Forest BETA V3/Trees.png" id="7_3t25t"]
-[ext_resource type="Texture2D" uid="uid://dlg710uj38m2w" path="res://sprites/tiletextures/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
+[ext_resource type="Texture2D" uid="uid://d33msr0u14vll" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
+[ext_resource type="Texture2D" uid="uid://bd463rv4j56c2" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
+[ext_resource type="Texture2D" uid="uid://bxnxuoylmc180" path="res://sprites/tiletextures/Forest BETA V3/Forest Props.png" id="3_e621c"]
+[ext_resource type="Texture2D" uid="uid://dbph70ki5eyw3" path="res://sprites/tiletextures/Cave/Dungeon tileset.png" id="3_s4yen"]
+[ext_resource type="Texture2D" uid="uid://bxpdst4v272ak" path="res://sprites/tiletextures/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
+[ext_resource type="Texture2D" uid="uid://cto1nws1we21i" path="res://sprites/tiletextures/Forest BETA V3/Sample.png" id="5_63d7n"]
+[ext_resource type="Texture2D" uid="uid://b6r7b8uxduy7g" path="res://sprites/tiletextures/Forest BETA V3/Settlement.png" id="6_t0wwn"]
+[ext_resource type="Texture2D" uid="uid://cj05f1vktxsdm" path="res://sprites/tiletextures/Forest BETA V3/Trees.png" id="7_3t25t"]
+[ext_resource type="Texture2D" uid="uid://ba1wpk8uhxfs0" path="res://sprites/tiletextures/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="9_ldt8q"]
 [ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="11_cx7cn"]
 [ext_resource type="Script" path="res://scripts/camera1.gd" id="11_giv6a"]
 [ext_resource type="PackedScene" uid="uid://cn2heyjv2wd3p" path="res://scenes/enemy_test.tscn" id="12_iejxk"]
+[ext_resource type="PackedScene" uid="uid://cjf502vdmu0on" path="res://music/music.tscn" id="14_m4oph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -26071,3 +26072,5 @@ position = Vector2(338.5, 223)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_pjena")
+
+[node name="Music" parent="." instance=ExtResource("14_m4oph")]

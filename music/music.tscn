@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjf502vdmu0on"]
+
+[ext_resource type="Script" path="res://music/music.gd" id="1_xa26v"]
+[ext_resource type="AudioStream" uid="uid://beyx3w1cywtnl" path="res://music/Shinrin-Yoku.ogg" id="2_c5eh7"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_xa26v")
+track = ExtResource("2_c5eh7")
