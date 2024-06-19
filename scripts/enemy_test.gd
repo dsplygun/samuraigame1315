@@ -9,26 +9,12 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	#var direction = ($PathfinderComponent.direction).normalized()
-	#if $"attack timer".is_stopped():
-		#velocity = direction * enemy_speed
-		#
-	#if $PathfinderComponent.distance_to_target() <30:
-		#if $"attack timer".is_stopped() and not $PathfinderComponent.is_target_reached():
-			#$"attack timer".start()
-			#char_anim.play("attack")
-		#velocity = Vector2(0,0)
-	#
-	#if (velocity.x == 0 and velocity.y == 0 and $"attack timer".is_stopped()) :
-		#char_anim.play("idle")
 	if velocity.x < 0:
 		$Sprite2D.flip_h = true
 	elif velocity.x > 0:
 		$Sprite2D.flip_h = false
 
 	move_and_slide()
-	
-	#look_at( get_node("../shooter").position )
 
 func _on_health_component_out_of_health():
 	self.queue_free()

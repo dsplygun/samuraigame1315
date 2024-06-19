@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cn2heyjv2wd3p"]
+[gd_scene load_steps=39 format=3 uid="uid://cn2heyjv2wd3p"]
 
 [ext_resource type="Script" path="res://scripts/enemy_test.gd" id="1_jx12r"]
 [ext_resource type="Texture2D" uid="uid://blk1t1oall7nb" path="res://sprites/characters/DarkSamurai (64x64).png" id="2_xmcob"]
@@ -64,22 +64,10 @@ step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.539614),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
@@ -147,12 +135,9 @@ resource_name = "AnimationPlayer"
 animation_player = SubResource("BBNode_ebi0k")
 animation_name = &"idle"
 
-[sub_resource type="BTAlwaysSucceed" id="BTAlwaysSucceed_4m1ye"]
-children = [SubResource("BTPlayAnimation_g446y")]
-
 [sub_resource type="BTSequence" id="BTSequence_44olb"]
-custom_name = "Idle"
-children = [SubResource("BTCondition_c2w1k"), SubResource("BTSetAgentProperty_06ti7"), SubResource("BTAlwaysSucceed_4m1ye")]
+custom_name = "idle"
+children = [SubResource("BTCondition_c2w1k"), SubResource("BTSetAgentProperty_06ti7"), SubResource("BTPlayAnimation_g446y")]
 
 [sub_resource type="BTCondition" id="BTCondition_w2g4g"]
 script = ExtResource("6_vpmr3")
@@ -225,6 +210,7 @@ script = ExtResource("1_jx12r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_xmcob")
+flip_h = true
 hframes = 14
 vframes = 8
 
