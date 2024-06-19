@@ -1,0 +1,161 @@
+[gd_scene load_steps=31 format=3 uid="uid://cp2xo6nvd0owg"]
+
+[ext_resource type="Script" path="res://scripts/lil_ghost.gd" id="1_1myjc"]
+[ext_resource type="Texture2D" uid="uid://dh0pumnf44y8w" path="res://sprites/Wisp.png" id="2_ujxx5"]
+[ext_resource type="Script" path="res://ai/tasks/get_first_in_group.gd" id="3_hgflf"]
+[ext_resource type="Script" path="res://ai/tasks/in_range.gd" id="4_oowon"]
+[ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="5_tafbi"]
+
+[sub_resource type="Animation" id="Animation_u6k67"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3p2hc"]
+resource_name = "idle"
+length = 1.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m85r8"]
+_data = {
+"RESET": SubResource("Animation_u6k67"),
+"idle": SubResource("Animation_3p2hc")
+}
+
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_5oibw"]
+
+[sub_resource type="BTAction" id="BTAction_se4oq"]
+script = ExtResource("3_hgflf")
+group = &"hero"
+output_var = &"target"
+
+[sub_resource type="BBNode" id="BBNode_2nbka"]
+saved_value = NodePath("AnimationPlayer")
+resource_name = "AnimationPlayer"
+
+[sub_resource type="BTPlayAnimation" id="BTPlayAnimation_23grk"]
+animation_player = SubResource("BBNode_2nbka")
+animation_name = &"idle"
+
+[sub_resource type="BTAlwaysSucceed" id="BTAlwaysSucceed_emar4"]
+children = [SubResource("BTAction_se4oq"), SubResource("BTPlayAnimation_23grk")]
+
+[sub_resource type="BTCondition" id="BTCondition_n1gw2"]
+script = ExtResource("4_oowon")
+distance_min = 400.0
+distance_max = 10000.0
+target_var = &"target"
+
+[sub_resource type="BBVariant" id="BBVariant_0vnaj"]
+type = 5
+saved_value = Vector2(0, 0)
+resource_name = "(0, 0)"
+
+[sub_resource type="BTSetAgentProperty" id="BTSetAgentProperty_f5x6r"]
+property = &"velocity"
+value = SubResource("BBVariant_0vnaj")
+
+[sub_resource type="BTSequence" id="BTSequence_8xsq1"]
+custom_name = "Idle"
+children = [SubResource("BTCondition_n1gw2"), SubResource("BTSetAgentProperty_f5x6r")]
+
+[sub_resource type="BTCondition" id="BTCondition_1gx1j"]
+script = ExtResource("4_oowon")
+distance_min = 0.0
+distance_max = 500.0
+target_var = &"target"
+
+[sub_resource type="BBNode" id="BBNode_3t6mc"]
+saved_value = NodePath(".")
+resource_name = "."
+
+[sub_resource type="BTCallMethod" id="BTCallMethod_lukc2"]
+node = SubResource("BBNode_3t6mc")
+method = &"set_velocity_to_target"
+
+[sub_resource type="BTWait" id="BTWait_bfk8c"]
+
+[sub_resource type="BBVariant" id="BBVariant_x3owh"]
+type = 5
+saved_value = Vector2(0, 0)
+resource_name = "(0, 0)"
+
+[sub_resource type="BTSetAgentProperty" id="BTSetAgentProperty_hmlm1"]
+property = &"velocity"
+value = SubResource("BBVariant_x3owh")
+
+[sub_resource type="BTWait" id="BTWait_tt78x"]
+duration = 3.0
+
+[sub_resource type="BTSequence" id="BTSequence_k6laj"]
+custom_name = "Flying"
+children = [SubResource("BTCondition_1gx1j"), SubResource("BTCallMethod_lukc2"), SubResource("BTWait_bfk8c"), SubResource("BTSetAgentProperty_hmlm1"), SubResource("BTWait_tt78x")]
+
+[sub_resource type="BTSelector" id="BTSelector_5m15x"]
+children = [SubResource("BTSequence_8xsq1"), SubResource("BTSequence_k6laj")]
+
+[sub_resource type="BTSequence" id="BTSequence_4jo3l"]
+children = [SubResource("BTAlwaysSucceed_emar4"), SubResource("BTSelector_5m15x")]
+
+[sub_resource type="BehaviorTree" id="BehaviorTree_gc65h"]
+blackboard_plan = SubResource("BlackboardPlan_5oibw")
+root_task = SubResource("BTSequence_4jo3l")
+
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_uavvt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gwamw"]
+radius = 9.05539
+
+[node name="lil_ghost" type="CharacterBody2D"]
+script = ExtResource("1_1myjc")
+enemy_speed = 500
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ujxx5")
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m85r8")
+}
+autoplay = "idle"
+
+[node name="BTPlayer" type="BTPlayer" parent="."]
+behavior_tree = SubResource("BehaviorTree_gc65h")
+blackboard_plan = SubResource("BlackboardPlan_uavvt")
+
+[node name="PathfinderComponent" parent="." instance=ExtResource("5_tafbi")]
+
+[node name="attackarea" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attackarea"]
+position = Vector2(2, 5)
+rotation = -1.57079
+shape = SubResource("CircleShape2D_gwamw")
+debug_color = Color(0.677952, 0, 0.180301, 0.42)
+
+[connection signal="body_entered" from="attackarea" to="." method="_on_attackarea_body_entered"]

@@ -15,9 +15,8 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 [node name="Village" type="Node2D"]
 script = ExtResource("1_yyqy3")
 
-[node name="enemy_test" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_88c4q")]
+[node name="enemy_test" parent="." instance=ExtResource("4_88c4q")]
 position = Vector2(849, 165)
-target = NodePath("../best_character")
 
 [node name="best_character" parent="." instance=ExtResource("5_q1j8e")]
 position = Vector2(159, 138)
