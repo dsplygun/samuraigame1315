@@ -1,40 +1,24 @@
-[gd_scene load_steps=17 format=3 uid="uid://cn2heyjv2wd3p"]
+[gd_scene load_steps=40 format=3 uid="uid://cn2heyjv2wd3p"]
 
 [ext_resource type="Script" path="res://scripts/enemy_test.gd" id="1_jx12r"]
-[ext_resource type="Texture2D" uid="uid://1xvsn72awwds" path="res://sprites/characters/DarkSamurai (64x64).png" id="2_xmcob"]
+[ext_resource type="Texture2D" uid="uid://blk1t1oall7nb" path="res://sprites/characters/DarkSamurai (64x64).png" id="2_xmcob"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="3_1ro8h"]
 [ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="4_skkb5"]
+[ext_resource type="Script" path="res://ai/tasks/get_first_in_group.gd" id="5_s88r8"]
+[ext_resource type="Script" path="res://ai/tasks/in_range.gd" id="6_vpmr3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ut18"]
 radius = 11.5
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7gmlh"]
-radius = 84.0536
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_go3r5"]
-radius = 437.293
 
 [sub_resource type="Animation" id="Animation_hejca"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -44,7 +28,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_8m3o7"]
 resource_name = "attack"
 length = 0.5
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -103,83 +86,8 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
-[sub_resource type="Animation" id="Animation_jdr21"]
-resource_name = "run_down"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [14, 15, 16, 17, 18, 19, 20, 21]
-}
-
 [sub_resource type="Animation" id="Animation_owfrd"]
-resource_name = "run_left"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:flip_h")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [14, 15, 16, 17, 18, 19, 20, 21]
-}
-
-[sub_resource type="Animation" id="Animation_e7wd4"]
-resource_name = "run_right"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:flip_h")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [14, 15, 16, 17, 18, 19, 20, 21]
-}
-
-[sub_resource type="Animation" id="Animation_335au"]
-resource_name = "run_up"
+resource_name = "run"
 length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
@@ -200,14 +108,117 @@ _data = {
 "RESET": SubResource("Animation_hejca"),
 "attack": SubResource("Animation_8m3o7"),
 "idle": SubResource("Animation_j878d"),
-"run_down": SubResource("Animation_jdr21"),
-"run_left": SubResource("Animation_owfrd"),
-"run_right": SubResource("Animation_e7wd4"),
-"run_up": SubResource("Animation_335au")
+"run": SubResource("Animation_owfrd")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4pdrg"]
 radius = 26.8328
+
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_beckh"]
+
+[sub_resource type="BTAction" id="BTAction_xfsui"]
+script = ExtResource("5_s88r8")
+group = &"hero"
+output_var = &"target"
+
+[sub_resource type="BTAlwaysSucceed" id="BTAlwaysSucceed_1l7x1"]
+children = [SubResource("BTAction_xfsui")]
+
+[sub_resource type="BTCondition" id="BTCondition_c2w1k"]
+script = ExtResource("6_vpmr3")
+distance_min = 400.0
+distance_max = 10000.0
+target_var = &"target"
+
+[sub_resource type="BBVariant" id="BBVariant_7xtkt"]
+type = 5
+saved_value = Vector2(0, 0)
+resource_name = "(0, 0)"
+
+[sub_resource type="BTSetAgentProperty" id="BTSetAgentProperty_06ti7"]
+property = &"velocity"
+value = SubResource("BBVariant_7xtkt")
+
+[sub_resource type="BBNode" id="BBNode_ebi0k"]
+saved_value = NodePath("AnimationPlayer")
+resource_name = "AnimationPlayer"
+
+[sub_resource type="BTPlayAnimation" id="BTPlayAnimation_g446y"]
+animation_player = SubResource("BBNode_ebi0k")
+animation_name = &"idle"
+
+[sub_resource type="BTAlwaysSucceed" id="BTAlwaysSucceed_4m1ye"]
+children = [SubResource("BTPlayAnimation_g446y")]
+
+[sub_resource type="BTSequence" id="BTSequence_44olb"]
+custom_name = "Idle"
+children = [SubResource("BTCondition_c2w1k"), SubResource("BTSetAgentProperty_06ti7"), SubResource("BTAlwaysSucceed_4m1ye")]
+
+[sub_resource type="BTCondition" id="BTCondition_w2g4g"]
+script = ExtResource("6_vpmr3")
+distance_min = 0.0
+distance_max = 50.0
+target_var = &"target"
+
+[sub_resource type="BBVariant" id="BBVariant_c6hn0"]
+type = 5
+saved_value = Vector2(0, 0)
+resource_name = "(0, 0)"
+
+[sub_resource type="BTSetAgentProperty" id="BTSetAgentProperty_2l4es"]
+property = &"velocity"
+value = SubResource("BBVariant_c6hn0")
+
+[sub_resource type="BBNode" id="BBNode_kt0q1"]
+saved_value = NodePath("AnimationPlayer")
+resource_name = "AnimationPlayer"
+
+[sub_resource type="BTPlayAnimation" id="BTPlayAnimation_4r0om"]
+await_completion = 0.6
+animation_player = SubResource("BBNode_kt0q1")
+animation_name = &"attack"
+
+[sub_resource type="BTSequence" id="BTSequence_evrsl"]
+custom_name = "attacking"
+children = [SubResource("BTCondition_w2g4g"), SubResource("BTSetAgentProperty_2l4es"), SubResource("BTPlayAnimation_4r0om")]
+
+[sub_resource type="BTCondition" id="BTCondition_ue5b1"]
+script = ExtResource("6_vpmr3")
+distance_min = 50.0
+distance_max = 400.0
+target_var = &"target"
+
+[sub_resource type="BBNode" id="BBNode_68k4s"]
+saved_value = NodePath(".")
+resource_name = "."
+
+[sub_resource type="BTCallMethod" id="BTCallMethod_rj86r"]
+node = SubResource("BBNode_68k4s")
+method = &"set_velocity_to_target"
+
+[sub_resource type="BBNode" id="BBNode_kvdch"]
+saved_value = NodePath("AnimationPlayer")
+resource_name = "AnimationPlayer"
+
+[sub_resource type="BTPlayAnimation" id="BTPlayAnimation_cvwmg"]
+animation_player = SubResource("BBNode_kvdch")
+animation_name = &"run"
+
+[sub_resource type="BTSequence" id="BTSequence_ok3dr"]
+custom_name = "walking"
+children = [SubResource("BTCondition_ue5b1"), SubResource("BTCallMethod_rj86r"), SubResource("BTPlayAnimation_cvwmg")]
+
+[sub_resource type="BTSelector" id="BTSelector_xqohc"]
+children = [SubResource("BTSequence_44olb"), SubResource("BTSequence_evrsl"), SubResource("BTSequence_ok3dr")]
+
+[sub_resource type="BTSequence" id="BTSequence_i76s3"]
+children = [SubResource("BTAlwaysSucceed_1l7x1"), SubResource("BTSelector_xqohc")]
+
+[sub_resource type="BehaviorTree" id="BehaviorTree_sdbsj"]
+blackboard_plan = SubResource("BlackboardPlan_beckh")
+root_task = SubResource("BTSequence_i76s3")
+
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_mv38d"]
 
 [node name="enemy_test" type="CharacterBody2D"]
 script = ExtResource("1_jx12r")
@@ -223,25 +234,11 @@ shape = SubResource("CircleShape2D_7ut18")
 disabled = true
 debug_color = Color(0, 0, 0, 0.42)
 
-[node name="death_area" type="Area2D" parent="." groups=["enemy"]]
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="death_area"]
-shape = SubResource("CircleShape2D_7gmlh")
-debug_color = Color(0.429522, 0.471704, 0.964104, 0.42)
-
 [node name="HealthComponent" parent="." instance=ExtResource("3_1ro8h")]
 
 [node name="PathfinderComponent" parent="." instance=ExtResource("4_skkb5")]
 avoidance_enabled = true
 radius = 12.0
-
-[node name="detection_area" type="Area2D" parent="."]
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-shape = SubResource("CircleShape2D_go3r5")
-debug_color = Color(0.779296, 0.429581, 0.233664, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -250,11 +247,6 @@ libraries = {
 autoplay = "idle"
 movie_quit_on_finish = true
 
-[node name="attack timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
-autostart = true
-
 [node name="attackarea" type="Area2D" parent="."]
 collision_mask = 3
 
@@ -262,5 +254,9 @@ collision_mask = 3
 position = Vector2(0, 7)
 shape = SubResource("CircleShape2D_4pdrg")
 debug_color = Color(0.677952, 0, 0.180301, 0.42)
+
+[node name="BTPlayer" type="BTPlayer" parent="."]
+behavior_tree = SubResource("BehaviorTree_sdbsj")
+blackboard_plan = SubResource("BlackboardPlan_mv38d")
 
 [connection signal="out_of_health" from="HealthComponent" to="." method="_on_health_component_out_of_health"]
