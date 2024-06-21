@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c68icqsdpat7t" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="3_v63p0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]
-size = Vector2(66, 41)
+size = Vector2(76, 48.75)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0mmxc"]
 radius = 21.0
@@ -21,7 +21,7 @@ region_enabled = true
 region_rect = Rect2(1.39632, 87.1066, 76.3661, 53.4563)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -7.5)
+position = Vector2(0, -3.625)
 shape = SubResource("RectangleShape2D_h0nn4")
 
 [node name="interact_area" type="Area2D" parent="."]

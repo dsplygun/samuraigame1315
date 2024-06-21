@@ -8,6 +8,14 @@ var attack = 1
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@export var number : int
+
+func _ready():
+	$HealthComponent.health =  Info.char_hp[number]
+
+func _process(delta):
+	Info.char_hp[number] = $HealthComponent.health
+
 func _physics_process(delta):
 	var vertical = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	var horizontal = Input.get_action_strength("move_right") - Input.get_action_strength("move_left") 

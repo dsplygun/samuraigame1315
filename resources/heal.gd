@@ -1,6 +1,7 @@
 extends Resource
 class_name HealEffect 
-func activate_effect(target,value):
-	target.get_node("HealthComponent").heal(value["heal"])
+@export var amount : int = 0
+func activate_effect(target):
+	target.get_node("HealthComponent").heal(amount)
 	
 	
