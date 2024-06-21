@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfya3lwq3t610"]
 
-[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://sprites/tiletextures/Themes/Purple_theme.tres" id="1_tvanj"]
+[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_tvanj"]
 [ext_resource type="Script" path="res://scripts/seting.gd" id="1_wr0q6"]
-[ext_resource type="Theme" uid="uid://d06ksedt6lxto" path="res://sprites/tiletextures/Themes/Only_read.tres" id="3_n3ect"]
+[ext_resource type="Theme" uid="uid://d06ksedt6lxto" path="res://Texture/Themes/Only_read.tres" id="3_n3ect"]
 
 [node name="seting" type="Control"]
 layout_mode = 3
@@ -21,6 +21,9 @@ offset_left = 16.0
 offset_top = 72.0
 offset_right = 240.0
 offset_bottom = 88.0
+max_value = 2.0
+step = 0.2
+value = 1.0
 
 [node name="Panel" type="Panel" parent="Panel/music"]
 layout_mode = 0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ckmn4stuq0k3f"]
 
 [ext_resource type="Script" path="res://scripts/game_intr.gd" id="1_hlc5l"]
-[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://sprites/tiletextures/Themes/Purple_theme.tres" id="1_xv4l3"]
+[ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_xv4l3"]
 
 [node name="game intr" type="Control"]
 layout_mode = 3
