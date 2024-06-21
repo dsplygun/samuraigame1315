@@ -15,6 +15,7 @@ func _process(delta):
 
 func take_damage(dmg : int):
 	health -= dmg
+	$"../zvuki".hit_sound()
 	if health <= 0:
 		emit_signal("out_of_health")
 func heal(value):

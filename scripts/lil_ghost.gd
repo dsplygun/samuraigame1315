@@ -27,6 +27,7 @@ func attack_all(value : int):
 			body.get_node("HealthComponent").take_damage(value) 
 	
 func set_velocity_to_target():
+	$zvuki.attack_sound()
 	velocity = ($PathfinderComponent.direction).normalized() * enemy_speed
 
 

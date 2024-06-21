@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3by5dhgc5bsq"]
+
+[ext_resource type="Script" path="res://music/zvuki.gd" id="1_gtelq"]
+[ext_resource type="AudioStream" uid="uid://hqygawayj2w5" path="res://music/sword-unsheathe.wav" id="2_juy6m"]
+[ext_resource type="AudioStream" uid="uid://b2k8cimeq43rx" path="res://music/hit01.mp3.mp3" id="3_f4w22"]
+
+[node name="zvuki" type="Node"]
+script = ExtResource("1_gtelq")
+attack = ExtResource("2_juy6m")
+hit = ExtResource("3_f4w22")
