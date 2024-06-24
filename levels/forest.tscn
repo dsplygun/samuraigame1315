@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=45 format=3 uid="uid://b4huhehi6fxyn"]
 
 [ext_resource type="Texture2D" uid="uid://pt750k45po5a" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
 [ext_resource type="Texture2D" uid="uid://c68icqsdpat7t" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cedufubb26f83" path="res://scenes/teleoport.tscn" id="16_wehnp"]
 [ext_resource type="Script" path="res://resources/teleport.gd" id="17_x7nsx"]
 [ext_resource type="PackedScene" uid="uid://c2lrcefh23bl6" path="res://scenes/sacred_statue.tscn" id="18_kyu68"]
+[ext_resource type="Script" path="res://resources/heal.gd" id="19_28gxf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -23999,6 +24000,11 @@ resource_local_to_scene = true
 script = ExtResource("17_x7nsx")
 place = Vector2(1488, 1161)
 
+[sub_resource type="Resource" id="Resource_epld0"]
+resource_local_to_scene = true
+script = ExtResource("19_28gxf")
+amount = 75
+
 [node name="Forest" type="Node2D"]
 scale = Vector2(2, 2)
 
@@ -26096,3 +26102,4 @@ effect = SubResource("Resource_uw0jh")
 
 [node name="sacred_statue" parent="." instance=ExtResource("18_kyu68")]
 position = Vector2(952, 112)
+effect = SubResource("Resource_epld0")

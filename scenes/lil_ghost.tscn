@@ -1,13 +1,16 @@
-[gd_scene load_steps=34 format=3 uid="uid://cp2xo6nvd0owg"]
+[gd_scene load_steps=35 format=3 uid="uid://cp2xo6nvd0owg"]
 
 [ext_resource type="Script" path="res://scripts/lil_ghost.gd" id="1_1myjc"]
-[ext_resource type="Texture2D" uid="uid://dfvwkwa1oythx" path="res://sprites/Wisp.png" id="2_ujxx5"]
+[ext_resource type="Texture2D" uid="uid://dh0pumnf44y8w" path="res://sprites/Wisp.png" id="2_ujxx5"]
 [ext_resource type="Script" path="res://ai/tasks/get_first_in_group.gd" id="3_hgflf"]
 [ext_resource type="Script" path="res://ai/tasks/in_range.gd" id="4_oowon"]
 [ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="5_tafbi"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="6_tt7jq"]
 [ext_resource type="PackedScene" uid="uid://d3by5dhgc5bsq" path="res://music/zvuki.tscn" id="7_r4iwo"]
-[ext_resource type="AudioStream" uid="uid://dp3luv6e1fsuj" path="res://music/foom_1.wav" id="8_3mu8y"]
+[ext_resource type="AudioStream" uid="uid://m0joke6qy5dt" path="res://music/foom_1.wav" id="8_3mu8y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xwt5"]
+radius = 8.0
 
 [sub_resource type="Animation" id="Animation_u6k67"]
 length = 0.001
@@ -130,15 +133,21 @@ root_task = SubResource("BTSequence_4jo3l")
 [sub_resource type="BlackboardPlan" id="BlackboardPlan_uavvt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwamw"]
-radius = 9.05539
+radius = 7.0
 
-[node name="lil_ghost" type="CharacterBody2D"]
+[node name="lil_ghost" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_1myjc")
 enemy_speed = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ujxx5")
 hframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 5)
+shape = SubResource("CircleShape2D_0xwt5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

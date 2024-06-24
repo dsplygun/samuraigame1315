@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://gy78e2kdlxx2"]
+[gd_scene load_steps=82 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
 [ext_resource type="Texture2D" uid="uid://bkj32ulsioin5" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
@@ -103,6 +103,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_vr7bn"]
 radius = 6.08276
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wg877"]
+radius = 13.0
+
 [sub_resource type="Animation" id="Animation_gh54d"]
 length = 0.001
 tracks/0/type = "value"
@@ -177,6 +180,33 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("attack_area/CollisionShape2D:shape")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CircleShape2D_wg877")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("attack_area/CollisionShape2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4, 0)]
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iyb6r"]
+radius = 13.0384
 
 [sub_resource type="Animation" id="Animation_bi43p"]
 resource_name = "attack_back"
@@ -258,6 +288,50 @@ tracks/5/keys = {
 "method": &"attack_sound"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("attack_area/CollisionShape2D:shape")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CircleShape2D_iyb6r")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("attack_area/CollisionShape2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -3)]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.4, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attack_all"
+}, {
+"args": [],
+"method": &"attack_all"
+}]
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ynouc"]
+radius = 13.0
 
 [sub_resource type="Animation" id="Animation_u0pt1"]
 resource_name = "attack_front"
@@ -339,6 +413,50 @@ tracks/5/keys = {
 "method": &"attack_sound"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("attack_area/CollisionShape2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 2)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("attack_area/CollisionShape2D:shape")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CircleShape2D_ynouc")]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.4, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attack_all"
+}, {
+"args": [],
+"method": &"attack_all"
+}]
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkpuv"]
+radius = 12.0
 
 [sub_resource type="Animation" id="Animation_fqxde"]
 resource_name = "attack_left"
@@ -420,6 +538,47 @@ tracks/5/keys = {
 "method": &"attack_sound"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("attack_area/CollisionShape2D:shape")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CircleShape2D_dkpuv")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("attack_area/CollisionShape2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4, 0)]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.4, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attack_all"
+}, {
+"args": [],
+"method": &"attack_all"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_2b1xq"]
 resource_name = "attack_right"
@@ -499,6 +658,47 @@ tracks/5/keys = {
 }, {
 "args": [],
 "method": &"attack_sound"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("attack_area/CollisionShape2D:shape")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CircleShape2D_wg877")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("attack_area/CollisionShape2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 0)]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.4, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attack_all"
+}, {
+"args": [],
+"method": &"attack_all"
 }]
 }
 
@@ -1475,7 +1675,7 @@ wait_time = 1.5
 one_shot = true
 
 [node name="attack_kd" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 2.0
 one_shot = true
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
@@ -1489,6 +1689,15 @@ parameters/walk/blend_position = Vector2(-0.00645161, -0.876652)
 [node name="intr" parent="." instance=ExtResource("13_6j2sh")]
 
 [node name="zvuki" parent="." instance=ExtResource("14_eutna")]
+
+[node name="attack_area" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area"]
+position = Vector2(-4, 0)
+shape = SubResource("CircleShape2D_wg877")
+debug_color = Color(0.998364, 0, 0.143922, 0.42)
 
 [connection signal="timeout" from="switch_effect/switch_eff_kd" to="." method="_on_switch_eff_kd_timeout"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

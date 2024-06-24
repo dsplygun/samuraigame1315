@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #@export var target : CharacterBody2D
-@export var enemy_speed = 100
+@export var enemy_speed = 150
 #@onready var char_anim = get_node("AnimationPlayer")
 
 # Called when the node enters the scene tree for the first time.
@@ -13,7 +13,6 @@ func _physics_process(delta):
 		$Sprite2D.flip_h = true
 	elif velocity.x > 0:
 		$Sprite2D.flip_h = false
-
 	move_and_slide()
 
 func _on_health_component_out_of_health():

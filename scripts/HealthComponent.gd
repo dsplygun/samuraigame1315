@@ -22,4 +22,6 @@ func heal(value):
 	health += value
 	if health > max_health:
 		health = max_health
+func death():
+	$"../".queue_free()
 	

@@ -15,6 +15,7 @@ func _ready():
 
 func _process(delta):
 	Info.char_hp[number] = $HealthComponent.health
+	
 
 func _physics_process(delta):
 	var vertical = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
@@ -78,6 +79,12 @@ func _on_attack_kd_timeout():
 func _on_attack_timer_timeout():
 	speed = 300
 	
+func attack_all():
+	var bodies = $"attack_area".get_overlapping_bodies()
+	print(bodies)
+	for body in bodies:
+		if body.is_in_group("enemy"):
+			body.get_node("HealthComponent").take_damage(50) 
 
 func _input(event):
 	if event is InputEventKey:
