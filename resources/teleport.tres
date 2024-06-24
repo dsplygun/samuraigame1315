@@ -3,4 +3,6 @@
 [ext_resource type="Script" path="res://resources/teleport.gd" id="1_kr8lp"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_kr8lp")
+place = Vector2(1488, 1161)

@@ -5,4 +5,4 @@ var char_pos := Vector2(0,0)
 func _ready():
 	pass # Replace with function body.
 
-
+var char_hp = [100,100,100]

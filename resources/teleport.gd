@@ -1,5 +1,6 @@
 extends Resource
 class_name TeleportEffect 
-func activate_effect(target,value):
-	target.position = value["teleport"]
+@export var place : Vector2 = Vector2(0,0)
+func activate_effect(target):
+	target.position = place
 	

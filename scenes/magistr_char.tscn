@@ -1356,6 +1356,7 @@ graph_offset = Vector2(0, -32.7551)
 [node name="magistr_char" type="CharacterBody2D" groups=["hero"]]
 collision_layer = 2
 script = ExtResource("1_ql84e")
+number = 2
 
 [node name="switch_effect" type="AnimatedSprite2D" parent="."]
 visible = false
