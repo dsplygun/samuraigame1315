@@ -1,13 +1,13 @@
 [gd_scene load_steps=35 format=3 uid="uid://cp2xo6nvd0owg"]
 
 [ext_resource type="Script" path="res://scripts/lil_ghost.gd" id="1_1myjc"]
-[ext_resource type="Texture2D" uid="uid://dh0pumnf44y8w" path="res://sprites/Wisp.png" id="2_ujxx5"]
+[ext_resource type="Texture2D" uid="uid://bokb437ct2s68" path="res://sprites/Wisp.png" id="2_ujxx5"]
 [ext_resource type="Script" path="res://ai/tasks/get_first_in_group.gd" id="3_hgflf"]
 [ext_resource type="Script" path="res://ai/tasks/in_range.gd" id="4_oowon"]
 [ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="5_tafbi"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="6_tt7jq"]
 [ext_resource type="PackedScene" uid="uid://d3by5dhgc5bsq" path="res://music/zvuki.tscn" id="7_r4iwo"]
-[ext_resource type="AudioStream" uid="uid://m0joke6qy5dt" path="res://music/foom_1.wav" id="8_3mu8y"]
+[ext_resource type="AudioStream" uid="uid://brajaqintt6pd" path="res://music/foom_1.wav" id="8_3mu8y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xwt5"]
 radius = 8.0

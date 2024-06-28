@@ -1,17 +1,17 @@
-[gd_scene load_steps=82 format=3 uid="uid://gy78e2kdlxx2"]
+[gd_scene load_steps=83 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
-[ext_resource type="Texture2D" uid="uid://bkj32ulsioin5" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
-[ext_resource type="Texture2D" uid="uid://cdchjoos4t8s3" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
+[ext_resource type="Texture2D" uid="uid://b36frf4j2em0x" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
+[ext_resource type="Texture2D" uid="uid://dliplvsqeo0pu" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
-[ext_resource type="Texture2D" uid="uid://d2rm5epqrtxhs" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
-[ext_resource type="Texture2D" uid="uid://cswiuxklnkgja" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="5_8t0al"]
-[ext_resource type="Texture2D" uid="uid://cuxotyn2xjajy" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
-[ext_resource type="Texture2D" uid="uid://cjt3xxjqgkeyu" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
-[ext_resource type="Texture2D" uid="uid://b4cd1em831k3d" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="6_tle6h"]
-[ext_resource type="Texture2D" uid="uid://xv5826k1p0gm" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="7_h8wsm"]
-[ext_resource type="Texture2D" uid="uid://bwawtm8hw43vl" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="8_5rvm0"]
-[ext_resource type="Texture2D" uid="uid://dhi25fq8cmf2m" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="8_bcl12"]
+[ext_resource type="Texture2D" uid="uid://bvxmnmwr120gl" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
+[ext_resource type="Texture2D" uid="uid://b12sxmfbe87bh" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="5_8t0al"]
+[ext_resource type="Texture2D" uid="uid://cb1uck0hl5tfu" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="5_k0b06"]
+[ext_resource type="Texture2D" uid="uid://crf4knbcpcyer" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="6_84gpp"]
+[ext_resource type="Texture2D" uid="uid://51xojmn8yjx2" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="6_tle6h"]
+[ext_resource type="Texture2D" uid="uid://v77avtdqqm5n" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="7_h8wsm"]
+[ext_resource type="Texture2D" uid="uid://cmk6ys6prlq2w" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="8_5rvm0"]
+[ext_resource type="Texture2D" uid="uid://bvwoupuv7u6vf" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="8_bcl12"]
 [ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="13_6j2sh"]
 [ext_resource type="PackedScene" uid="uid://d3by5dhgc5bsq" path="res://music/zvuki.tscn" id="14_eutna"]
 
@@ -1470,6 +1470,36 @@ tracks/4/keys = {
 "values": [6, 7, 8, 9, 10]
 }
 
+[sub_resource type="Animation" id="Animation_nodru"]
+resource_name = "death"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [-1],
+"method": &"switch_char"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j6h0v"]
 _data = {
 "RESET": SubResource("Animation_gh54d"),
@@ -1481,6 +1511,7 @@ _data = {
 "dash_front": SubResource("Animation_cfwj2"),
 "dash_left": SubResource("Animation_4hixx"),
 "dash_right": SubResource("Animation_5ip7m"),
+"death": SubResource("Animation_nodru"),
 "idle_back": SubResource("Animation_q0rdi"),
 "idle_front": SubResource("Animation_sw1mc"),
 "idle_left": SubResource("Animation_mglkn"),
@@ -1620,7 +1651,7 @@ states/idle/position = Vector2(360, 100)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_8gr3b")
 states/walk/position = Vector2(360, 273)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_krjoc"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_57h2v"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_qwjaw"), "walk", "dash", SubResource("AnimationNodeStateMachineTransition_uhvku"), "dash", "walk", SubResource("AnimationNodeStateMachineTransition_5xrin"), "idle", "dash", SubResource("AnimationNodeStateMachineTransition_6ghq2"), "dash", "idle", SubResource("AnimationNodeStateMachineTransition_ya08l"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_ef5he"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_qmheq"), "walk", "attack", SubResource("AnimationNodeStateMachineTransition_r3yeu"), "attack", "walk", SubResource("AnimationNodeStateMachineTransition_653j4")]
-graph_offset = Vector2(0, -32.7551)
+graph_offset = Vector2(-35, -12.7551)
 
 [node name="best_character" type="CharacterBody2D" groups=["hero"]]
 collision_layer = 2
@@ -1699,9 +1730,15 @@ position = Vector2(-4, 0)
 shape = SubResource("CircleShape2D_wg877")
 debug_color = Color(0.998364, 0, 0.143922, 0.42)
 
+[node name="death_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="timeout" from="switch_effect/switch_eff_kd" to="." method="_on_switch_eff_kd_timeout"]
+[connection signal="out_of_health" from="HealthComponent" to="." method="_on_health_component_out_of_health"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_anim" to="." method="_on_dash_anim_timeout"]
 [connection signal="timeout" from="freeze_timer" to="." method="_on_freeze_timer_timeout"]
 [connection signal="timeout" from="attack_kd" to="." method="_on_attack_kd_timeout"]
+[connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]

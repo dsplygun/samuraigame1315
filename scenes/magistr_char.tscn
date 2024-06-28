@@ -1,17 +1,18 @@
-[gd_scene load_steps=77 format=3 uid="uid://cgenjp04pohk6"]
+[gd_scene load_steps=79 format=3 uid="uid://cgenjp04pohk6"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_ql84e"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="2_ag2fu"]
-[ext_resource type="Texture2D" uid="uid://bkj32ulsioin5" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_vvmea"]
-[ext_resource type="Texture2D" uid="uid://cdchjoos4t8s3" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_v8uwu"]
-[ext_resource type="Texture2D" uid="uid://dhi25fq8cmf2m" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="4_xvwl7"]
-[ext_resource type="Texture2D" uid="uid://cjt3xxjqgkeyu" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="5_8nhn7"]
-[ext_resource type="Texture2D" uid="uid://bwawtm8hw43vl" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="6_mdv3d"]
-[ext_resource type="Texture2D" uid="uid://cswiuxklnkgja" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="7_wiev8"]
-[ext_resource type="Texture2D" uid="uid://b4cd1em831k3d" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="8_cfvyg"]
-[ext_resource type="Texture2D" uid="uid://xv5826k1p0gm" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="9_0wd5s"]
-[ext_resource type="Texture2D" uid="uid://d2rm5epqrtxhs" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="10_5j4vv"]
-[ext_resource type="Texture2D" uid="uid://cuxotyn2xjajy" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="11_w6l6y"]
+[ext_resource type="PackedScene" uid="uid://d3by5dhgc5bsq" path="res://music/zvuki.tscn" id="2_fn08u"]
+[ext_resource type="Texture2D" uid="uid://b36frf4j2em0x" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_vvmea"]
+[ext_resource type="Texture2D" uid="uid://dliplvsqeo0pu" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_v8uwu"]
+[ext_resource type="Texture2D" uid="uid://bvwoupuv7u6vf" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="4_xvwl7"]
+[ext_resource type="Texture2D" uid="uid://crf4knbcpcyer" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="5_8nhn7"]
+[ext_resource type="Texture2D" uid="uid://cmk6ys6prlq2w" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="6_mdv3d"]
+[ext_resource type="Texture2D" uid="uid://b12sxmfbe87bh" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="7_wiev8"]
+[ext_resource type="Texture2D" uid="uid://51xojmn8yjx2" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="8_cfvyg"]
+[ext_resource type="Texture2D" uid="uid://v77avtdqqm5n" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="9_0wd5s"]
+[ext_resource type="Texture2D" uid="uid://bvxmnmwr120gl" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="10_5j4vv"]
+[ext_resource type="Texture2D" uid="uid://cb1uck0hl5tfu" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="11_w6l6y"]
 [ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="13_7nlbk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soob3"]
@@ -1201,6 +1202,36 @@ tracks/4/keys = {
 "values": [6, 7, 8, 9, 10]
 }
 
+[sub_resource type="Animation" id="Animation_06m1n"]
+resource_name = "death"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0.0156863, 1), Color(1, 0, 0.0156863, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [-1],
+"method": &"switch_char"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j6h0v"]
 _data = {
 "RESET": SubResource("Animation_gh54d"),
@@ -1212,6 +1243,7 @@ _data = {
 "dash_front": SubResource("Animation_cfwj2"),
 "dash_left": SubResource("Animation_4hixx"),
 "dash_right": SubResource("Animation_5ip7m"),
+"death": SubResource("Animation_06m1n"),
 "idle_back": SubResource("Animation_q0rdi"),
 "idle_front": SubResource("Animation_sw1mc"),
 "idle_left": SubResource("Animation_mglkn"),
@@ -1358,6 +1390,8 @@ collision_layer = 2
 script = ExtResource("1_ql84e")
 number = 2
 
+[node name="zvuki" parent="." instance=ExtResource("2_fn08u")]
+
 [node name="switch_effect" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(0, 8)
@@ -1419,6 +1453,11 @@ parameters/walk/blend_position = Vector2(-0.00645161, -0.876652)
 
 [node name="intr" parent="." instance=ExtResource("13_7nlbk")]
 
+[node name="death_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="out_of_health" from="HealthComponent" to="." method="_on_health_component_out_of_health"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_anim" to="." method="_on_dash_anim_timeout"]

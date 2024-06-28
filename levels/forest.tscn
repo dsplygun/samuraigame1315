@@ -1,14 +1,14 @@
 [gd_scene load_steps=50 format=3 uid="uid://b4huhehi6fxyn"]
 
-[ext_resource type="Texture2D" uid="uid://d33msr0u14vll" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
-[ext_resource type="Texture2D" uid="uid://bd463rv4j56c2" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
-[ext_resource type="Texture2D" uid="uid://bxnxuoylmc180" path="res://sprites/tiletextures/Forest BETA V3/Forest Props.png" id="3_e621c"]
-[ext_resource type="Texture2D" uid="uid://dbph70ki5eyw3" path="res://sprites/tiletextures/Cave/Dungeon tileset.png" id="3_s4yen"]
-[ext_resource type="Texture2D" uid="uid://bxpdst4v272ak" path="res://sprites/tiletextures/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
-[ext_resource type="Texture2D" uid="uid://cto1nws1we21i" path="res://sprites/tiletextures/Forest BETA V3/Sample.png" id="5_63d7n"]
-[ext_resource type="Texture2D" uid="uid://b6r7b8uxduy7g" path="res://sprites/tiletextures/Forest BETA V3/Settlement.png" id="6_t0wwn"]
-[ext_resource type="Texture2D" uid="uid://cj05f1vktxsdm" path="res://sprites/tiletextures/Forest BETA V3/Trees.png" id="7_3t25t"]
-[ext_resource type="Texture2D" uid="uid://ba1wpk8uhxfs0" path="res://sprites/tiletextures/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
+[ext_resource type="Texture2D" uid="uid://bl7r5t436juqv" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
+[ext_resource type="Texture2D" uid="uid://4p456m0jfrq8" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
+[ext_resource type="Texture2D" uid="uid://baolc23eg0ee8" path="res://sprites/tiletextures/Forest BETA V3/Forest Props.png" id="3_e621c"]
+[ext_resource type="Texture2D" uid="uid://c0yuh507ndtle" path="res://sprites/tiletextures/Cave/Dungeon tileset.png" id="3_s4yen"]
+[ext_resource type="Texture2D" uid="uid://6lof6mv2nmi6" path="res://sprites/tiletextures/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
+[ext_resource type="Texture2D" uid="uid://buglblxem7x1h" path="res://sprites/tiletextures/Forest BETA V3/Sample.png" id="5_63d7n"]
+[ext_resource type="Texture2D" uid="uid://bri327x1fbnmo" path="res://sprites/tiletextures/Forest BETA V3/Settlement.png" id="6_t0wwn"]
+[ext_resource type="Texture2D" uid="uid://nmb5s15017xf" path="res://sprites/tiletextures/Forest BETA V3/Trees.png" id="7_3t25t"]
+[ext_resource type="Texture2D" uid="uid://bta5d382883ks" path="res://sprites/tiletextures/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="9_ldt8q"]
 [ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="11_cx7cn"]
 [ext_resource type="Script" path="res://scripts/camera1.gd" id="11_giv6a"]
@@ -26095,9 +26095,7 @@ scale = Vector2(1.5, 1.5)
 
 [node name="camera1" type="Camera2D" parent="." node_paths=PackedStringArray("follow_char")]
 position = Vector2(2830.51, 1264)
-scale = Vector2(1, 1)
 offset = Vector2(576, 324)
-enabled = false
 script = ExtResource("11_giv6a")
 follow_char = NodePath("../best_character")
 
