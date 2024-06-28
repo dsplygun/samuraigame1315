@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://mxylpo6nnxv6"]
 
 [ext_resource type="Script" path="res://scripts/item_test.gd" id="1_3vfky"]
-[ext_resource type="Texture2D" uid="uid://c72okot8k02kr" path="res://sprites/tiletextures/Items/Coins_topdown_outline_18x18res.png" id="2_xfjbq"]
+[ext_resource type="Texture2D" uid="uid://ck0a3u3t71vlm" path="res://sprites/tiletextures/Items/Coins_topdown_outline_18x18res.png" id="2_xfjbq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hhjj"]
 size = Vector2(41, 42.5)

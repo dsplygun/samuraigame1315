@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AddMoney" load_steps=2 format=3 uid="uid://7udkvi7gy5rx"]
+
+[ext_resource type="Script" path="res://resources/money.gd" id="1_8wg5u"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_8wg5u")
+value = 10
