@@ -1,14 +1,14 @@
-[gd_scene load_steps=45 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=50 format=3 uid="uid://b4huhehi6fxyn"]
 
-[ext_resource type="Texture2D" uid="uid://pt750k45po5a" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
-[ext_resource type="Texture2D" uid="uid://c68icqsdpat7t" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
-[ext_resource type="Texture2D" uid="uid://538vual0qwg0" path="res://sprites/tiletextures/Forest BETA V3/Forest Props.png" id="3_e621c"]
-[ext_resource type="Texture2D" uid="uid://dqj8q555rtg27" path="res://sprites/tiletextures/Cave/Dungeon tileset.png" id="3_s4yen"]
-[ext_resource type="Texture2D" uid="uid://drg8fkvdr7vh1" path="res://sprites/tiletextures/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
-[ext_resource type="Texture2D" uid="uid://dyerlvmbyf1mc" path="res://sprites/tiletextures/Forest BETA V3/Sample.png" id="5_63d7n"]
-[ext_resource type="Texture2D" uid="uid://bbbc7owxecpde" path="res://sprites/tiletextures/Forest BETA V3/Settlement.png" id="6_t0wwn"]
-[ext_resource type="Texture2D" uid="uid://xlch6cjhb4h1" path="res://sprites/tiletextures/Forest BETA V3/Trees.png" id="7_3t25t"]
-[ext_resource type="Texture2D" uid="uid://clrnomdrkcmch" path="res://sprites/tiletextures/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
+[ext_resource type="Texture2D" uid="uid://d33msr0u14vll" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
+[ext_resource type="Texture2D" uid="uid://bd463rv4j56c2" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
+[ext_resource type="Texture2D" uid="uid://bxnxuoylmc180" path="res://sprites/tiletextures/Forest BETA V3/Forest Props.png" id="3_e621c"]
+[ext_resource type="Texture2D" uid="uid://dbph70ki5eyw3" path="res://sprites/tiletextures/Cave/Dungeon tileset.png" id="3_s4yen"]
+[ext_resource type="Texture2D" uid="uid://bxpdst4v272ak" path="res://sprites/tiletextures/Forest BETA V3/Forest Structures.png" id="4_n76nd"]
+[ext_resource type="Texture2D" uid="uid://cto1nws1we21i" path="res://sprites/tiletextures/Forest BETA V3/Sample.png" id="5_63d7n"]
+[ext_resource type="Texture2D" uid="uid://b6r7b8uxduy7g" path="res://sprites/tiletextures/Forest BETA V3/Settlement.png" id="6_t0wwn"]
+[ext_resource type="Texture2D" uid="uid://cj05f1vktxsdm" path="res://sprites/tiletextures/Forest BETA V3/Trees.png" id="7_3t25t"]
+[ext_resource type="Texture2D" uid="uid://ba1wpk8uhxfs0" path="res://sprites/tiletextures/Forest BETA V3/Water Tileset.png" id="8_xaj6s"]
 [ext_resource type="PackedScene" uid="uid://gy78e2kdlxx2" path="res://scenes/best_character.tscn" id="9_ldt8q"]
 [ext_resource type="PackedScene" uid="uid://mxylpo6nnxv6" path="res://scenes/item_test.tscn" id="11_cx7cn"]
 [ext_resource type="Script" path="res://scripts/camera1.gd" id="11_giv6a"]
@@ -18,7 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://cedufubb26f83" path="res://scenes/teleoport.tscn" id="16_wehnp"]
 [ext_resource type="Script" path="res://resources/teleport.gd" id="17_x7nsx"]
 [ext_resource type="PackedScene" uid="uid://c2lrcefh23bl6" path="res://scenes/sacred_statue.tscn" id="18_kyu68"]
-[ext_resource type="Script" path="res://resources/heal.gd" id="19_28gxf"]
+[ext_resource type="Script" path="res://resources/heal.gd" id="19_m41nt"]
+[ext_resource type="PackedScene" uid="uid://bc44axmi75tja" path="res://scenes/chest.tscn" id="20_cxbjw"]
+[ext_resource type="Script" path="res://resources/key.gd" id="21_4b65c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -23998,12 +24000,27 @@ agent_radius = 15.0
 [sub_resource type="Resource" id="Resource_uw0jh"]
 resource_local_to_scene = true
 script = ExtResource("17_x7nsx")
-place = Vector2(1488, 1161)
+place = Vector2(5897, 922)
 
-[sub_resource type="Resource" id="Resource_epld0"]
+[sub_resource type="Resource" id="Resource_wa4fq"]
 resource_local_to_scene = true
-script = ExtResource("19_28gxf")
-amount = 75
+script = ExtResource("19_m41nt")
+amount = 35
+
+[sub_resource type="Resource" id="Resource_1noho"]
+resource_local_to_scene = true
+script = ExtResource("19_m41nt")
+amount = 35
+
+[sub_resource type="Resource" id="Resource_awqpq"]
+resource_local_to_scene = true
+script = ExtResource("19_m41nt")
+amount = 35
+
+[sub_resource type="Resource" id="Resource_rhvwb"]
+resource_local_to_scene = true
+script = ExtResource("21_4b65c")
+item = "Ключ"
 
 [node name="Forest" type="Node2D"]
 scale = Vector2(2, 2)
@@ -26077,29 +26094,68 @@ position = Vector2(135.5, 136)
 scale = Vector2(1.5, 1.5)
 
 [node name="camera1" type="Camera2D" parent="." node_paths=PackedStringArray("follow_char")]
-position = Vector2(1, -1.5)
+position = Vector2(2830.51, 1264)
+scale = Vector2(1, 1)
 offset = Vector2(576, 324)
+enabled = false
 script = ExtResource("11_giv6a")
 follow_char = NodePath("../best_character")
 
 [node name="enemy_test" parent="." instance=ExtResource("12_iejxk")]
-position = Vector2(338.5, 223)
+position = Vector2(629, 192)
+
+[node name="enemy_test3" parent="." instance=ExtResource("12_iejxk")]
+position = Vector2(1775, 1295)
+
+[node name="enemy_test2" parent="." instance=ExtResource("12_iejxk")]
+position = Vector2(2553.5, 486.5)
+
+[node name="enemy_test4" parent="." instance=ExtResource("12_iejxk")]
+position = Vector2(3168, 1488.5)
+
+[node name="enemy_test5" parent="." instance=ExtResource("12_iejxk")]
+position = Vector2(3876.5, 1764)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_pjena")
 
 [node name="lil_ghost" parent="." instance=ExtResource("14_65smh")]
-position = Vector2(780, 188)
+position = Vector2(1061.5, 375.5)
 
 [node name="lil_ghost2" parent="." instance=ExtResource("14_65smh")]
-position = Vector2(916, 344)
+position = Vector2(1243, 383)
+
+[node name="lil_ghost3" parent="." instance=ExtResource("14_65smh")]
+position = Vector2(2718.5, 1714)
+
+[node name="lil_ghost4" parent="." instance=ExtResource("14_65smh")]
+position = Vector2(2721, 1742.5)
+
+[node name="lil_ghost5" parent="." instance=ExtResource("14_65smh")]
+position = Vector2(3921, 1738)
+
+[node name="lil_ghost6" parent="." instance=ExtResource("14_65smh")]
+position = Vector2(3921, 1765)
 
 [node name="Music" parent="." instance=ExtResource("14_m4oph")]
 
 [node name="cave teleport" parent="." instance=ExtResource("16_wehnp")]
-position = Vector2(720, 132)
+position = Vector2(4546, 1607.5)
 effect = SubResource("Resource_uw0jh")
 
 [node name="sacred_statue" parent="." instance=ExtResource("18_kyu68")]
-position = Vector2(952, 112)
-effect = SubResource("Resource_epld0")
+position = Vector2(934, 117)
+effect = SubResource("Resource_wa4fq")
+
+[node name="sacred_statue2" parent="." instance=ExtResource("18_kyu68")]
+position = Vector2(2021.5, 51.5)
+effect = SubResource("Resource_1noho")
+
+[node name="sacred_statue3" parent="." instance=ExtResource("18_kyu68")]
+position = Vector2(3090, 1675)
+effect = SubResource("Resource_awqpq")
+
+[node name="chest" parent="." instance=ExtResource("20_cxbjw")]
+position = Vector2(807.5, 299)
+one_use = true
+effect = SubResource("Resource_rhvwb")

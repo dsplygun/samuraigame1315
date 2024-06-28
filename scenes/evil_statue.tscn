@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_yr3fl"]
 [ext_resource type="Resource" uid="uid://blyl25id6i33f" path="res://resources/damage_10.tres" id="2_dxhyj"]
-[ext_resource type="Texture2D" uid="uid://nypr7r74350l" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_o1xu4"]
+[ext_resource type="Texture2D" uid="uid://dbru2vr4syevb" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_o1xu4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]
 size = Vector2(37, 26)
@@ -11,6 +11,7 @@ size = Vector2(37, 26)
 radius = 30.0167
 
 [node name="evil_statue" type="StaticBody2D"]
+collision_mask = 3
 script = ExtResource("1_yr3fl")
 effect = ExtResource("2_dxhyj")
 
