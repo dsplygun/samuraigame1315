@@ -1,7 +1,8 @@
-[gd_resource type="Theme" load_steps=21 format=3 uid="uid://pnb3rikxhy3i"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://pnb3rikxhy3i"]
 
-[ext_resource type="Texture2D" uid="uid://1aagonco3j4l" path="res://Texture/Themes/Pixel Buttom.png" id="1_57a7k"]
-[ext_resource type="Texture2D" uid="uid://c5baeehfirwwx" path="res://Texture/Themes/All.png" id="2_pphm0"]
+[ext_resource type="Texture2D" uid="uid://4goxto1ndyku" path="res://Texture/Themes/Pixel Buttom.png" id="1_57a7k"]
+[ext_resource type="FontFile" uid="uid://ckxhdmpoitts8" path="res://scenes/Minecraft/PixelifySans-Regular.ttf" id="2_h46bt"]
+[ext_resource type="Texture2D" uid="uid://mgg2m4gkpqn5" path="res://Texture/Themes/All.png" id="2_pphm0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_do60v"]
 texture = ExtResource("1_57a7k")
@@ -163,6 +164,7 @@ ItemList/styles/panel = SubResource("StyleBoxTexture_nkbl3")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_qmxrp")
 LineEdit/styles/read_only = SubResource("StyleBoxTexture_jsdvk")
 Panel/styles/panel = SubResource("StyleBoxTexture_4cbud")
+ProgressBar/fonts/font = ExtResource("2_h46bt")
 ProgressBar/styles/fill = SubResource("StyleBoxTexture_3okl6")
 TextEdit/styles/normal = SubResource("StyleBoxTexture_que2m")
 TextEdit/styles/read_only = SubResource("StyleBoxTexture_2nhb5")

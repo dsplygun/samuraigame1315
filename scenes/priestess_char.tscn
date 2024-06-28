@@ -1,18 +1,19 @@
-[gd_scene load_steps=77 format=3 uid="uid://b5c2nteard442"]
+[gd_scene load_steps=78 format=3 uid="uid://b5c2nteard442"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_bfopn"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="2_2kee6"]
-[ext_resource type="Texture2D" uid="uid://bkj32ulsioin5" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_8gdi1"]
+[ext_resource type="Texture2D" uid="uid://dvshrago6cxrh" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_8gdi1"]
 [ext_resource type="PackedScene" uid="uid://d0kxbm2wnacw2" path="res://scenes/interface.tscn" id="2_n0dxf"]
-[ext_resource type="Texture2D" uid="uid://cdchjoos4t8s3" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_yt73o"]
-[ext_resource type="Texture2D" uid="uid://dhi25fq8cmf2m" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="4_d4mn5"]
-[ext_resource type="Texture2D" uid="uid://cjt3xxjqgkeyu" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="5_tydiw"]
-[ext_resource type="Texture2D" uid="uid://bwawtm8hw43vl" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="6_c2ksd"]
-[ext_resource type="Texture2D" uid="uid://cswiuxklnkgja" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="7_7jube"]
-[ext_resource type="Texture2D" uid="uid://b4cd1em831k3d" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="8_evmv0"]
-[ext_resource type="Texture2D" uid="uid://xv5826k1p0gm" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="9_1nxs7"]
-[ext_resource type="Texture2D" uid="uid://d2rm5epqrtxhs" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="10_hb4ex"]
-[ext_resource type="Texture2D" uid="uid://cuxotyn2xjajy" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="11_a4xn1"]
+[ext_resource type="Texture2D" uid="uid://cg0b2kx6ap50b" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_yt73o"]
+[ext_resource type="Texture2D" uid="uid://olt5k54b2abi" path="res://sprites/characters/Free Version Red Sprite/Back ConsecutiveSlash.png" id="4_d4mn5"]
+[ext_resource type="PackedScene" uid="uid://d3by5dhgc5bsq" path="res://music/zvuki.tscn" id="5_fnsee"]
+[ext_resource type="Texture2D" uid="uid://b32j53p87hqol" path="res://sprites/characters/Free Version Red Sprite/Front ConsecutiveSlash.png" id="5_tydiw"]
+[ext_resource type="Texture2D" uid="uid://bbvplap6boq0y" path="res://sprites/characters/Free Version Red Sprite/Side ConsecutiveSlash.png" id="6_c2ksd"]
+[ext_resource type="Texture2D" uid="uid://civj1a284s1a4" path="res://sprites/characters/Free Version Red Sprite/Back Dash.png" id="7_7jube"]
+[ext_resource type="Texture2D" uid="uid://livlol031wia" path="res://sprites/characters/Free Version Red Sprite/Front DashnRoll.png" id="8_evmv0"]
+[ext_resource type="Texture2D" uid="uid://3hj4qot4gujb" path="res://sprites/characters/Free Version Red Sprite/Side Dash.png" id="9_1nxs7"]
+[ext_resource type="Texture2D" uid="uid://chtj6capggabm" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="10_hb4ex"]
+[ext_resource type="Texture2D" uid="uid://dywt23eiefa1k" path="res://sprites/characters/Free Version Red Sprite/Side Movement.png" id="11_a4xn1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soob3"]
 atlas = ExtResource("2_8gdi1")
@@ -1378,6 +1379,8 @@ shape = SubResource("CircleShape2D_vr7bn")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_2kee6")]
 health = 100
+
+[node name="zvuki" parent="." instance=ExtResource("5_fnsee")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(0, 0.833333, 1, 1)

@@ -24,6 +24,8 @@ func _physics_process(delta):
 	
 	velocity = direction * speed
 	
+	
+	
 	if direction != Vector2(0,0):
 		$AnimationTree["parameters/idle/blend_position"] = direction
 		$AnimationTree["parameters/walk/blend_position"] = direction 

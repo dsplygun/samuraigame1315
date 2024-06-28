@@ -1,13 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0kxbm2wnacw2"]
+[gd_scene load_steps=22 format=3 uid="uid://d0kxbm2wnacw2"]
 
 [ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_0gpsx"]
-[ext_resource type="Texture2D" uid="uid://bbxwm3rsub1eb" path="res://sprites/tiletextures/Items/CoinsV2_outline_18x18res.png" id="1_b341n"]
+[ext_resource type="Texture2D" uid="uid://cjgochgtlrqcm" path="res://sprites/tiletextures/Items/CoinsV2_outline_18x18res.png" id="1_b341n"]
 [ext_resource type="Script" path="res://scripts/enventory_.gd" id="1_ocoi3"]
-[ext_resource type="PackedScene" path="res://scenes/hp_bar.tscn" id="2_hyou6"]
+[ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://scenes/hp_bar.tscn" id="2_hyou6"]
 [ext_resource type="Script" path="res://scripts/hp_bar.gd" id="3_etsim"]
 [ext_resource type="PackedScene" uid="uid://ckmn4stuq0k3f" path="res://levels/Menu/game_intr.tscn" id="4_4dn0e"]
 [ext_resource type="PackedScene" uid="uid://dfya3lwq3t610" path="res://levels/Menu/setting.tscn" id="5_5nblj"]
 [ext_resource type="Script" path="res://scripts/KEYREG.gd" id="6_h0y8c"]
+[ext_resource type="FontFile" uid="uid://d4hto4aafdat3" path="res://scenes/Minecraft/1_Minecraft-Regular.otf" id="6_t6gfj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_28cyh"]
 atlas = ExtResource("1_b341n")
@@ -66,6 +67,20 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6500"]
+bg_color = Color(0.000229776, 0.304877, 0.918508, 1)
+
+[sub_resource type="Theme" id="Theme_tf65v"]
+ProgressBar/fonts/font = ExtResource("6_t6gfj")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_p6500")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drs0d"]
+bg_color = Color(0.532725, 0, 0.0235916, 1)
+
+[sub_resource type="Theme" id="Theme_sf55g"]
+ProgressBar/fonts/font = ExtResource("6_t6gfj")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_drs0d")
+
 [node name="intr" type="CanvasLayer"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -99,7 +114,21 @@ offset_right = 285.0
 offset_bottom = 49.0
 theme = ExtResource("1_0gpsx")
 
-[node name="ProgressBar" parent="." instance=ExtResource("2_hyou6")]
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 285.0
+offset_bottom = 89.0
+theme = ExtResource("1_0gpsx")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 285.0
+offset_bottom = 129.0
+theme = ExtResource("1_0gpsx")
+
+[node name="ProgressBar0" parent="." instance=ExtResource("2_hyou6")]
 offset_left = 15.0
 offset_top = 15.0
 offset_right = 278.0
@@ -108,8 +137,27 @@ theme = ExtResource("1_0gpsx")
 value = 50.0
 script = ExtResource("3_etsim")
 
+[node name="ProgressBar1" parent="." instance=ExtResource("2_hyou6")]
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 279.0
+offset_bottom = 83.0
+theme = SubResource("Theme_tf65v")
+value = 50.0
+script = ExtResource("3_etsim")
+chararam = 1
+
+[node name="ProgressBar2" parent="." instance=ExtResource("2_hyou6")]
+offset_left = 16.0
+offset_top = 96.0
+offset_right = 279.0
+offset_bottom = 123.0
+theme = SubResource("Theme_sf55g")
+value = 50.0
+script = ExtResource("3_etsim")
+chararam = 2
+
 [node name="game intr" parent="." instance=ExtResource("4_4dn0e")]
-visible = false
 
 [node name="seting" parent="." instance=ExtResource("5_5nblj")]
 visible = false
