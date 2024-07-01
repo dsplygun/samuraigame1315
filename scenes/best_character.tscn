@@ -1,8 +1,7 @@
-[gd_scene load_steps=83 format=3 uid="uid://gy78e2kdlxx2"]
+[gd_scene load_steps=82 format=3 uid="uid://gy78e2kdlxx2"]
 
 [ext_resource type="Script" path="res://scripts/best_character.gd" id="1_3x33p"]
 [ext_resource type="Texture2D" uid="uid://dvshrago6cxrh" path="res://sprites/effects/Free Smoke Fx  Pixel 05.png" id="2_102yq"]
-[ext_resource type="Resource" uid="uid://c3hmtdq67fygx" path="res://resources/damagebuff.tres" id="2_icxfg"]
 [ext_resource type="Texture2D" uid="uid://cg0b2kx6ap50b" path="res://sprites/characters/Free Version Red Sprite/Front Movement.png" id="3_pd10w"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="4_qpxmd"]
 [ext_resource type="Texture2D" uid="uid://chtj6capggabm" path="res://sprites/characters/Free Version Red Sprite/Back Movement.png" id="4_ws5ba"]
@@ -1626,7 +1625,6 @@ graph_offset = Vector2(0, -32.7551)
 [node name="best_character" type="CharacterBody2D" groups=["hero"]]
 collision_layer = 2
 script = ExtResource("1_3x33p")
-buff = ExtResource("2_icxfg")
 
 [node name="switch_effect" type="AnimatedSprite2D" parent="."]
 visible = false

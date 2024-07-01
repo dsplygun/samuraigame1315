@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GiveBuff" load_steps=3 format=3 uid="uid://kp1x0pjkvpj1"]
+
+[ext_resource type="Script" path="res://resources/give_buffs.gd" id="1_hrp20"]
+[ext_resource type="Resource" uid="uid://c3hmtdq67fygx" path="res://resources/damagebuff.tres" id="1_jkj5i"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_hrp20")
+buffs = ExtResource("1_jkj5i")

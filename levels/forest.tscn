@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=43 format=3 uid="uid://b4huhehi6fxyn"]
 
 [ext_resource type="Texture2D" uid="uid://c2ug55lqikwv1" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
 [ext_resource type="Texture2D" uid="uid://cmh3osfh4o0hj" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
@@ -16,11 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://cp2xo6nvd0owg" path="res://scenes/lil_ghost.tscn" id="14_65smh"]
 [ext_resource type="PackedScene" uid="uid://cjf502vdmu0on" path="res://music/music.tscn" id="14_m4oph"]
 [ext_resource type="PackedScene" uid="uid://cedufubb26f83" path="res://scenes/teleoport.tscn" id="16_wehnp"]
-[ext_resource type="Script" path="res://resources/teleport.gd" id="17_x7nsx"]
 [ext_resource type="PackedScene" uid="uid://c2lrcefh23bl6" path="res://scenes/sacred_statue.tscn" id="18_kyu68"]
-[ext_resource type="Script" path="res://resources/heal.gd" id="19_m41nt"]
+[ext_resource type="PackedScene" uid="uid://ba75cobk6y582" path="res://scenes/buff_statue.tscn" id="19_hp0ey"]
 [ext_resource type="PackedScene" uid="uid://bc44axmi75tja" path="res://scenes/chest.tscn" id="20_cxbjw"]
-[ext_resource type="Script" path="res://resources/key.gd" id="21_4b65c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -23981,31 +23979,6 @@ source_geometry_mode = 1
 source_geometry_group_name = &"coll"
 agent_radius = 15.0
 
-[sub_resource type="Resource" id="Resource_uw0jh"]
-resource_local_to_scene = true
-script = ExtResource("17_x7nsx")
-place = Vector2(5897, 922)
-
-[sub_resource type="Resource" id="Resource_wa4fq"]
-resource_local_to_scene = true
-script = ExtResource("19_m41nt")
-amount = 35
-
-[sub_resource type="Resource" id="Resource_1noho"]
-resource_local_to_scene = true
-script = ExtResource("19_m41nt")
-amount = 35
-
-[sub_resource type="Resource" id="Resource_awqpq"]
-resource_local_to_scene = true
-script = ExtResource("19_m41nt")
-amount = 35
-
-[sub_resource type="Resource" id="Resource_rhvwb"]
-resource_local_to_scene = true
-script = ExtResource("21_4b65c")
-item = "Ключ"
-
 [node name="Forest" type="Node2D"]
 scale = Vector2(2, 2)
 
@@ -26123,21 +26096,24 @@ position = Vector2(3921, 1765)
 
 [node name="cave teleport" parent="." instance=ExtResource("16_wehnp")]
 position = Vector2(4546, 1607.5)
-effect = SubResource("Resource_uw0jh")
+effect = null
 
 [node name="sacred_statue" parent="." instance=ExtResource("18_kyu68")]
 position = Vector2(934, 117)
-effect = SubResource("Resource_wa4fq")
+effect = null
 
 [node name="sacred_statue2" parent="." instance=ExtResource("18_kyu68")]
 position = Vector2(2021.5, 51.5)
-effect = SubResource("Resource_1noho")
+effect = null
 
 [node name="sacred_statue3" parent="." instance=ExtResource("18_kyu68")]
 position = Vector2(3090, 1675)
-effect = SubResource("Resource_awqpq")
+effect = null
 
 [node name="chest" parent="." instance=ExtResource("20_cxbjw")]
 position = Vector2(807.5, 299)
 one_use = true
-effect = SubResource("Resource_rhvwb")
+effect = null
+
+[node name="sacred_statue4" parent="." instance=ExtResource("19_hp0ey")]
+position = Vector2(39.5, 288)
