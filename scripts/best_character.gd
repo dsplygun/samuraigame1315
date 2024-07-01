@@ -3,6 +3,7 @@ extends CharacterBody2D
 var dash = 2
 var attack = 1
 var alivechar = true
+@export var Camera : Camera2D
 @export var speed = 300
 @onready var char_anim = get_node("AnimationTree")
 @onready var switch_anim = get_node("switch_effect")
@@ -116,6 +117,7 @@ func switch_char(to_char):
 	hero.position = self.position + Vector2(0,0)
 	hero.scale = self.scale
 	$"../camera1".follow_char = hero
+	hero.Camera = $"../camera1"
 	$"..".add_child(hero)
 	hero.get_node("switch_effect").visible = true
 	hero.switch_anim.play("switch")

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqq6j4sapqi2u"]
+
+[ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_ou0xe"]
+[ext_resource type="Resource" uid="uid://rq7ros7kjb3i" path="res://resources/shaking.tres" id="2_m25gi"]
+[ext_resource type="Texture2D" uid="uid://yynt171khvvu" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_lrv4u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]
+size = Vector2(32, 61)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mmxc"]
+radius = 39.0512
+
+[node name="shaking" type="StaticBody2D"]
+script = ExtResource("1_ou0xe")
+effect = ExtResource("2_m25gi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.0625)
+texture = ExtResource("3_lrv4u")
+region_enabled = true
+region_rect = Rect2(278.322, 155, 47.6777, 63.783)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -0.5)
+shape = SubResource("RectangleShape2D_h0nn4")
+
+[node name="interact_area" type="Area2D" parent="."]
+position = Vector2(14, 4)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact_area"]
+position = Vector2(-14, -4)
+shape = SubResource("CircleShape2D_0mmxc")
+debug_color = Color(0.641039, 0.524044, 0.0293422, 0.42)
