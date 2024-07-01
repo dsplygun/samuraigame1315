@@ -110,7 +110,7 @@ func switch_char(to_char):
 			to_char = (to_char + 1) % 3
 		else:
 			break
-		get_tree().change_scene_to_file("res://levels/Menu/menu.tscn")
+		$"../".get_tree().change_scene_to_file.bind("res://levels/Menu/menu.tscn").call_deferred()
 	var next_char = load(char_scenes[to_char])
 	var hero = next_char.instantiate()
 	hero.position = self.position + Vector2(0,0)
