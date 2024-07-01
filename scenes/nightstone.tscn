@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cedufubb26f83"]
+[gd_scene load_steps=6 format=3 uid="uid://crlp8mdvj0klb"]
 
-[ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_fotl0"]
-[ext_resource type="Resource" uid="uid://bf6r21vdhyeop" path="res://resources/teleport.tres" id="2_tkxkv"]
-[ext_resource type="Texture2D" uid="uid://x2bawgom4rh5" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="3_v63p0"]
+[ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_38sdl"]
+[ext_resource type="Resource" uid="uid://ddcuhb5eddtkp" path="res://resources/nightstone.tres" id="2_gff8t"]
+[ext_resource type="Texture2D" uid="uid://c0u5d2i2koaef" path="res://sprites/tiletextures/Items/Blackstone.png" id="3_wcqaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]
 size = Vector2(76, 48.75)
@@ -10,15 +10,17 @@ size = Vector2(76, 48.75)
 [sub_resource type="CircleShape2D" id="CircleShape2D_0mmxc"]
 radius = 21.0
 
-[node name="cave teleport" type="StaticBody2D"]
-script = ExtResource("1_fotl0")
-effect = ExtResource("2_tkxkv")
+[node name="nightstone" type="StaticBody2D"]
+script = ExtResource("1_38sdl")
+one_use = true
+effect = ExtResource("2_gff8t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 1.0625)
-texture = ExtResource("3_v63p0")
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(0.175585, 0.186559)
+texture = ExtResource("3_wcqaj")
 region_enabled = true
-region_rect = Rect2(1.39632, 87.1066, 76.3661, 53.4563)
+region_rect = Rect2(0, 0, 299.998, 300)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3.625)

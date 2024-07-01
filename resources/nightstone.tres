@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Nightstone" load_steps=2 format=3 uid="uid://ddcuhb5eddtkp"]
+
+[ext_resource type="Script" path="res://resources/nightstone.gd" id="1_f2ewq"]
+
+[resource]
+script = ExtResource("1_f2ewq")
+value = 0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://d0kxbm2wnacw2"]
 
 [ext_resource type="Theme" uid="uid://pnb3rikxhy3i" path="res://Texture/Themes/Purple_theme.tres" id="1_0gpsx"]
-[ext_resource type="Texture2D" uid="uid://bjnhw03u2stbj" path="res://sprites/tiletextures/Items/CoinsV2_outline_18x18res.png" id="1_b341n"]
+[ext_resource type="Texture2D" uid="uid://bhgxam5yc11cm" path="res://sprites/tiletextures/Items/CoinsV2_outline_18x18res.png" id="1_b341n"]
 [ext_resource type="Script" path="res://scripts/enventory_.gd" id="1_ocoi3"]
 [ext_resource type="PackedScene" uid="uid://cu7mu5tj5kbtn" path="res://scenes/hp_bar.tscn" id="2_hyou6"]
 [ext_resource type="Script" path="res://scripts/hp_bar.gd" id="3_etsim"]
@@ -67,6 +67,11 @@ animations = [{
 }]
 
 [node name="intr" type="CanvasLayer"]
+
+[node name="_night_" type="Panel" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(305.25, 28.25)

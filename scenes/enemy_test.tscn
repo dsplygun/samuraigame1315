@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/enemy_test.gd" id="1_jx12r"]
 [ext_resource type="PackedScene" uid="uid://d3by5dhgc5bsq" path="res://music/zvuki.tscn" id="2_dswq7"]
-[ext_resource type="Texture2D" uid="uid://dtyfacakvvica" path="res://sprites/characters/DarkSamurai (64x64).png" id="2_xmcob"]
+[ext_resource type="Texture2D" uid="uid://dp2ne1kq6hvqh" path="res://sprites/characters/DarkSamurai (64x64).png" id="2_xmcob"]
 [ext_resource type="PackedScene" uid="uid://btkanmv24ehss" path="res://scenes/health_component.tscn" id="3_1ro8h"]
 [ext_resource type="PackedScene" uid="uid://cxqddt48jh5p3" path="res://scenes/pathfinder_component.tscn" id="4_skkb5"]
 [ext_resource type="Script" path="res://ai/tasks/get_first_in_group.gd" id="5_s88r8"]
