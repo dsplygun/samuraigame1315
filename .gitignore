@@ -20,3 +20,5 @@ mono_crash.*.json
 *.import
 dialogues/backgrounds/Без імені.png.import
 characters/portraits/patrick.png.import
+.godot/editor/HealthComponent.gd-folding-30770adc2315a9d96dc60abf34d1e665.cfg
+addons/limboai/bin/~liblimboai.windows.editor.x86_64.dll
