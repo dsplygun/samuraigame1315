@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dmg_buff" load_steps=2 format=3 uid="uid://c3hmtdq67fygx"]
+
+[ext_resource type="Script" path="res://resources/Dmg_buff.gd" id="1_t6c4g"]
+
+[resource]
+script = ExtResource("1_t6c4g")
+effects = {
+"damageboost": 2
+}
+duration = 30

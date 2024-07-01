@@ -1,8 +1,9 @@
 extends CharacterBody2D
-
+var damage = 50
 var dash = 2
 var attack = 1
 @export var speed = 300
+@export var buff : Resource
 @onready var char_anim = get_node("AnimationTree")
 @onready var switch_anim = get_node("switch_effect")
 
@@ -12,9 +13,14 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	$HealthComponent.health =  Info.char_hp[number]
+	
+func _turnoffbuffs():
+	buff = null
 
 func _process(delta):
 	Info.char_hp[number] = $HealthComponent.health
+	if buff and $"buff_timer".is_stopped():
+		$"buff_timer".start(buff.duration)
 	
 
 func _physics_process(delta):
@@ -84,9 +90,12 @@ func _on_attack_timer_timeout():
 func attack_all():
 	var bodies = $"attack_area".get_overlapping_bodies()
 	print(bodies)
+	var damage_mult = 1 #damage * "damageboost"
+	if buff and "damageboost" in buff.effects:
+		damage_mult += buff.effects["damageboost"]
 	for body in bodies:
 		if body.is_in_group("enemy"):
-			body.get_node("HealthComponent").take_damage(50) 
+			body.get_node("HealthComponent").take_damage(damage*damage_mult) 
 
 func _input(event):
 	if event is InputEventKey:
