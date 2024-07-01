@@ -8,6 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+
 	var new_pos_x= int(follow_char.position.x / 576) * 576
 	var new_pos_y= int(follow_char.position.y / 324) * 324
 	if new_pos_x != self.position.x or new_pos_y !=self.position.y:

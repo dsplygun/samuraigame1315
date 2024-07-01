@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc44axmi75tja"]
+[gd_scene load_steps=5 format=3 uid="uid://bc44axmi75tja"]
 
 [ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_1dxpy"]
-[ext_resource type="Resource" uid="uid://dg3lammoduyml" path="res://resources/add_item.tres" id="2_nv85o"]
-[ext_resource type="Texture2D" uid="uid://dbru2vr4syevb" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_04016"]
+[ext_resource type="Texture2D" uid="uid://nypr7r74350l" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_04016"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]
 size = Vector2(37, 36)
@@ -12,7 +11,6 @@ radius = 49.0
 
 [node name="chest" type="StaticBody2D"]
 script = ExtResource("1_1dxpy")
-effect = ExtResource("2_nv85o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(0.741385, 0.741385, 0.741385, 1)

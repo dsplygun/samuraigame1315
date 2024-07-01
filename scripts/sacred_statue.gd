@@ -1,5 +1,6 @@
 extends StaticBody2D
 @export var one_use : bool = false
+
 var can_use = true
 @export var effect : Resource
 #@export var value : Array[Variant]
@@ -14,7 +15,6 @@ func _input(event):
 					effect.activate_effect(body)
 					if one_use:
 						can_use = false
-					
 
-func _on_interact_area_body_entered(body):
-	pass
+
+
