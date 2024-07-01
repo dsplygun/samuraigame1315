@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TeamHealEffect" load_steps=2 format=3 uid="uid://c5dmq4p70cqbp"]
+
+[ext_resource type="Script" path="res://resources/team_heal.gd" id="1_t5qvl"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_t5qvl")
+amount = 100

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SpeedBoost" load_steps=2 format=3 uid="uid://dtbw5bngs7rc7"]
+
+[ext_resource type="Script" path="res://resources/speed_boost.gd" id="1_k2ymd"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_k2ymd")
+value = 150

@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7hl27n3n7fes"]
+
+[ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_guwxn"]
+[ext_resource type="Resource" uid="uid://c5dmq4p70cqbp" path="res://resources/team_heal.tres" id="2_ver0r"]
+[ext_resource type="Texture2D" uid="uid://daqcnr61no0oo" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_ms4d6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mmxc"]
+radius = 19.0263
+
+[node name="teamheal" type="StaticBody2D"]
+script = ExtResource("1_guwxn")
+one_use = true
+effect = ExtResource("2_ver0r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.0625)
+texture = ExtResource("3_ms4d6")
+region_enabled = true
+region_rect = Rect2(352.135, 268.813, 95.5892, 72.3292)
+
+[node name="interact_area" type="Area2D" parent="."]
+position = Vector2(14, 4)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact_area"]
+position = Vector2(-14, -4)
+shape = SubResource("CircleShape2D_0mmxc")
+debug_color = Color(0.641039, 0.524044, 0.0293422, 0.42)
+
+[node name="rune1_activ" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-39, -4)
+scale = Vector2(1, 1.07143)
+texture = ExtResource("3_ms4d6")
+region_enabled = true
+region_rect = Rect2(328.969, 264.608, 6.69122, 7.32852)
+
+[node name="rune2_activ" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.640625, -32.5837)
+scale = Vector2(1.05625, 1.03348)
+texture = ExtResource("3_ms4d6")
+region_enabled = true
+region_rect = Rect2(336.673, 265.999, 5.40524, 5.27008)
+
+[node name="rune3_activ" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 25)
+scale = Vector2(1, 1.13571)
+texture = ExtResource("3_ms4d6")
+region_enabled = true
+region_rect = Rect2(329.971, 272.837, 4.99985, 5.08154)
+
+[node name="rune4_activ" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(40, -4)
+scale = Vector2(1.0875, 1.13571)
+texture = ExtResource("3_ms4d6")
+region_enabled = true
+region_rect = Rect2(337.025, 273.026, 5.27011, 5.13495)

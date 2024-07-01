@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3g6xse6ts15h"]
+
+[ext_resource type="Script" path="res://scripts/sacred_statue.gd" id="1_lovuj"]
+[ext_resource type="Resource" uid="uid://dtbw5bngs7rc7" path="res://resources/speed_boost.tres" id="2_sn6by"]
+[ext_resource type="Texture2D" uid="uid://daqcnr61no0oo" path="res://sprites/tiletextures/Basic/TX Props.png" id="3_hm6k0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0nn4"]
+size = Vector2(24, 53)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mmxc"]
+radius = 29.0689
+
+[node name="speedblock" type="StaticBody2D"]
+script = ExtResource("1_lovuj")
+one_use = true
+effect = ExtResource("2_sn6by")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.0625)
+texture = ExtResource("3_hm6k0")
+region_enabled = true
+region_rect = Rect2(225, 84, 31, 76)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 10)
+shape = SubResource("RectangleShape2D_h0nn4")
+
+[node name="interact_area" type="Area2D" parent="."]
+position = Vector2(14, 4)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact_area"]
+position = Vector2(-14, 13)
+shape = SubResource("CircleShape2D_0mmxc")
+debug_color = Color(0.641039, 0.524044, 0.0293422, 0.42)
+
+[node name="rune_active" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 8.25)
+scale = Vector2(1, 1.05102)
+texture = ExtResource("3_hm6k0")
+region_enabled = true
+region_rect = Rect2(264, 105, 17, 49)

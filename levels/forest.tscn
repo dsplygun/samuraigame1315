@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://b4huhehi6fxyn"]
+[gd_scene load_steps=56 format=3 uid="uid://b4huhehi6fxyn"]
 
 [ext_resource type="Texture2D" uid="uid://bl7r5t436juqv" path="res://sprites/tiletextures/Forest BETA V3/Forest Tilesett.png" id="1_u07d5"]
 [ext_resource type="Texture2D" uid="uid://4p456m0jfrq8" path="res://sprites/tiletextures/Forest BETA V3/Forest Cliff.png" id="2_uba8p"]
@@ -21,6 +21,10 @@
 [ext_resource type="Script" path="res://resources/heal.gd" id="19_m41nt"]
 [ext_resource type="PackedScene" uid="uid://bc44axmi75tja" path="res://scenes/chest.tscn" id="20_cxbjw"]
 [ext_resource type="Script" path="res://resources/key.gd" id="21_4b65c"]
+[ext_resource type="PackedScene" uid="uid://b3g6xse6ts15h" path="res://scenes/speed_block.tscn" id="22_74guu"]
+[ext_resource type="Script" path="res://resources/speed_boost.gd" id="23_6rpct"]
+[ext_resource type="PackedScene" uid="uid://b7hl27n3n7fes" path="res://scenes/team_heal_bl.tscn" id="24_wtwld"]
+[ext_resource type="Script" path="res://resources/team_heal.gd" id="25_qiq8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkjo6"]
 texture = ExtResource("1_u07d5")
@@ -24022,6 +24026,16 @@ resource_local_to_scene = true
 script = ExtResource("21_4b65c")
 item = "Ключ"
 
+[sub_resource type="Resource" id="Resource_w7ivv"]
+resource_local_to_scene = true
+script = ExtResource("23_6rpct")
+value = 150
+
+[sub_resource type="Resource" id="Resource_kse8b"]
+resource_local_to_scene = true
+script = ExtResource("25_qiq8j")
+amount = 100
+
 [node name="Forest" type="Node2D"]
 scale = Vector2(2, 2)
 
@@ -26157,3 +26171,12 @@ effect = SubResource("Resource_awqpq")
 position = Vector2(807.5, 299)
 one_use = true
 effect = SubResource("Resource_rhvwb")
+
+[node name="speedblock" parent="." instance=ExtResource("22_74guu")]
+position = Vector2(750.5, 127)
+scale = Vector2(0.8, 0.8)
+effect = SubResource("Resource_w7ivv")
+
+[node name="teamheal" parent="." instance=ExtResource("24_wtwld")]
+position = Vector2(452.5, 351.5)
+effect = SubResource("Resource_kse8b")
